@@ -1,0 +1,43 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{template-for-exam}[2023/07/01 Custom Package]
+
+\newcommand{\myclass}{}
+
+\DeclareOption{hon}{\renewcommand{\myclass}{Honors Physics}}
+\DeclareOption{phy}{\renewcommand{\myclass}{Physics I}}
+\DeclareOption{icp}{\renewcommand{\myclass}{ICP}}
+\ProcessOptions
+\relax
+
+
+
+\pagestyle{headandfoot}
+\runningheadrule
+\header{Name:}{Date:}{Period: \hspace{0.5in}}
+\footer{}{}{\sc \myclass}
+\headrule
+\footrule
+
+\RequirePackage{amsmath}
+\RequirePackage{array}
+\RequirePackage[per-mode=symbol]{siunitx}
+
+
+%disable \thispagestyle so \maketitle doesn't change it
+\renewcommand{\thispagestyle}[1]{}
+
+%redefine \maketitle
+\def\@maketitle{
+    \begin{flushleft}
+        {\LARGE \textbf \@title \par}
+    \end{flushleft}
+    \par
+    }
+
+
+%make it so section headings aren't numbered
+%\makeatletter
+%\renewcommand{\@seccntformat}[1]{}
+%\makeatother
+
+\endinput
