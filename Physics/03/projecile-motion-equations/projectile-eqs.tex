@@ -1,0 +1,85 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[margin=0.5in]{geometry}
+
+
+
+\title{Projectile Motion Equations}
+\author{Rohrbach}
+
+\newcommand{\printcontent}{
+  {\bf \noindent \Large Projectile Motion Equations}
+
+  \vspace{1em}
+  \hrule
+  \vspace{-.5em}
+  \begin{multicols}{3}
+    \begin{center}
+
+      $v_f = v_i + a t$
+    
+      \emph{\footnotesize ``Old Faithful''}
+    
+    
+      $d = v_i t + \frac{1}{2} a t^2$
+    
+      \emph{\footnotesize``The Big Chalupa''}
+    
+
+      $v_f^2 = v_i^2 + 2 a d$
+
+      \emph{\footnotesize ``Ain't Got No Time''}
+
+    \end{center}
+  \end{multicols}
+  \vspace{-8pt}
+  \hrule
+  \vspace{-8pt}
+
+  \begin{multicols}{2}
+    \begin{center}
+      \begin{tikzpicture}[
+          every node/.append style={font=\large}
+      ]
+        \draw[ultra thick,->] 
+                  (0,0) -- 
+                  (4.5,3) node[anchor=south east]{\bf $v_R$};
+        \draw[thin,dashed,->] 
+                  (0,0) -- 
+                  (2.3,0) node[anchor=north]{$v_x$} --
+                  (4.5,0) -- 
+                  (4.5,1.5) node[anchor=west]{$v_y$} --
+                  (4.5,3);
+        \draw (1,0) node[anchor=south west]{$\theta$}
+                  arc[
+                    start angle = 0,
+                    end angle = 30, 
+                    radius = 1
+                  ];
+      \end{tikzpicture}
+
+      \begin{align*}
+        v_x     &= v_R \cos \left( \theta \right) \\
+        v_y     &= v_R \sin \left( \theta \right) \\
+        \theta  &= \tan^{-1} \left( v_y / v_x \right)
+      \end{align*}
+      \vspace{2em}
+    \end{center}
+  \end{multicols}
+  \vspace{-8pt}
+  \hrule
+}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+
+\end{document}
