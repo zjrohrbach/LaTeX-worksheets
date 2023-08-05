@@ -1,0 +1,111 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{mdframed}
+\usepackage{multirow}
+
+\title{Designing a Measurement Lab}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\vspace{-2em}
+\begin{questions}
+    \uplevel{\section*{Pre-Lab}}
+  
+    \question
+      What can we measure on the different balls?  Make 
+      a list of as many things as possible. 
+      \vs[3]
+
+    \question
+      Identify each of the following (there may be more 
+      than one):
+      
+      \begin{center}
+        \begin{tabular}
+          { m{.25\textwidth} | m{.3\textwidth}| m{.25\textwidth} } 
+          Independent Variables & 
+          Dependent Variables   & 
+          Control Variables  \\[8em]
+        \end{tabular}
+      \end{center}
+    
+  
+\end{questions}
+
+\section*{Purpose}
+Write down one sentence explainging the purpose of the lab that includes all the independent and dependent variable.
+\vs
+
+\section*{Procedure}
+
+Materials:
+
+\begin{itemize}
+  \item two different balls
+  \item one meter stick
+\end{itemize}
+
+
+\noindent When you're ready to start the experiment:
+
+\begin{enumerate}
+  \item Drop the ball
+  \item Stand back and watch how high the ball bounces
+  \item Record the Data.
+\end{enumerate}
+
+\pagebreak
+
+\section*{Data}
+
+
+
+\def\cw{.15\textwidth}
+\def\ch{3em}
+
+\newcommand{\datatable}{
+  \begin{center}
+    \begin{tabular}
+      {|*{5}{>{\centering\arraybackslash}m{\cw}|}}
+      \hline
+      \multirow{2}{\cw}
+        {\centering Drop Height (cm)} & 
+      \multicolumn{4}{c|}{Bounce Height (cm)} \\
+      \cline{2-5}
+      & Trial \#1 & Trial \#2 & Trial \#3 & Average \\
+      \hline
+      &&&&\\[\ch]
+      \hline
+      &&&&\\[\ch]
+      \hline
+      &&&&\\[\ch]
+      \hline
+      &&&&\\[\ch]
+      \hline
+      &&&&\\[\ch]
+      \hline
+    \end{tabular}
+  \end{center}
+}
+
+
+\subsection*{Experiment \#1}
+
+Constant(s): \fillin[][15em]
+
+\datatable
+
+\subsection*{Experiment \#2}
+
+Constant(s): \fillin[][15em]
+
+\datatable
+
+
+
+
+
+\end{document}
