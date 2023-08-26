@@ -1,0 +1,66 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{enumitem,multirow}
+
+\title{Car Lab \#1 - Sample Data}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\def\cw{.15\textwidth}
+
+  Red Car:
+  \begin{center}
+    \begin{tabular}
+      {|*{5}{>{\centering\arraybackslash}m{\cw}|}}
+      \hline
+      \multirow{2}{\cw}
+        {\centering Time (s)} & 
+      \multicolumn{4}{c|}{Distance Traveled (m)} \\
+      \cline{2-5}
+      & Trial \#1 & Trial \#2 & Trial \#3 & Average \\
+      \hline
+      2  & 1.16 & 1.20 & 1.12 & \\
+      \hline
+      4  & 2.14 & 2.08 & 1.93 & \\
+      \hline
+      6  & 2.90 & 2.85 & 2.82 & \\
+      \hline
+      8  & 3.53 & 3.72 & 3.60 & \\
+      \hline
+      10 & 4.41 & 4.35 & 4.48 & \\
+      \hline
+      12 & 5.22 & 5.31 & 5.32 & \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  Blue Car:
+  \begin{center}
+    \begin{tabular}
+      {|*{5}{>{\centering\arraybackslash}m{\cw}|}}
+      \hline
+      \multirow{2}{\cw}
+        {\centering Time (s)} & 
+      \multicolumn{4}{c|}{Distance Traveled (m)} \\
+      \cline{2-5}
+      & Trial \#1 & Trial \#2 & Trial \#3 & Average \\
+      \hline
+      2  & 0.50 & 0.52 & 0.35 & \\
+      \hline
+      4  & 1.00 & 0.83 & 0.72 & \\
+      \hline
+      6  & 1.13 & 1.13 & 1.05 & \\
+      \hline
+      8  & 1.33 & 1.47 & 1.33 & \\
+      \hline
+      10 & 1.72 & 1.78 & 1.66 & \\
+      \hline
+      12 & 1.97 & 2.09 & 2.00 & \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+\end{document}

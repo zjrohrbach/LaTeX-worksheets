@@ -36,6 +36,18 @@
 
 \newcommand{\vs}[1][1]{\vspace{\stretch{#1}}}
 
+\newcommand{\ku}[1][10em]{
+    \begin{center}
+        \begin{tabular}
+          {p{.2\textwidth}|p{.45\textwidth}|p{.2\textwidth}}
+          \small Knowns/Unknowns    &
+          \small  Plug \& Chug      & 
+          \small Answer w/ Units \\
+          &&\\[#1]
+        \end{tabular}
+      \end{center}
+}
+
 %make it so section headings aren't numbered
 %\makeatletter
 %\renewcommand{\@seccntformat}[1]{}
