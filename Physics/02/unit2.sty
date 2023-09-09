@@ -1,0 +1,24 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{unit2}[2023/08/30 Custom Package]
+
+\RequirePackage[phy]{template-for-exam}
+
+\newcommand{\printeqs}{
+  \begin{center}
+    \begin{tabular}{|*6c|}
+      \hline 
+      &&&&&\\
+      $v=\frac{d}{t}$ &
+      $a=\frac{\Delta v}{t}$ &&
+      $v_f=v_i+at$ &
+      $d=v_i t + \tfrac{1}{2} at^2$ &
+      $v_f^2 = v_i^2 + 2ad$ \\
+      &&&
+      \it\small ``Old Faithful'' &
+      \it\small ``The Big Chalupa'' &
+      \it\small ``Ain't Got no Time'' \\
+      &&&&&\\
+      \hline
+    \end{tabular}
+  \end{center}
+}
