@@ -5,7 +5,7 @@
 \usetikzlibrary{arrows.meta}
 \tikzset{f/.append style={-{Stealth[length=3mm,width=2mm]}}}
 
-\title{Net Force Examples}
+\title{Newton \#1 (Net Force)}
 \author{Rohrbach}
 \date{\today}
 
@@ -46,34 +46,34 @@
         \begin{scope}
           \node (a) at (-5,4) {};
           \createFBD{(a)}
-          \vforce{ 2}{\SI{18}{\newton}};
-          \vforce{-2}{\SI{18}{\newton}};
+          \vforce{ 2}{\SI{18}{\newton}}
+          \vforce{-2}{\SI{18}{\newton}}
 
         \end{scope}
 
         \begin{scope}
           \node (a) at (4,4) {};
           \createFBD{(b)}
-          \vforce{  2  }{\SI{40}{\newton}};
-          \vforce{-1.25}{\SI{24}{\newton}};
+          \vforce{  2  }{\SI{40}{\newton}}
+          \vforce{-1.25}{\SI{24}{\newton}}
         \end{scope}
 
         \begin{scope}
           \node (a) at (-5,-4) {};
           \createFBD{(c)}
-          \vforce{ 2}{\SI{5}{\newton}};
-          \vforce{-2}{\SI{5}{\newton}};
-          \hforce{ 3}{\SI{7}{\newton}};
-          \hforce{-3}{\SI{7}{\newton}};
+          \vforce{ 2}{\SI{5}{\newton}}
+          \vforce{-2}{\SI{5}{\newton}}
+          \hforce{ 3}{\SI{7}{\newton}}
+          \hforce{-3}{\SI{7}{\newton}}
         \end{scope}
 
         \begin{scope}
           \node (a) at (4,-4) {};
           \createFBD{(d)}
-          \vforce{  2 }{\SI{17}{\newton}};
-          \vforce{ -2 }{\SI{17}{\newton}};
-          \hforce{  3 }{\SI{32}{\newton}};
-          \hforce{-1.5}{\SI{14}{\newton}};
+          \vforce{  2 }{\SI{17}{\newton}}
+          \vforce{ -2 }{\SI{17}{\newton}}
+          \hforce{  3 }{\SI{32}{\newton}}
+          \hforce{-1.5}{\SI{14}{\newton}}
         \end{scope}
       \end{tikzpicture}
     \end{center}
@@ -117,7 +117,7 @@
           \node (a) at (\sep,0) {};
           \vforce{  2 }{\forceblank}
           \vforce{ -1 }{\SI{200}{\newton}}
-          \createFBD{(b)}{\SI{300}{\newton}, up}
+          \createFBD{(b)}{\SI{150}{\newton}, up}
         \end{scope}
 
         \begin{scope}
@@ -159,12 +159,12 @@
             \filldraw (a) circle [radius=0.15];
             \path (a) node {} 
               + (-3,2.5) node {#1}
-              ++ ( 0,-3.5) node[anchor=east] {$m=$}
-              ++ ( .3,  0) node[anchor=west] {#2}
-              ++ (-.3,-.8) node[anchor=east] {$a=$}
-              ++ ( .3,  0) node[anchor=west] {#3}
-              ++ (-.3,-.8) node[anchor=east] {$F_{NET}=$}
-              ++ ( .3,  0) node[anchor=west] {#4}
+              ++ (-1,-3.5) node[anchor=east] {$m=$}
+              ++ (0,  0) node[anchor=west] {#2}
+              ++ (0,-.8) node[anchor=east] {$a=$}
+              ++ (0,  0) node[anchor=west] {#3}
+              ++ (0,-.8) node[anchor=east] {$F_{NET}=$}
+              ++ (0,  0) node[anchor=west] {#4}
               ;
           }
         \newcommand{\makeblank}{\fillin[][3em]{} }
@@ -179,11 +179,11 @@
         \begin{scope}
           \node (a) at (-5,5) {};
           \createFBD
-            {(a)}{3 kg}{\makeblank m/s$^2$}{23 N, right}
-          \vforce{  2 }{\forceblank};
-          \vforce{ -2 }{29.4 N};
-          \hforce{ 3.5}{\forceblank};
-          \hforce{ -1}{5 N};
+            {(a)}{3 kg}{\makeblank m/s$^2$, \makeblank}{23 N, right}
+          \vforce{  2 }{\forceblank}
+          \vforce{ -2 }{29.4 N}
+          \hforce{ 3.5}{\forceblank}
+          \hforce{ -1}{5 N}
 
         \end{scope}
 
@@ -191,29 +191,29 @@
           \node (a) at (5,5) {};
           \createFBD
             {(b)}{2 kg}{8 m/s$^2$, left}{\makeblank N, \makeblank}
-          \vforce{  2 }{19.6 N};
-          \vforce{ -2 }{\forceblank};
-          \hforce{-1.8}{\forceblank};
+          \vforce{  2 }{19.6 N}
+          \vforce{ -2 }{\forceblank}
+          \hforce{-1.8}{\forceblank}
         \end{scope}
 
         \begin{scope}
           \node (a) at (-5,-5) {};
           \createFBD
-            {(c)}{5 kg}{12 m/s$^2$}{\makeblank N, \makeblank}
-          \vforce{  1.5 }{15 N};
-          \vforce{ -1.5 }{\forceblank};
-          \hforce{  1   }{7 N};
-          \hforce{ -3   }{\forceblank};
+            {(c)}{5 kg}{12 m/s$^2$, left}{\makeblank N, \makeblank}
+          \vforce{  1.5 }{49 N}
+          \vforce{ -1.5 }{\forceblank}
+          \hforce{  1   }{7 N}
+          \hforce{ -3   }{\forceblank}
         \end{scope}
 
         \begin{scope}
           \node (a) at (5,-5) {};
           \createFBD
-            {(d)}{3 kg}{18 m/s$^2$}{\makeblank N, \makeblank}
-          \vforce{  2.5 }{\forceblank};
-          \vforce{ -2.5 }{\forceblank};
-          \hforce{  4   }{\forceblank};
-          \hforce{  -2   }{17 N};
+            {(d)}{3 kg}{18 m/s$^2$, right}{\makeblank N, \makeblank}
+          \vforce{  2.5 }{\forceblank}
+          \vforce{ -2.5 }{\forceblank}
+          \hforce{  4   }{\forceblank}
+          \hforce{  -2   }{17 N}
         \end{scope}
       \end{tikzpicture}
     \end{center}

@@ -1,0 +1,245 @@
+\documentclass[10pt]{exam}
+\usepackage{unit2}
+\usepackage{multicol}
+\usepackage{pgfplots}
+%\printanswers
+\shadedsolutions
+
+
+\title{Unit 02 Review}
+\author{Rohrbach}
+\date{\today}
+
+\pgfplotsset{
+  compat=1.18,
+  width=6cm,
+  posgraph/.append style={
+    axis y line = left,
+    axis x line = center,
+    axis line style = ultra thick,
+    xlabel={\bf time},
+    ylabel={\bf displacement},
+    ymin=0,
+    ymax=9,
+    xmin=0,
+    xmax=3,
+    xtick=\empty,
+    ytick=\empty,
+  },
+  velgraph/.append style={
+    xlabel={\bf time},
+    ylabel={\bf velocity},
+    ymin=-5,
+    ymax=5,
+    xmin=0,
+    xmax=4,
+    ytick=\empty,
+    xtick=\empty,
+    axis y line = left,
+    axis x line = center,
+    axis line style = ultra thick,
+  },
+}
+
+\begin{document}
+\maketitle
+
+\printeqs
+
+\begin{questions}
+  \question 
+    An arrow is shot straight up into the air.  Assuming that the upward direction is positive, what is true about the velocity and acceleration of the arrow on the way up, at the top of its motion, and on the way down?
+
+    \begin{multicols}{3}
+      {\it On the way up:}
+
+      Velocity:
+      
+      \begin{oneparcheckboxes}
+        \correctchoice pos
+        \choice neg
+        \choice zero
+      \end{oneparcheckboxes}
+
+      Acceleration:
+      
+      \begin{oneparcheckboxes}
+        \choice pos
+        \correctchoice neg
+        \choice zero
+      \end{oneparcheckboxes}
+
+      {\it At the top:}
+
+      Velocity:
+      
+      \begin{oneparcheckboxes}
+        \choice pos
+        \choice neg
+        \correctchoice zero
+      \end{oneparcheckboxes}
+
+      Acceleration:
+      
+      \begin{oneparcheckboxes}
+        \choice pos
+        \correctchoice neg
+        \choice zero
+      \end{oneparcheckboxes}
+
+      {\it On the way down:}
+
+      Velocity:
+      
+      \begin{oneparcheckboxes}
+        \choice pos
+        \correctchoice neg
+        \choice zero
+      \end{oneparcheckboxes}
+
+      Acceleration:
+      
+      \begin{oneparcheckboxes}
+        \choice pos
+        \correctchoice neg
+        \choice zero
+      \end{oneparcheckboxes}
+      
+    \end{multicols}
+
+  
+  \question
+    Explain why the upward and downward motions of an object thrown in the air are mirror images of each other.
+    
+    \begin{solution}[\stretch{1}]
+      The acceleration of gravity is always -9.8 m/s$^2$.  This means that on the way up, the object is losing speed at a rate of 9.8 m/s/s.  On the way down it gains that speed back at a rate of 9.8 m/s/s.  Any speed lost on the way up is gained back on the way down.  
+    \end{solution}
+
+  \question 
+    Sketch the velocity and displacement graphs for an object tossed in the air.  Assume that up is the positive direction.
+
+    \begin{multicols}{2}
+
+      \begin{tikzpicture}
+        \begin{axis}[posgraph]
+          \ifprintanswers
+            \addplot[red,smooth]{-3*(x-1.5)^2+6};
+          \fi
+        \end{axis}
+      \end{tikzpicture}
+  
+      \begin{tikzpicture}
+        \begin{axis}[velgraph]
+          \ifprintanswers
+            \addplot[red,smooth]{-2*x+4};
+          \fi
+        \end{axis}
+      \end{tikzpicture}
+      
+    \end{multicols}
+  
+  \question
+    What is the acceleration of a car that goes from rest to 30 m/s over the course of 128 m?
+
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        v_i &= 0    \\
+        v_f &= \SI{30}{\meter\per\second} \\
+        d   &= \SI{128}{\meter}    & 
+                      v_f^2 &= v_i^2 + 2 a d \\
+        a &= \text{ ?} & 
+                       30^2 &= (0)^2 + 2a(128) \\
+        &&              900 &= 256a \\
+        && \SI{3.52}{\meter\per\second^2} &= a 
+      \end{align*}
+    \end{solution}
+
+
+  \pagebreak
+  \printeqs
+
+  \question 
+    A cannon is sitting on the ground.  A stuntman is launched straight up into the air at a velocity of 21 m/s.
+
+    \begin{parts}
+      \part
+        What is the maximum height above the ground reached by the stuntman?
+
+        \begin{solution}[\stretch{1}]
+          \begin{align*}
+            v_i &= \SI{  21}{\meter\per\second}    & 
+                                v_f^2 &= v_i^2 + 2 a d \\
+            v_f &= \SI{   0}{\meter\per\second}    & 
+                                  0^2 &= 21^2 + 2(-9.8)d \\
+            a   &= \SI{-9.8}{\meter\per\second^2}  &
+                                 -441 &= -19.6d \\
+            d &= \SI{7.3}{\second} & 
+                    \SI{22.5}{\meter} &= d 
+          \end{align*}
+        \end{solution}
+      \part
+        For how long is the stuntman in the air?
+        
+        \begin{solution}[\stretch{1}]
+          \begin{align*}
+            v_f                &= v_i + at \\
+            -21                &= 21 - 9.8 t \\
+            \SI{4.29}{\second} &= t
+          \end{align*}
+        \end{solution}
+    \end{parts}
+
+  \question
+    You drop a penny, from rest, down a 20 m wishing well.  How long will it take the penny to reach the bottom?
+
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        d   &= \SI{20}{\meter}    & 
+                              d &= v_i t+\frac{1}{2}at^2 \\
+        a   &= \SI{9.8}{\meter\per\second^2} &
+                      20 &= (0)(t) + \frac{1}{2}(9.8)t^2 \\
+        v_i &= 0     &
+                                           20 &= 4.9t^2 \\
+        t &= \text{ ?} & 
+                                        4.08 &= t^2 \\
+        &&                \SI{2.02}{\second} &= t
+      \end{align*}
+    \end{solution}
+
+  \question
+    What is the initial velocity of an ice cream truck that has a final velocity of 24 m/s, and accelerated at 2.1 m/s$^2$ for 7.3 s?
+    
+
+    \begin{solution}[\stretch{1}]
+      \begin{align*}
+        v_i &= \text{ ?}     \\
+        v_f &= \SI{24}{\meter\per\second} \\
+        a   &= \SI{2.1}{\meter\per\second^2} & 
+                              v_f &= v_i + at \\
+        t &= \SI{7.3}{\second} & 
+                              24  &= v_i + (2.1)(7.3) \\
+        &&                    24  &= v_i + 15.33 \\
+        &&  \SI{8.67}{\meter\per\second} &= v_i 
+      \end{align*}
+    \end{solution}
+
+
+
+\end{questions}
+
+\end{document}
+
+\question
+A matchbox car starts at rest and accelerates at a rate of 5.6 m/s$^2$ for 10 s.  Find the car's displacement.
+
+\begin{solution}[\stretch{1}]
+  \begin{align*}
+    v_i &= \SI{0}{\meter\per\second}     \\
+    a &= \SI{5.8}{\meter\per\second^2}   \\
+    t &= \SI{10}{\second} & 
+                d &= v_i t+\frac{1}{2}at^2 \\
+    d &= \text{ ?}       & 
+                d &= (0)(10) + \frac{1}{2}(5.8)(10)^2 \\
+    &&          d &= \SI{280}{\meter}
+  \end{align*}
+\end{solution}
