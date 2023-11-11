@@ -2,7 +2,7 @@
 \usepackage[
   paperheight=2.125in, 
   paperwidth=5.5in,
-  margin=.4in
+  margin=.3in
 ]{geometry}
 \usepackage{tikz,graphicx}
 
@@ -33,16 +33,18 @@ A ball is thrown with an initial resultant velocity of 12.5 m/s at angle 37$^\ci
 
 \paragraph{Ex \#4} 
 
-An airplane comes in for a landing at a speed of 67 m/s.  Its angle is 15 degrees below horizontal.  Calculate the $x$- and $y$- components of the airplane's velocity
+An airplane comes in for a landing at a speed of 67 m/s.  Its angle is 15 degrees below horizontal.  Calculate the $x$- and $y$- components of the airplane's velocity.
 
 \begin{tikzpicture}
   \node at (0,0) 
     {\includegraphics[angle=-15,origin=c,width=1.5cm]{airplane.png}};
-  \draw[->,red] (.6,-.2) 
-    -- ++(-15:1) 
+  \draw[->,red,thick] (.6,-.2) coordinate (a)
+    -- ++(-15:1.05) 
     node[anchor=north,rotate=-14] {\footnotesize 67 m/s} 
-    -- ++(-15:1);
-  \draw[dashed, thin] (.6,-.2) -- ++(2,0);
+    -- ++(-15:1) coordinate (b);
+  \draw[dashed, thin] (a) -- ++(3,0);
+  \draw[brown] (-1,-1.1) -- ++(7,0);
+  \node at (2.1,-.4) {\footnotesize $15^\circ$};
 \end{tikzpicture}
 
 
