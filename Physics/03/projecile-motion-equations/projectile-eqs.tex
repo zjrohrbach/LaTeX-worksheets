@@ -8,6 +8,7 @@
     left=0.5in,
     right=2in
   ]{geometry}
+  \usetikzlibrary{arrows.meta}
 
 
 
@@ -44,21 +45,31 @@
   \begin{multicols}{2}
     \begin{center}
       \begin{tikzpicture}[
-          every node/.append style={font=\large}
+          every node/.append style={font=\large},
+          component/.append style={
+            dashed,
+            -{Stealth}
+          },
+          resultant/.append style={
+            ultra thick,
+            -{Stealth}
+          }
       ]
-        \draw[ultra thick,->] 
+        \draw[resultant] 
                   (0,0) -- (4.5,3) 
                     node[midway,anchor=south east]{\bf $v_R$};
-        \draw[thin,dashed,->] 
+        \draw[component] 
                   (0,0) 
                   -- (4.5,0) 
-                    node[midway,anchor=north]{$v_x$} 
+                    node[midway,anchor=north]{$v_x$} ;
+        \draw[component] 
+                  (4.5,0)
                   -- (4.5,3) 
                     node[midway, anchor=west]{$v_y$} ;
-        \draw[->] (1,0) node[anchor=south west]{$\theta$}
+        \draw[-Stealth] (1,0) node[anchor=south west]{$\theta$}
                   arc[
                     start angle = 0,
-                    end angle = 30, 
+                    end angle = 31, 
                     radius = 1
                   ];
       \end{tikzpicture}
