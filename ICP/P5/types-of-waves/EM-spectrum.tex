@@ -1,0 +1,77 @@
+\documentclass[landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfdeclareverticalshading{rainbow}{100bp}
+ {
+  color(0bp)=(red); 
+  color(25bp)=(red); 
+  color(35bp)=(yellow);
+  color(45bp)=(green); 
+  color(55bp)=(cyan); 
+  color(65bp)=(blue);
+  color(75bp)=(violet); 
+  color(100bp)=(violet)
+}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\wave}{
+  \noindent
+  \begin{tikzpicture}[x=1cm]
+    \def\tickheight{.2}
+    \node[anchor=west] at (-6,4) 
+      {\bf \Large The Electromagnetic Spectrum};
+    \draw[<->,thick] (-6,0) -- (6,0);
+    \foreach \x in {-4.5,-2.25,-.1,.1,2.25,4.5} {
+      \draw (-\x,0) +(0,\tickheight) -- +(0,-\tickheight);
+    }
+    \shade[shading=rainbow,shading angle=-90] 
+      (-.1,\tickheight) 
+      -- (.1,\tickheight) 
+      -- (.1,-\tickheight) coordinate (right vis)
+      -- (-.1,-\tickheight) coordinate (left vis)
+      -- cycle;
+    \shade[shading=rainbow,shading angle=-90] 
+        (-4,-1) coordinate (left zoom) 
+      -- (4,-1) coordinate (right zoom)
+      -- (4,-2) coordinate (bright zoom)
+      -- (-4,-2) coordinate (bleft zoom)
+      -- cycle;
+
+    \draw (left vis) -- (left zoom) -- (bleft zoom)
+      -- (bright zoom) -- (right zoom) -- (right vis);
+
+    \begin{scope}[shift={(-6,2)}]
+      \begin{axis}[
+          red,
+          width=12cm,
+          height=5mm,
+          scale only axis,
+          ultra thick,
+          xmin=-600,
+          xmax=-1,
+          hide axis
+        ] 
+        \addplot[domain=-600:-1,samples=900]{sin(150*sqrt(-x))};
+      \end{axis}
+    \end{scope}
+
+  \end{tikzpicture}
+}
+
+\newcommand{\myline}{
+  \wave\hspace{\stretch{1}}\wave
+}
+
+
+
+\myline\vspace{0.5in} \vspace{\stretch{1}}
+
+\vspace{0.5in}\myline \vspace{\stretch{1}}
+
+
+
+\end{document}
