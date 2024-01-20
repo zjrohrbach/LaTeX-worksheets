@@ -1,0 +1,58 @@
+\documentclass[10pt]{exam}
+\usepackage[icp]{template-for-exam}
+\usepackage{tikz,multicol}
+\usepackage[top=0.2in, bottom=0.5in, left=1in, right=1in]{geometry}
+
+
+
+\newcommand{\drawscantron}[2]{
+  \begin{center}
+    \begin{tikzpicture}
+      \node[anchor=south west] at (0,0) {\includegraphics[width=6in]{scantron.png}};
+      \fill (#1,#2) circle (0.19);
+      \node at (8.1,18.5) {Physics Final Exam};
+    \end{tikzpicture}
+
+  \end{center}
+}
+
+\newcommand{\writerules}{
+  \subsection*{PLEASE DO NOT OPEN UNTIL INSTRUCTED TO DO SO!}
+
+  \begin{enumerate}
+    \item 
+      Put your name three places: On your Scantron, On your Equation Sheet, and on the first page of the Exam Packet.
+    \item 
+      On your Scantron, bubble in your 3-digit ZipGrade ID from your notebook.
+    \item 
+      You may write on your equation sheet and on the exam.  There is space provided to show your work, but only your scantron will be graded.
+    \item 
+      {\bf
+        PHONES AND EARBUDS NEED TO BE PUT AWAY DURING THE EXAM.
+      }
+    \item 
+      When you are finished, turn in your scantron, equation sheet, and exam packet up front.
+    \item 
+      Stay silent until all your classmates are finished.
+  \end{enumerate}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+
+
+\drawscantron{10.05}{2.05}
+\writerules
+
+\pagebreak
+
+\drawscantron{10.45}{2.05}
+\writerules
+
+\pagebreak
+
+
+
+
+\end{document}

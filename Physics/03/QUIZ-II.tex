@@ -1,0 +1,60 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\header{Name:}{Date:}{Period: \hspace{2cm} ID:A}
+
+
+\title{Projectile Motion - Quiz II}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent
+An arrow is shot with a velocity of 120 m/s at a $72^\circ$ angle.  
+
+\vspace{2em}
+
+
+\begin{parts}
+  \part
+    Label this diagram of the situation and {\bf make a T-chart} to list your knowns and unknowns. (3 points)
+
+    \vspace{1em}
+
+    \begin{tikzpicture}
+      \draw[dashed,red] (2.5,2) parabola (0,0);
+      \draw[dashed,red] (2.5,2) parabola (5,0);
+      \draw (-1,0) -- ++(7,0);
+      \draw[ultra thick, blue, ->] (0,0) -- ++(65:.6);
+      \draw[ultra thick, blue, ->] (0,0) -- ++(65:.6);
+      \draw[ultra thick, blue, ->] (2.3,2) -- ++(0:.6);
+      \draw[ultra thick, blue, ->] (5,0) ++(125:.6)  
+        -- ++(-65:.6);
+    \end{tikzpicture}
+
+    \vspace{1em}
+
+  \part
+    Draw a triangle and calculate the x- and y- velocities of the arrow at the moment it is shot into the air. (3 points)
+    \vs
+  
+  \part
+    What is the maximum height that the arrow will reach? (3 points)
+    \vs
+  
+  \part
+    How long will the arrow be in the air? (3 points)
+    \vs
+  
+  \part
+    How far forward will the arrow go before hitting the ground? (3 points)
+    \vs
+
+    
+\end{parts}
+
+
+\end{document}

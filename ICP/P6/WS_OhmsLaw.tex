@@ -1,0 +1,108 @@
+\documentclass[10pt]{exam}
+\usepackage[icp]{template-for-exam}
+\usepackage{circuitikz}
+
+
+\title{Ohm's Law Practice}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+  \question
+    What current flows through a hair dryer plugged into a 110 Volt circuit if it has a resistance of 25 ohms?
+    \ku\vs
+
+  \question
+    A light bulb has a resistance of 5 ohms and a maximum current of 10 A. How much voltage can be applied before the bulb will break?
+    \ku\vs
+
+  \question
+    A television takes in a current of 2 amps.  It is plugged into the wall, which provides a potential difference of 120 volts.  What is the resistance of the TV?
+    \ku\vs
+
+\begin{EnvUplevel}
+  \begin{flushright}
+    \emph{Ohm My Goodness! Isn't this fun?  More on the next page...}
+  \end{flushright}
+\end{EnvUplevel}
+
+\pagebreak
+
+\question
+  What is the current through the following circuit?  (\emph{Hint: If resistors are in series, you can add the resistances.})
+  
+  \begin{tikzpicture}
+    \draw (0,0) 
+      to[battery ,l=\SI{ 9}{\volt}] (0,2)
+      to[resistor,l=\SI{100}{\ohm}] (3,2)
+      to[resistor,l=\SI{ 50}{\ohm}] (3,0)
+      to[resistor,l=\SI{ 10}{\ohm}] (0,0);
+
+    \node[anchor=north west] at (4,3) 
+      {Knowns/Unknowns};
+    \node[anchor=north west] at (7.6,3)
+      {Plug \& Chug};
+    \node[anchor=north west] at (11.8,3) 
+      {Answer w/ Units};
+    \draw (7.4,3) -- ++(0,-4);
+    \draw (11.6,3) -- ++(0,-4);
+
+  \end{tikzpicture}
+
+\question
+  The following circuit has a current of 0.1 amperes.  Find the resistance of the resistor.
+  
+  \begin{tikzpicture}
+    \draw (0,2.5) 
+      to[battery ,l=\SI{1.5}{\volt}] +(0,2)
+      to[bulb,l=\SI{ 5}{\ohm}]   +(3,2)
+      to[resistor,l={
+          \fillin[][3em]\SI{}{\ohm}
+        }]                          +(3,0)
+      to[short]                     +(0,0);
+
+    \node[anchor=north west] at (4,3) 
+      {Knowns/Unknowns};
+    \node[anchor=north west] at (7.6,3)
+      {Plug \& Chug};
+    \node[anchor=north west] at (11.6,3) 
+      {Answer w/ Units};
+    \draw (7.4,3) -- ++(0,-4);
+    \draw (11.4,3) -- ++(0,-4);
+
+  \end{tikzpicture}
+
+
+\question
+  The following circuit has a current of 0.25 amperes.  Find the voltage of the second battery.
+  
+  \begin{tikzpicture}
+    \draw (0,-1.5) 
+      to[battery ,l=\SI{2}{\volt}] ++(0,2)
+      to[battery ,l={
+          \fillin[][3em]\SI{}{\volt}
+        }]                           ++(0,2)
+      to[resistor,l=\SI{15}{\ohm}]   ++(2,0)
+      to[resistor,l=\SI{10}{\ohm}]   ++(0,-4)
+      to[short]                      ++(-2,0);
+ 
+
+    \node[anchor=north west] at (3,3) 
+      {Knowns/Unknowns};
+    \node[anchor=north west] at (6.6,3)
+      {Plug \& Chug};
+    \node[anchor=north west] at (11,3) 
+      {Answer w/ Units};
+    \draw (6.4,3) -- ++(0,-4);
+    \draw (10.8,3) -- ++(0,-4);
+
+  \end{tikzpicture}
+
+  
+\end{questions}
+
+\end{document}

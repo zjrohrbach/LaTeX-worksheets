@@ -1,0 +1,32 @@
+\documentclass[12pt,landscape]{article}
+\usepackage[margin=.3in]{geometry}
+\setlength{\columnsep}{.6in}
+\usepackage{multicol}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\mycontent}{
+  \def\myend{\\[8em]\hline}
+
+  \begin{tabular}{l|p{2.9in}}
+    \hline
+    tangential velocity: & \myend
+    rotational velocity: & \myend
+    centripetal force:   & \myend \hline
+    period of motion:    & \myend
+    radian:              & \myend
+  \end{tabular}
+}
+
+\begin{multicols*}{2}
+
+  \mycontent
+
+  \columnbreak
+
+  \mycontent
+
+\end{multicols*}
+
+\end{document}
