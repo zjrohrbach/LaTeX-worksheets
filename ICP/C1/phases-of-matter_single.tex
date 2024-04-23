@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage[
+  paperheight=4.25in, 
+  paperwidth=5.5in,
+  margin=.4in
+]{geometry}
+\usepackage{tikz}
+
+
+\tikzstyle{person}=[ultra thick, orange!50, scale=0.8]
+
+
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  \begin{tikzpicture}
+
+    \draw (0,3)      ++(-1.75,-.75) rectangle ++(3.5,1.5);
+    \draw (-3.5,-3)  ++(-1.75,-.75) rectangle ++(3.5,1.5);
+    \draw (3.5,-3)   ++(-1.75,-.75) rectangle ++(3.5,1.5);
+
+    \draw[->] (-3.75,-2) -- (-0.25,2);
+    \draw[<-] (-3.25,-2) -- (0.25,2);
+
+
+  \end{tikzpicture}
+\end{center}
+
+\end{document}

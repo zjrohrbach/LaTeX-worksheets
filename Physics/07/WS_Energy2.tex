@@ -1,0 +1,128 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{my-tikz-clipart}
+
+\title{Energy \#2}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+\question
+  A 1.3-kg apple is hanging 2.5 m above the ground.
+
+  \begin{parts}
+    \part
+      What is its potential energy?
+      \vs
+    
+    \part
+      What would be the work required to lift it from the ground to that height in the air?  (\emph{Hint:} Use $W=Fd$ and $F_G=mg$)
+      \vs 
+
+    \part 
+      What do you notice about your answers to (a) and (b)?  Why does this make sense?
+      \vspace{5em}
+
+  \end{parts}
+
+\question
+  What is the kinetic energy of a car with a mass of 1000 kg traveling with a velocity of (a) 15~m/s and (b) 30~m/s? (\emph{Give two answers.})
+  \vs
+
+\question
+  What is the speed of a 1500-kg airplane with 7,350,000 J of Kinetic Energy?
+  \vs
+
+\question
+  Calculate the \emph{total energy} of a 0.56-kg football thrown with a speed of 22~m/s at the top of its flight, 6.8~m off the ground.
+  \vs
+
+\pagebreak
+
+\uplevel{The following questions are \emph{``Proportionality questions''}.  They don't involve doing math.  You just need to think ``proportionally'' about how the equations will respond when you change their variables.}
+
+\question 
+  What would happen to the kinetic energy of a vehicle if its {\bf speed} were {\bf doubled}?
+  \vs 
+
+\question 
+  What would happen to the kinetic energy of a vehicle if its {\bf mass} were {\bf doubled}?
+  \vs 
+
+\question 
+  What would happen to the kinetic energy of a vehicle if its {\bf speed} were {\bf cut by 1/3}?
+  \vs 
+
+\question 
+  What would happen to the potential energy of a ball if its {\bf height} were {\bf quadrupled}?
+  \vs 
+
+\question
+  Two cars are traveling down the highway. They have the \emph{same mass}, but car \#2 is traveling twice as fast as car \#1. Which car has the larger kinetic energy, and by how much? 
+
+  \begin{tikzpicture}
+    \path (-4,0) coordinate (one) pic[scale=0.5] {car} 
+      +(1.25,0.45) node[fill=white, shape=circle] {$m$}
+      +(1.25, -0.5) node {Car \#1};
+    \draw[->,blue,very thick] 
+      (one) ++(2.5,0.25) -- ++(1,0) 
+      node[anchor=west] {$v$};
+    \path (4,0) coordinate (two) pic[scale=0.5] {car}
+      +(1.25,0.45) node[fill=white, shape=circle] {$m$}
+      +(1.25, -0.5) node {Car \#2};
+    \draw[->,blue,very thick] 
+      (two) ++(2.5,0.25) -- ++(2,0)
+      node[anchor=west] {$2v$};
+
+  \end{tikzpicture}
+  \vs
+
+\question
+  Two cars are traveling down the highway. They have the \emph{same speed}, but car \#2 is traveling twice the mass of car \#1. Which car has the larger kinetic energy, and by how much? 
+
+  \begin{tikzpicture}
+    \path (-4,0) coordinate (one) pic[scale=0.5] {car} 
+      +(1.25,0.45) node[fill=white, shape=circle] {$m$}
+      +(1.25, -0.5) node {Car \#1};
+    \draw[->,blue,very thick] 
+      (one) ++(2.5,0.25) -- ++(1,0) 
+      node[anchor=west] {$v$};
+    \path (4,0) coordinate (two) pic[scale=0.5] {car}
+      +(1.25,0.45) node[fill=white, shape=circle] {$2m$}
+      +(1.25, -0.5) node {Car \#2};
+    \draw[->,blue,very thick] 
+      (two) ++(2.5,0.25) -- ++(1,0)
+      node[anchor=west] {$v$};
+
+  \end{tikzpicture}
+  \vs
+
+\question
+  Two cars are traveling down the highway. Car \#1 has three times speed as Car \#2, but Car \#2 has four times the mass of Car \#1. Which car has the larger kinetic energy, and by how much? 
+
+  \begin{tikzpicture}
+    \path (-4,0) coordinate (one) pic[scale=0.5] {car} 
+      +(1.25,0.45) node[fill=white, shape=circle] {$m$}
+      +(1.25, -0.5) node {Car \#1};
+    \draw[->,blue,very thick] 
+      (one) ++(2.5,0.25) -- ++(3,0) 
+      node[anchor=west] {$3v$};
+    \path (4,0) coordinate (two) pic[scale=0.5] {car}
+      +(1.25,0.45) node[fill=white, shape=circle] {$4m$}
+      +(1.25, -0.5) node {Car \#2};
+    \draw[->,blue,very thick] 
+      (two) ++(2.5,0.25) -- ++(1,0)
+      node[anchor=west] {$v$};
+
+  \end{tikzpicture}
+  \vs
+
+  
+  
+\end{questions}
+
+\end{document}

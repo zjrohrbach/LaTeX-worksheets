@@ -23,6 +23,18 @@
     \draw[fill=gray!50, draw=black, ultra thick] 
       (4.5,0) circle (.5);
   },
+  truck/.pic = {
+    \filldraw[top color=orange!50, draw=black, rounded corners] 
+      (0,0) -- (0,1.25) --  (2,1.25) -- (4.5,1.25) -- 
+      (5.5,.6) -- (5.5,0) -- cycle;
+    \draw[fill=blue!10] 
+      (2.5,1.25) -- (2.5,2.5) -- (4,2.5) -- 
+      (4.5,1.25) -- cycle;
+    \draw[fill=gray!50, draw=black, ultra thick] 
+      (1,0) circle (.5);
+    \draw[fill=gray!50, draw=black, ultra thick] 
+      (4.5,0) circle (.5);
+  },
   bucket/.pic = {
     \node[
         cylinder,draw,

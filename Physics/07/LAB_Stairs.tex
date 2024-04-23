@@ -1,0 +1,221 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{enumitem,boldline,multirow,makecell}
+\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+%\printanswers
+
+\title{Stair Lab}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\newcommand{\printeqs}{
+  \begin{align*}
+    W   &= F d          & 
+    P   &= \frac{W}{t}  &
+    F_G &= mg
+  \end{align*}
+
+  \vspace{-2em}
+}
+
+\vspace{-2em}
+\printeqs
+\vspace{-2em}
+
+\ifprintanswers
+  \vspace{3em}
+
+  \begin{center}
+    \large \color{red} \bf --- Makeup Assignment with Sample Data included. ---
+  \end{center}
+
+  \vspace{-2em}
+
+\fi
+
+
+\begin{questions}
+
+\uplevel{\section*{Pre-Lab}}
+
+\question
+  \emph{Practice Problem:} A 20-kg box is lifted 3 m into the air:
+
+  \begin{parts}
+    \part 
+      Calculate the force that you are doing work against.
+      \vs[2]
+
+    \part 
+      How much work is needed to lift the box that high?
+      \vs[2]
+    
+    \part
+      If it took you 12 s to lift it 3 m, what is your power?
+      \vs
+  
+  \end{parts}
+
+  
+  
+  
+  
+  
+\begin{EnvUplevel}
+
+  \section*{Hypotheses}
+  
+  In this lab you will change the \emph{speed} you climb the stairs, the \emph{height} of the stairs, and the \emph{mass} you are carrying.
+
+\end{EnvUplevel}
+
+  
+\question
+  Which (if any) of these will affect work?  Explain why you think this.
+  \vs[2]
+  
+  
+\question
+  Which (if any) of this will affect power?  Explain why you think this.
+  \vs
+  
+  
+\uplevel{\section*{Procedure}}
+  \begin{enumerate}
+    \item
+      Pick two members of your group to go up the stairs.  Person A will carry 1 book; person B will carry 3 textbooks.
+    \item
+      Start at the bottom of the stairs for trial 1 (long stairs) or trial 2 (short stairs).
+    \item
+      One person in the group will time how long it takes person A to climb the stairs at a slow rate (think how fast you would go on a Monday morning).  Record the time
+    \item 
+      Return to the bottom of the stairs, and repeat step 
+      \#2, but this time at a moderate pace (think how fast you go on a regular day)
+    \item 
+      Return to the bottom of the stairs, and repeat step \#2, but this time at a fast pace (think how fast you go if you'’'re running late to class)
+    \item 
+      Repeat steps \#2-5, but this time do it for the other set of steps
+    \item 
+      Repeat steps \#2-6 with person B.
+  \end{enumerate}
+
+\pagebreak
+\printeqs
+
+\uplevel{\section*{Data}}
+
+\renewcommand{\arraystretch}{2}
+\newcommand{\samp}[1]{
+  \ifprintanswers {\bf \color{red}#1 sec} \fi
+}
+
+\paragraph{Trial \#1: Tall stairs}\hfill
+
+\begin{tabular}{|l|c|c|c|p{7em}|p{7em}|}
+  \hline
+  & Stair Height & Mass carried 
+  & \centering\arraybackslash Climb Time (s)  
+  & \centering\arraybackslash Work (J) 
+  & \centering\arraybackslash Power (W) \\
+  \hlineB{4}
+  fast   & \multirow{6}{*}{3.0 m} & 
+    \multirow{3}{*}{\shortstack{(1 book) \\ 2.7 kg}} 
+                                    & \samp{1.5} & & \\
+  \cline{1-1}\cline{4-6}
+  medium & &                        & \samp{3.2} & & \\
+  \cline{1-1}\cline{4-6}
+  slow   & &                        & \samp{8.3} & & \\
+
+  \clineB{1-1}{4}\clineB{3-6}{4}
+  fast   & & 
+    \multirow{3}{*}{\shortstack{(3 books) \\ 8.1 kg}} 
+                                    & \samp{2.1} & & \\
+  \cline{1-1}\cline{4-6}
+  medium & &                        & \samp{3.8} & & \\
+  \cline{1-1}\cline{4-6}
+  slow   & &                        & \samp{9.1} & & \\
+  \hlineB{4}
+\end{tabular}
+
+    
+Show at least one calculation for work and at least one calculation for power:
+\vs
+
+\paragraph{Trial \#2: Short stairs}\hfill
+
+\begin{tabular}{|l|c|c|c|p{7em}|p{7em}|}
+  \hline
+  & Stair Height & Mass carried 
+  & \centering\arraybackslash Climb Time (s)  
+  & \centering\arraybackslash Work (J) 
+  & \centering\arraybackslash Power (W) \\
+  \hlineB{4}
+  fast   & \multirow{6}{*}{1.25 m} & 
+    \multirow{3}{*}{\shortstack{(1 book) \\ 2.7 kg}} 
+                                    & \samp{0.8} & & \\
+  \cline{1-1}\cline{4-6}
+  medium & &                        & \samp{1.4} & & \\
+  \cline{1-1}\cline{4-6}
+  slow   & &                        & \samp{3.9} & & \\
+
+  \clineB{1-1}{4}\clineB{3-6}{4}
+  fast   & & 
+    \multirow{3}{*}{\shortstack{(3 books) \\ 8.1 kg}} 
+                                    & \samp{1.1} & & \\
+  \cline{1-1}\cline{4-6}
+  medium & &                        & \samp{1.8} & & \\
+  \cline{1-1}\cline{4-6}
+  slow   & &                        & \samp{4.4} & & \\
+  \hlineB{4}
+\end{tabular}
+
+    
+Show at least one calculation for work and at least one calculation for power:
+\vs
+
+\pagebreak
+\printeqs
+
+\begin{EnvUplevel}
+
+  \section*{Conclusion Questions}
+  
+  Justify all your answers using your data!!
+
+\end{EnvUplevel}
+
+\question
+  Compare the work you did carrying one book vs. carrying multiple books.  How did mass seem to affect the amount of work done?
+  \vs
+
+
+\question
+  Compare your power output for the different speeds in trial one.  How did the speed with which you climbed the stairs seem to affect your power?
+  \vs
+
+\question
+  How did the height of the stairs seem to affect your work?
+  \vs
+
+\question
+  Of the power calculations you made, which ones are similar?  Why does this make sense?
+  \vs
+
+
+
+
+\uplevel{\section*{Post-Lab}}
+
+\question
+  A crane lifts a 1200-kg car to height of 10 meters in a time of 8 seconds.  What power does the motor produce in accomplishing this task?
+  \vs[2]
+
+  
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,198 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,my-tikz-clipart}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta}
+%\printanswers
+\shadedsolutions
+
+\title{Unit 07 Review (Work \& Energy)}
+\author{Rohrbach}
+\date{\today}
+
+\newcommand{\printeqs}{
+  \ifprintanswers
+  \else
+    \begin{center}
+      \begin{tabular}{|*{11}{c}|}
+        \hline 
+        &&&&&&&&&&\\
+        &
+        $W=Fd$ &&
+        $P=\frac{W}{t}$ &&
+        $F_G=mg$ &&
+        $KE=\frac{1}{2}mv^2$ &&
+        $PE=mgh$ &\\
+        &&&&&&&&&&\\
+        \multicolumn{11}{|c|}{$KE_i + PE_i + W = KE_f + PE_f$}\\
+        &&&&&&&&&&\\
+        \hline
+      \end{tabular}
+    \end{center}
+  \fi
+}
+
+
+\begin{document}
+\maketitle
+
+\printeqs
+
+\begin{questions}
+
+\question
+  A ski jumper with a mass of 93 kg starts from rest at the top of a ramp which is 55 m above the landing zone.  Assume he starts from rest at the top of the ramp and that the snow is frictionless.  What is his velocity when he reaches the end of the ramp, which is 35 m above the landing zone?
+
+  \ifprintanswers
+  \else
+    \begin{tikzpicture}
+      \draw (0,5.5) 
+        parabola[bend at end] (3,3) 
+        parabola (4,3.5) -- (4,0) -- (0,0) -- cycle;
+
+      \draw[|<->|] (-0.8,0) -- ++ (0,5.5) 
+        node[midway, fill=white] {55 m};
+      \draw[|<->|] (4.8,0) -- ++ (0,3.5) 
+        node[midway, fill=white] {35 m};
+    \end{tikzpicture}
+  \fi
+
+  \begin{solution}[\stretch{1}]
+    \begin{align*}
+      m   &= \SI{93}{\kilo\gram} &
+      h_i &= \SI{55}{\meter}     &
+      h_f &= \SI{35}{\meter}     &
+      v_i &= \SI{0}{\meter\per\second} &
+      v_f &= \text { ?}          &
+      W   &= \SI{0}{\joule}
+    \end{align*}
+
+    \begin{align*}
+      PE_i  &= KE_f + PE_f \\
+      mgh_i &= \frac{1}{2}mv_f^2 + mgh_f \\
+      (93)(9.8)(55) &= \frac{1}{2}(93)v_f^2+(93)(9.8)(35) \\
+      \SI{19.8}{\meter\per\second} &= v_f
+    \end{align*}
+  \end{solution}
+
+\question
+  A 75-N force, is used to pull a 20-kg block 1.3 m across the ground.
+
+  \begin{parts}
+    \part
+      What is the work done on the block?
+      
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          W = Fd = (75)(1.3) = \SI{97.5}{\joule}
+        \end{align*}
+      \end{solution}
+
+    \part
+      If the block started from rest, what is its final velocity?
+      
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          m   &= \SI{20}{\kilo\gram} &
+          h_i &= \SI{0}{\meter}     &
+          h_f &= \SI{0}{\meter}     &
+          v_i &= \SI{0}{\meter\per\second} &
+          v_f &= \text { ?}          &
+          W   &= \SI{97.5}{\joule}
+        \end{align*}
+    
+        \begin{align*}
+          W &= KE_f \\
+          W    &= \frac{1}{2}mv_f^2 \\
+          97.5 &= \frac{1}{2}(20)v_f^2 \\
+          \SI{3.12}{\meter\per\second} &= v_f
+        \end{align*}
+      \end{solution}
+
+    \part
+      If this took 2.3 s, what was the power exerted by the person pulling the block?
+      
+      \begin{solution}[\stretch{1}]
+        \begin{align*}
+          P = \frac{W}{t} = \frac{97.5}{2.3} = \SI{42.4}{\watt}
+        \end{align*}
+      \end{solution}
+
+  \end{parts}
+
+\pagebreak
+
+\printeqs
+
+\question
+  A skier ($m = \SI{78}{\kilo\gram}$) is lifted to the top of a 103-m-tall mountain.  How much work is done by the lift?
+  
+  \begin{solution}[\stretch{2}]
+    \begin{align*}
+      m &= \SI{78}{\kilo\gram} &
+      d &= \SI{108}{\meter}    &
+    \end{align*}
+
+    \begin{align*}
+      F_G &= mg = \SI{764.4}{\newton} \\
+      W   &= Fd = (764.4)(108) = \SI{78733.2}{\joule}
+    \end{align*}
+  \end{solution}
+
+\question
+  Define the following
+
+  \begin{parts}
+    \part work
+    \part power
+    \part energy
+    \part kinetic energy
+    \part potential energy
+  \end{parts}
+
+  \begin{solution}[3em]
+    \begin{parts}
+      \part work: influence that changes energy
+      \part power: rate that work gets done
+      \part energy: ability to do work
+      \part kinetic energy: energy of motion
+      \part potential energy: energy that is stored
+    \end{parts}
+  \end{solution}
+
+\question
+  What are the two categories of work?
+  
+  \begin{solution}[\stretch{1}]
+    (i) work against a force; (ii) work to change speed
+  \end{solution}
+
+\question
+  What does it mean to say that energy is \emph{conserved}?
+  
+  \begin{solution}[\stretch{1}]
+    The total energy of a system does not change.
+  \end{solution}
+
+\question
+  Consider these proportional reasoning problems
+
+  \begin{parts}
+    \part 
+      Two cars are driving down the road.  If car \#2 is traveling two times faster than car \#1, but car \#1 has three times more mass than car \#2, which one has more kinetic energy?
+      
+      \begin{solution}[\stretch{1}]
+        Car \#2 has $4\times KE$, car \#1 has $3\times KE$.  {\bf Therefore, Car \#2 has more $KE$.}
+      \end{solution}
+
+    \part 
+    	An apple is held above the ground on Earth.  If the moon's gravity is 1/8 the size than it is on earth, how much less would the apple's PE be on the moon (assuming mass and height stay the same)?
+      
+      \begin{solution}[\stretch{1}]
+        $1/8\times PE$
+      \end{solution}
+
+  \end{parts}
+
+\end{questions}
+
+\end{document}
