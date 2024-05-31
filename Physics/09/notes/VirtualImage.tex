@@ -1,0 +1,69 @@
+\documentclass[landscape]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\pgfdeclareverticalshading{rainbow}{100bp}
+ {
+  color(0bp)=(red); 
+  color(25bp)=(red); 
+  color(35bp)=(yellow);
+  color(45bp)=(green); 
+  color(55bp)=(cyan); 
+  color(65bp)=(blue);
+  color(75bp)=(violet); 
+  color(100bp)=(violet)
+}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\pic}{
+  \begin{tikzpicture}
+
+    \def\person{
+      \begin{scope}[scale=2, shift={(-2,0)}]
+        \draw (0,1.2) circle (0.2);
+        \coordinate (waste) at (-.1,.3);
+        \coordinate (neck) at (0,1);
+        \draw (waste) -- (neck);
+        \draw (-.3,0) -- (waste);
+        \draw (0,0) -- (waste);
+        \draw (neck) -- ++(.1,-.3) -- ++(.2,-.1);
+        \draw (neck) -- ++(-.2,-.3) -- ++(.2,-.1);
+
+        \draw[rounded corners] (neck) ++(-.3,.4) -- +(.6,0)
+          ++(.2,0) -- ++(0,0.2) -- ++(0.2,0) -- ++(0,-0.2);
+
+        \path (0,1.2) ++(-20:0.2) coordinate (smile);
+
+        \draw (neck) ++(0.1,0.25) circle (0.02)
+            ++(0,-0.1) to[bend right] (smile);
+      \end{scope}
+    }
+
+    \draw[ultra thick, blue] (0,4) -- (0,0);
+
+    \begin{scope}
+      \person
+    \end{scope}
+    \begin{scope}[xscale=-1,yscale=1, dotted]
+      \person
+    \end{scope}
+
+  \end{tikzpicture}
+}
+
+\newcommand{\myline}{
+  \noindent\pic\hspace{\stretch{1}}\pic
+}
+
+
+
+\myline\vspace{0.5in} \vspace{\stretch{1}}
+
+\vspace{0.5in}\myline \vspace{\stretch{1}}
+
+
+
+\end{document}
