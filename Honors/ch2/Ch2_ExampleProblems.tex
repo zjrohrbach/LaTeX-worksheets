@@ -1,0 +1,63 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen}
+\footer{\emph{\small Example Problems: Ch 2 (One-Dimensional Motion)}}{}{\sc \myclass}
+
+
+\title{Chapter 2 Example Problems}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Example Problem 3-\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+\begin{questions}
+  
+\titledquestion{Kinematic Equations}
+  A minivan starts at rest and then accelerates at a rate of 3 m/s$^2$ for 10 seconds.  How far does the minivan travel in this time?
+  \vs 
+
+\question
+  In coming to a stop, a car leaves skid marks 65 meters long on the highway.  Assuming a deceleration of 4.0~m/s$^2$, estimate the speed of the car just before braking. 
+  \vs 
+
+\question
+  You are traveling at 24 m/s on the onramp.  As you get ready to merge onto the interstate, you accelerate over a distance of 50 meters to 46 m/s.  What was your acceleration?
+  \vs 
+
+\pagebreak
+
+\titledquestion{Free Fall}
+  The Eiffel Tower is 324 meters tall.  If we make the (totally unrealistic) assumption that there is no air resistance, how fast would a penny dropped from the Eiffel Tower be travelling when it hit the ground?
+  \vs 
+
+
+\titledquestion{Throwing Cats}
+  You have a kitten named Mittens.  You toss Mittens into the air at an initial velocity of 8~m/s. 
+  
+  \begin{parts}
+    \part
+      How high will Mittens go before coming back down (at which point you will---of course---gently catch her)?
+    \part
+      What is the total time that Mittens is in the air?
+    \part
+      What is her velocity just before you catch her?
+
+  \end{parts}
+  \vs
+  
+
+
+
+\end{questions}
+
+
+
+
+\end{document}

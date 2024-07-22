@@ -1,0 +1,252 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{multicol}
+
+
+
+\def\mytitle{Chapter 2 (One-Dimensional Kinematics)}
+\author{Rohrbach}
+\date{\today}
+
+\def\mymaketitle{
+  \begin{flushleft}
+    {\LARGE \textbf \mytitle \par}
+  \end{flushleft}
+}
+
+\newcommand{\printeqs}{
+  \section*{Equations} 
+  
+  \begin{center}
+    \begin{tabular}{cccccc}
+      $\bar{v} = \frac{\Delta x}{\Delta t}$       &   
+      $\bar{a} = \frac{\Delta v}{\Delta t}$       &&
+      $v = v_0 + a t$                             &
+      $x = x_0 + v_0t + \frac{1}{2}at^2$          &
+      $v^2 = v_0^2 + 2a \left( x - x_0 \right) $  \\
+          & & & ``Old Faithful'' & ``Big Chalupa'' & ``Ain't Got No Time'' \\
+    \end{tabular}
+  \end{center}
+}
+
+\begin{document}
+
+
+\mymaketitle
+
+
+
+\newcommand{\stampbox}[1]{
+
+  \hfill
+  \begin{tikzpicture}[every text node part/.style={align=center}]
+     \node[gray!50,draw,rounded corners] at (0,0) 
+      {\sc Stamp \\ \sc Here \\ \small #1 \sc Points};
+  \end{tikzpicture}
+  \vspace{1em}
+  
+  \hrule
+
+}
+
+\section*{Homework Check A (collected Mon Aug, 15)}
+
+
+%%%%%%%%%%%
+
+
+\paragraph{Velocity and Speed} p. 43 \#1, 2, 4 
+\dotfill Complete by Thu, Aug 11
+
+\stampbox{3}
+
+
+%%%%%%%%%%%
+
+\paragraph{Average Velocity} p. 43 \#7, 9, 12
+\dotfill Complete by Thu, Aug 11
+
+\stampbox{5}
+
+%%%%%%%%%%%%
+
+\paragraph{Acceleration} pp. 43-44 \#17, 18, 19, 20
+\dotfill Complete by Thu, Aug 11
+
+\stampbox{5}
+  
+
+%%%%%%%%%%%%
+
+\paragraph{Graphical Analysis} p. 45 \#55, 57, 58
+\dotfill Complete by Mon, Aug 15
+
+{\sc There is not much work to show for these problems; 
+you can provide just answers.}
+
+\stampbox{2}
+
+
+%%%%%%%%%%%%%
+
+\subsection*{Answers}
+
+\begin{multicols}{3}
+
+  \begin{itemize}[noitemsep]
+    \item[1.]  52.7 m
+    \item[2.]  85.5 km/h
+    \item[4.]  $-4.06$ cm/s
+    \item[7.]  distance is 350 km; \\
+               avg velocity is 77.7 km/h
+    \item[9.]  avg vel is zero; \\
+               avg speed is 3.68 m/s
+    \item[12.] avg vel is zero; \\
+               avg speed is 61.1 km/h
+    \item[17.] 6.1 m/s/s
+    \item[18.] 6.52 m/s/s = 84,500 km/h/h
+    \item[19.] $-6$ m/s/s = $-0.61$ g
+    \item[20.] 8.5 seconds
+    \item[55.] a) t=48 sec;  \\ 
+               b) $\SI{90}{\second} < t < \SI{105}{\second}$; \\
+               c) $\SI{0}{\second} < t < \SI{40}{\second}$; \\
+               d) $t=\SI{70}{\second}$
+    \item[57.] a) about 0.3 m/s;  \\
+               b) about 1.3 m/s;  \\
+               c) about 0.4 m/s;  \\
+               d) about 1.6 m/s;  \\ 
+               e) about $-1$ m/s
+    \item[58.] a) $\SI{0}{\second} < t < \SI{15}{\second}$;;  \\
+               b) either around $t=29$ s or $t=45$ s; \\
+               c) about $t=37$ s; \\
+               d) moves forward for 37 sec \\ \hspace*{5em} then backwards
+  \end{itemize}
+  
+\end{multicols}
+
+\noindent
+{\footnotesize Homework will be accepted for full credit until the test.
+Homework turned in after the test will be accepted for half credit
+until the Unit 3 Test.
+\emph{Please remember that you will not be eligible to complete 
+test corrections if you do not turn in your homework.}}
+
+\vspace{1em}
+\hrule 
+\printeqs
+
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+
+\pagebreak
+
+\mymaketitle
+
+\section*{Homework Check B (collected on Test Day)}
+
+\paragraph{Motion at a Constant Acceleation} pp. 44 \#22, 23, 24, 29
+\dotfill Complete by Thu, Aug 18.
+   
+{\sc Your work for these problems should include pictures!}
+\hfill \textbf{\emph{Homework Quiz}}
+
+\stampbox{5}
+
+%%%%%%%%%%%%%%
+
+\paragraph{Falling Objects} pp. 44-45 \#39, 40, 41, 49, 52
+\dotfill Complete by Fri, Aug 19.
+   
+{\sc Your work for these problems should include pictures!}
+
+\stampbox{5}
+
+%%%%%%%%%%%%%%
+
+\paragraph{Conceptual Questions} p. 41 \#1, 2, 3, 4, 6, 9, 10, 16, 17
+\dotfill Complete by Mon, Aug 22.
+   
+{\sc These questions should have at least one full sentence 
+      of explanation}
+
+\stampbox{5}
+
+%%%%%%%%%%%%%%
+
+\paragraph{Misconceptual Questions} p. 42 \#2, 3, 4, 5, 6, 9
+\dotfill Complete by Mon, Aug 22.
+   
+{\sc You do not need to get this one stamped,
+but these are good review for your test!}
+
+\vspace{1em}
+\hrule
+
+%%%%%%%%%%%%%%
+
+\paragraph{Bonus Problems!} p. 43 \#15; p. 44 \#32 \& 38; p. 45 \#53
+\dotfill Turn in separately on test day!
+  
+
+\vspace{1em}
+\hrule
+
+%%%%%%%%%%%%%%
+
+\paragraph{Test will be on Tuesday, Aug 23.} \hfill
+
+
+\subsection*{Problem Answers}
+
+\begin{multicols}{3}
+
+  \begin{itemize}[noitemsep]
+    \item[22.] $-4.5$ m/s/s
+    \item[23.] 1.17 m/s/s; 105 m
+    \item[24.] 204 m
+    \item[29.] $-435$ m/s/s = $-44.4 g$'s
+    \item[39.] 61.8 m
+    \item[40.] 8.8 s;  86.3 m/s
+    \item[41.] 16.7 m/s;  14.2 m
+    \item[49.] 5.21 s
+    \item[52.] 23.4 m/s; \\ 
+               28 m above the ground; \\
+               0.96 s before seen at window; \\
+               4.78 s after being thrown
+    
+  \end{itemize}
+  
+\end{multicols}
+
+\subsection*{Misconceptual Answers}
+
+\begin{multicols}{9}
+
+  \begin{itemize}[noitemsep]
+    \item[2.] d 
+    \item[3.] d 
+    \item[4.] c 
+    \item[5.] a
+    \item[6.] c
+    \item[9.] a
+    
+  \end{itemize}
+  
+\end{multicols}
+  
+\noindent
+{\footnotesize Homework will be accepted for full credit until the test.
+Homework turned in after the test will be accepted for half credit
+until the Unit 3 Test.
+\emph{Please remember that you will not be eligible to complete 
+test corrections if you do not turn in your homework.}}
+
+\vspace{1em}
+\hrule 
+\printeqs
+
+
+\end{document}
