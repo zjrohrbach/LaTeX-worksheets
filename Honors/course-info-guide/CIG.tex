@@ -7,7 +7,7 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \graphicspath{{./images}}
-\setlist[enumerate]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\setlist[enumerate,itemize]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
 \usepackage[super]{nth}
 
 
@@ -45,6 +45,70 @@ As a result of taking Physics I, you will:
 	\item Develop problem solving and scientific literacy skills
 \end{enumerate}
 
+\section*{Class Policies}
+
+	\paragraph{Tardies}
+		My tardy policy is the same as the policy listed on p. 12  of the AHS Student Handbook.  You are tardy if you are not in the classroom by the time the bell rings.  You will be given a detention on your \nth{3} and \nth{4} tardies and referred to Saturday School for \nth{5} and \nth{6} tardies.
+	
+	\paragraph{Cell Phones and Earbuds}
+		In Honors Physics, there is no instructional need for cell phones or earbuds.  They should therefore be put away at all times.  Failure to comply will result in the progressive discipline outlined in the AHS Student Handbook on p. 25.
+	
+	\paragraph{Absences and Makeup Work}
+		I will often post video explanations and recordings for students who are absent on Schoology.  If you are absent, it is your responsibility to check Schoology and contact me with any questions.
+	
+		There are some activities that we do in class which will not need to be made up.  Students with \emph{excused} absences will be exempted from these assignments in the grade book.  Students with \emph{unexcused} or \emph{unverified} absences will receive a zero, which cannot be made up.  This is in line with the policy in the AHS Student Handbook on p. 14.
+	
+		\begin{center}
+			\begin{tikzpicture}[every node/.style = {
+					draw,
+					rectangle,
+					rounded corners,
+					text width=2.8cm,
+					text centered
+				},
+				arrow/.style = {
+					dashed
+				},
+				levela/.style = {orange,fill=orange!10,text=black},
+				levelb/.style = {teal,fill=teal!10,text=black},
+				levelc/.style = {blue,fill=blue!10,text=black},
+				leveld/.style = {olive,fill=olive!10,text=black},
+				x=3.5cm, y=0.5cm
+				]
+				\node[levela] (assmt) 
+					{Assignment completed when you were absent};
+		
+				\node[levelb] at (1,2) (essential) 	
+					{``essential'' assignment};
+				\node[levelb] at (1,-2) (nonessential) 	
+					{``nonessential'' assignment};
+		
+				\node[levelc] at (2,-3) (unexcused) 	
+					{absence is unexcused};
+				\node[levelc] at (2,-1) (excused) 	
+					{absence is excused};
+		
+				\node[leveld] at (3,2) (schoology) 	
+					{makeup info is on Schoology};
+				\node[leveld] at (3,-1) (exempt) 	
+					{grade exempted in gradebook};
+				\node[leveld] at (3,-3) (zero) 	
+					{grade is zero; can't be made up};
+		
+				\draw[arrow] (assmt.east) -- (nonessential.west);
+				\draw[arrow] (assmt.east) -- (essential.west);
+				\draw[arrow] (essential.east) -- (schoology.west);
+				\draw[arrow] (nonessential.east) -- (unexcused.west);
+				\draw[arrow] (nonessential.east) -- (excused.west);
+				\draw[arrow] (excused.east) -- (exempt.west);
+				\draw[arrow] (unexcused.east) -- (zero.west);
+		
+			\end{tikzpicture}
+		\end{center}
+	
+
+
+
 
 \section*{Required Materials}
 
@@ -68,14 +132,10 @@ You are expected to bring the following materials with you to class every day.
 	\node [font=\large] at (6, .5) {Computer};
 	\node [font=\large] at (6, 0)  {Charger};
 	\node at (6,1.7) {\includegraphics[width=2.4cm]{charger}};
-	
-	\node [font=\large] at (9, .5) {Student};
-	\node [font=\large] at (9, 0) 	{Agenda};
-	\node at (9,1.7) {\includegraphics[width=2.4cm]{agenda}};
 
-	\node [font=\large] at (12, .5) {Reading};
-	\node [font=\large] at (12, 0)  {Book};
-	\node at (12,1.7) {\includegraphics[width=2.4cm]{book}};
+	\node [font=\large] at (9, .5) {Reading};
+	\node [font=\large] at (9, 0)  {Book};
+	\node at (9,1.7) {\includegraphics[width=2.4cm]{book}};
 
 
 \end{tikzpicture}
@@ -88,13 +148,8 @@ You are expected to bring the following materials with you to class every day.
 \paragraph{Laptop and Charger:}
 	Please bring your laptop and charger with you to class every day.  We will not use it every day or even most days, but there are certain assignment you will be unable to complete without it.	
 
-\paragraph{Student Agenda:}
-	This is required by school policy.  If you need to use the restroom, you must have your agenda.  I will write one restroom pass per week. 
-
 \paragraph{Reading Book:}
 	If there is downtime in class, you may not use your phone.  You may, however, read a book.
-
-
 
 
 \section*{Methods of Evaluation}
@@ -139,18 +194,6 @@ final exam grade (15\%).
 \end{enumerate}
 
 
-\section*{Other Class Policies}
-
-\paragraph{Tardies}
-	My tardy policy is the same as the school's. You are tardy if you are not in the classroom by the time the bell rings.  If you do come in late, please sign the tardy log.
-
-\paragraph{Cell Phones and Earbuds}
-	In Honors Physics, there is no instructional need for cell phones or earbuds.  They should therefore be put away at all times.  Failure to comply will result in the progressive discipline outlined in the AHS Student Handbook.
-
-\paragraph{Absences and Makeup Work}
-	I will often post video explanations and recordings for students who are absent on Schoology.  If you are absent, it is your responsibility to check Schoology and contact me with any questions.
-
-	There are some activities that we do in class which will not need to be made up.  Students with \emph{excused} absences will be exempted from these assignments in the grade book.  Students with \emph{unexcused} or \emph{unverified} absences will receive a zero, which cannot be made up.  This is in line with the policy in the AHS Student Handbook.
 
 
 

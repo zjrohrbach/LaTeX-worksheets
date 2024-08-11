@@ -1,4 +1,4 @@
-\documentclass[12pt]{exam}
+\documentclass[10pt]{exam}
 \usepackage[hon]{template-for-exam}
 \usepackage{pgfplots}
 \pgfplotsset{
@@ -190,8 +190,7 @@
 
 \question
   A graph of the motion of a tram at the airport 
-  is shown below.  What is the tram’s velocity?
-
+  is shown below.  What is the tram's velocity?
   
   \begin{tikzpicture}
     \begin{axis}[
@@ -208,11 +207,50 @@
       grid=both,
       xtick = {0,...,5},
       ytick = {0,...,9},
-      width=8cm
+      width=6.5cm
     ]
-      \addplot{1.5*x+1};
+      \addplot[smooth,ultra thick,blue]{1.5*x+1};
     \end{axis}
   \end{tikzpicture}
+
+
+\question
+  Below is the graph of a cart's motion.  
+
+  \begin{multicols}{2}
+    \begin{tikzpicture}
+      \begin{axis}[
+        axis y line = box,
+        axis x line = box,
+        axis y line shift = 0,
+        axis line style = thin,
+        xlabel={time (s)},
+        ylabel={position (m)},
+        ymin=0,
+        ymax=9,
+        xmin=0,
+        xmax=5,
+        grid=both,
+        xtick = {0,...,5},
+        ytick = {0,...,16},
+        width=6.5cm
+      ]
+        \addplot[smooth,ultra thick,blue]{0.25*x^2+1};
+      \end{axis}
+    \end{tikzpicture}
+
+    \begin{parts}
+      \part
+        Estimate the cart's \emph{instantaneous velocity} at $t=\SI{1}{\second}$. \vs 
+      \part
+        Estimate the cart's \emph{instantaneous velocity} at $t=\SI{3}{\second}$.  \vs 
+      \part
+        Use these two measurements to estimate its average acceleration of the cart. \vs
+      
+    \end{parts}
+  \end{multicols}
+
+  
 
 \question
   Consider the motion maps of the cars below.  All of the
