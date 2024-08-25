@@ -1,0 +1,166 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{enumitem,multirow,tikz}
+
+\title{Car Lab \#2 (\emph{Accelerated Motion})}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\vspace{-1em}
+\section*{Procedure:}
+  \begin{enumerate}[label=\alph*),topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+    \item 
+      Find a spot on the hallway for your group and mark every 25 cm for 125 cm
+    \item 
+      Set the car at 25 cm and pull it back to the starting line.
+    \item 
+      Measure the time it takes the car to go 0.25 m
+    \item
+      Repeat for 0.50, 0.75, 1.00, and 1.25 meters.  Make sure you pull the car back from 25 cm each time.
+    \item
+      Repeat three times
+    \item 
+      For experiment \#2, make an additional mark (``charge point'') 1.0 meters behind the starting line and a second mark (``release point'') 25 cm behind that.
+    \item 
+      For experiment \#2, pull the car back from ``charge point'' to ``release point,'' but don't start the timer until the car gets to ``start.''  We are trying to capture the part of the motion where the car is slowing down.
+  \end{enumerate}
+
+  \tikzstyle{marker}=[fill=gray,draw=gray]
+  \tikzstyle{arrow}=[->,ultra thick, gray]
+  \tikzstyle{lab}=[below]
+  \tikzstyle{dim}=[<->]
+  \tikzstyle{pullarrow}=[anchor=south west, text width=6cm]
+  \def\markwidth{.02}
+  \def\abovesp{0.3}
+  \tikzset{x=5cm}
+
+  \begin{tikzpicture}
+      
+    \draw[marker] (-1,0) rectangle ++(\markwidth,-1) 
+      ++(-0.5*\markwidth,0) node[lab] {charge} 
+      +(0,-0.4) node[lab] {point}
+      ++(0,1) ++(0,\abovesp) coordinate (pull);
+
+    \draw[marker] (-1.25,0) rectangle ++(\markwidth,-1) 
+      ++(-0.5*\markwidth,0) node[lab] {release}
+      +(0,-0.4) node[lab] {point}
+      ++(0,1) ++(0,\abovesp) coordinate (release);
+
+    \draw[marker] (0,0) rectangle ++(\markwidth,-1) 
+      ++(-0.5*\markwidth,0) node[lab] (start) {start};
+
+    \foreach \x in {1.25, 1.00, 0.75, 0.50, 0.25}{
+      \draw[marker] (\x,0) rectangle ++(\markwidth,-1) 
+        ++(-0.5*\markwidth,0) node[lab] {\x{} m};
+    }
+
+    \draw[dim] (-0.95,-0.5) -- (-0.05,-0.5)
+      node[fill=white,midway] {\footnotesize 1.0 m};
+    \draw[dim] (-1.05,-0.5) -- (-1.2,-0.5)
+      node[fill=white,midway,rotate=90] {\footnotesize 25 cm};
+
+    \draw[arrow] (pull) -- (release) 
+      node[anchor=south west, text width=6cm] 
+      {\emph{Experiment \#2: Pull car from ``charge point'' to ``release point''.}};
+
+    \draw[arrow] (0.25,-1.5) -- ++(-0.25,0) 
+      node[anchor=north west, text width=6cm] 
+      {\emph{Experiment \#1: Pull car from 25 cm to ``start''.}};
+
+  \end{tikzpicture}
+
+\section*{Data}
+
+  \def\cw{6em}
+
+  \newcommand{\datatable}{
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}
+      {|*{3}{>{\centering\arraybackslash}m{\cw}|}|*{2}{>{\centering\arraybackslash}m{\cw}|}}
+      \hline
+      Trial \#1 Time (s) & 
+      Trial \#2 Time (s) & 
+      Trial \#3 Time (s) & 
+      Average Time (s)  & Displacement (m) \\
+      \hline
+      &&&& 0.00\\
+      \hline
+      &&&& 0.25\\
+      \hline
+      &&&& 0.50\\
+      \hline
+      &&&& 0.75\\
+      \hline
+      &&&& 1.00\\
+      \hline
+      &&&& 1.25\\
+      \hline
+    \end{tabular}
+  }
+
+  \paragraph{Experiment \#1:} Accelerating Motion
+
+    \datatable
+
+  \paragraph{Experiment \#2:} Decelerating Motion
+
+    \datatable
+
+  
+  \section*{Graph} 
+    Make a graph on Desmos.  Submit a link to the graph on Schoology
+    
+    \begin{enumerate}[label=\alph*),topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+      \item 
+        Start by making a table by clicking the “+” icon at the top 
+      \item
+        Make sure to label the axes using the wrench icon at the right.
+      \item
+        Zoom out so that you can see the whole graph and so that it fills the page. (you can use the Zoom Fit magnifying glass to do this.)
+    \end{enumerate}
+
+
+\section*{Analysis}
+
+\begin{questions}
+
+  \question
+    Try making a best fit line.  How well does this best-fit line represent your data?  Give a reason why a line is not good for this data.
+    \vs
+
+  \question
+    Instead make a best fit curve of the form 
+    $\mathbf{y_1\sim a_1 x_1^{\,2}+b_1 x_1+c_1}$.  (To make the `squared`', use the caret~[\string^\string] on top of the 6 on your keyboard.)
+    
+    \vspace{1em}
+
+    Best Fit Curve \#1 (Accelerated Motion):
+
+    \vspace{3em}
+
+    Best Fit Curve \#2 (Decelerated Motion):
+
+    \vspace{3em}
+
+    \emph{After you've done this, make sure to submit your graph on Schoology}.
+    
+    \vspace{4em}
+      
+  \question
+    Explain why the shape of each graph makes sense.  
+    \vs
+
+  
+  \question
+    Your graphs are not perfect.  What were some aspects that limited the accuracy of our graphs and our precision?  What could be done to mitigate these in future experiments?
+    \vs
+  
+  
+
+
+\end{questions}
+
+\end{document}

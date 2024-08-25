@@ -43,9 +43,8 @@
 \section*{Data}
 
   \def\cw{.15\textwidth}
-  \def\ch{1em}
-
   \newcommand{\datatable}{
+    \renewcommand{\arraystretch}{1.65}
     \begin{center}
       \begin{tabular}
         {|*{5}{>{\centering\arraybackslash}m{\cw}|}}
@@ -56,17 +55,17 @@
         \cline{2-5}
         & Trial \#1 & Trial \#2 & Trial \#3 & Average \\
         \hline
-        2 &&&&\\[\ch]
+        2 &&&&\\
         \hline
-        4 &&&&\\[\ch]
+        4 &&&&\\
         \hline
-        6 &&&&\\[\ch]
+        6 &&&&\\
         \hline
-        8 &&&&\\[\ch]
+        8 &&&&\\
         \hline
-        10 &&&&\\[\ch]
+        10 &&&&\\
         \hline
-        12 &&&&\\[\ch]
+        12 &&&&\\
         \hline
       \end{tabular}
     \end{center}
@@ -105,7 +104,7 @@
 
     Line \#2:
   
-    \vspace{2em}
+    \vspace{1em}
 
 \section*{Analysis}
 
@@ -114,15 +113,23 @@
   \question
     What is the physical meaning of the slope of each of the lines?  Explain.
     \vs
+
+  \question
+    Just by looking at the graph, how can you tell which car is faster?
+    \vs
     
   \question
     How does this graph show that these cars have a constant velocity?
     \vs
   
   \question
-    Can you tell anything about the accuracy of your graphs?  Can you tell anything about the precision?
+    Are your results accurate?  Explain.
     \vs
   
+  \question
+    Are your results precise?  Explain.
+    \vs
+
   \question
     What were some aspects that limited the accuracy of our graphs and/or our precision?  What could be done to mitigate these in future experiments?
     \vs

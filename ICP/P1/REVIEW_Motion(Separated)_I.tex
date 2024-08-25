@@ -1,0 +1,185 @@
+\documentclass[10pt]{exam}
+\usepackage[icp]{template-for-exam}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{
+  compat=1.18, 
+  every axis/.append style={
+    grid=major,
+    xtick={0,1,...,25},
+    ytick={-10,-9,...,15},
+    grid style = dashed,
+  },
+  empgraph/.append style={
+    xmin=0, xmax=9,
+    ymin=0, ymax=6,
+    width  = 5cm,
+    height = 4cm,
+    ylabel = {position},
+    xlabel={time},
+    xtick = \empty,
+    ytick = \empty,
+    axis y line = left,
+    axis x line = bottom,
+  },
+  soln/.append style={
+    red,
+    domain=0:7
+  }
+}
+%\printanswers
+\shadedsolutions
+
+\newcommand{\ansblank}{
+  \ifprintanswers
+  \else
+    \ku
+  \fi
+  \vs
+}
+
+\title{Unit P1 Review (Motion) - Part I}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \question
+    Define the following terms in your own words. 
+    \begin{parts}
+        \part Velocity:
+          %
+          \begin{solution}[\stretch{1}]
+            how fast an object is moving and its direction (measured in m/s)
+          \end{solution}
+
+        \part Acceleration:
+          %
+          \begin{solution}[\stretch{1}]
+            the rate that velocity changes (measured in m/s/s or \SI{}{\meter\per\second^2})
+          \end{solution}
+    \end{parts}
+
+
+
+  \question
+    Draw the following distance-time graphs.
+
+    \newcommand{\empgraph}[1]{
+      \par
+      \begin{tikzpicture}
+        \begin{axis}[empgraph]
+        \ifprintanswers
+          \addplot[soln] {#1};
+        \fi
+        \end{axis}
+      \end{tikzpicture}
+    }
+
+    \begin{multicols}{2}
+      \begin{parts}
+        \part Not moving \empgraph{3}
+        \part Forward at a constant speed \empgraph{0.6*x}
+        \part Backward at a constant speed \empgraph{5-0.6*x}
+        \part Forward and speeding up \empgraph{(x/3)^2}
+        \part Backward and speeding up \empgraph{-(x/3)^2+5}
+        \part Forward and slowing down \empgraph{-(x/3-2.1)^2+5}
+      \end{parts}
+    \end{multicols}
+
+
+    \question
+    How much time does it take for a car to travel at 28.4 m/s to travel 3000 meters? 
+    %
+    \begin{solution}
+      \begin{align*}
+        v &= \SI{28.4}{\meter\per\second} 
+                            & v &= \frac{d}{t} \\
+        d &= \SI{3000}{\meter}
+                            & 28.4 &= \frac{3000}{t} &
+                              t &= \SI{105.63}{\second}
+      \end{align*}
+    \end{solution}
+    \ansblank
+
+  \pagebreak
+
+
+  \question
+    If a car is initially traveling forward at 15 m/s, how fast will it be going in 1.2 seconds if the acceleration is $-10$ m/s/s?
+    %
+    \begin{solution}
+      \begin{align*}
+        v_i &= \SI{15}{\meter\per\second} & 
+                a &= \frac{\left(v_f-v_i\right)}{t}  \\
+        t &= \SI{1.2}{\second} &
+              -10 &= \frac{\left(v_f-15\right)}{1.2} \\
+        a &= \SI{-10}{\meter\per\second^2} &&&
+                      v_f &= \SI{3}{\meter\per\second}
+      \end{align*}
+    \end{solution}
+    \ansblank
+
+    \question
+    What is the speed of an object that travels 35 meters in 9 seconds? 
+    %
+    \begin{solution}
+      \begin{align*}
+        d &= \SI{35}{\meter} 
+                            & v &= \frac{d}{t} \\
+        t &= \SI{9}{\sec}
+                            & v &= \frac{35}{0} &
+                       t &= \SI{3.89}{\meter\per\second}
+      \end{align*}
+    \end{solution}
+    \ansblank
+
+
+    \question
+    Draw a graph for the following situation:
+    \begin{parts}
+      \part
+        I start at school and drive forward 2 miles in 4 minutes.  
+      \part
+        Then I get stopped at a red light for 1 minute.  
+      \part 
+        The light turns green and I go forward 2 miles in 5 minutes.
+      \part 
+        I turn around and go back to school because I forgot my phone.  It makes me 6 minutes to get back.
+      \part 
+        It then takes me 4 minutes to go 1 mile forward because of traffic.
+    \end{parts}
+
+    \begin{tikzpicture}
+      \begin{axis}[
+          xmin=0, xmax=20,
+          ymin=0, ymax=5,
+          width  = 15cm,
+          height = 7cm,
+          ylabel = {position (miles)},
+          xlabel={time (minutes)},
+      ]
+      \ifprintanswers
+        \addplot[soln] table {
+          x   y
+          0   0
+          4   2
+          5   2
+          10  4
+          16  0
+          20  1
+        };
+      \fi
+      \end{axis}
+    \end{tikzpicture}
+
+
+
+
+  
+
+\end{questions}
+\end{document}

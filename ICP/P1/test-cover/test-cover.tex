@@ -7,7 +7,7 @@
 \begin{document}
 \pagestyle{empty}
 
-\def\mytitle{P1 (Motion) Test}
+\def\mytitle{C1 (Matter) Test}
 
 \newcommand{\topmatter} {
   \vspace{2em}
@@ -39,17 +39,15 @@
     \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
     \node at (0,0.2) {\bf !};
   \end{tikzpicture}
-  \bf Don't forget to do the problems on the back of this page!
+  \bf Don't forget to do the two pages of problems on the packet!
 }
 
 \newcommand{\drawscantron}[2]{
   \begin{flushright}
     \begin{tikzpicture}
-      \node[anchor=south west] at (0,0) {\includegraphics[width=4in]{scantron.png}};
+      \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron.png}};
       \fill (#1,#2) circle (0.2);
-      \node[anchor=west] at (2,10.9) {\small \mytitle};
-      \node[anchor=west, fill=white] at (6.4,7.8) {ZipGrade ID};
-      \fill[white] (6.4,7.5) rectangle ++(.9,-6.2);
+      \node[anchor=west] at (7,16) {\small \mytitle};
     \end{tikzpicture}
   
     \bottommatter
@@ -58,22 +56,22 @@
 
 
 
-  \drawscantron{4.5}{1.65}
+  \drawscantron{7.85}{2}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{4.9}{1.65}
+  \drawscantron{8.35}{2}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{5.4}{1.65}
+  \drawscantron{8.85}{2}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{5.8}{1.65}
+  \drawscantron{9.35}{2}
   \topmatter
 
 
