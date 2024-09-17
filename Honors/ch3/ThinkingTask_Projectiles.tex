@@ -1,0 +1,80 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+
+
+\begin{document}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+\begin{questions}
+
+\question
+  Evel Knievel is attempting to jump his motorcycle from the roof of one building to the roof of another building that has the same height.  To do so he rides at 25 m/s and uses a ramp with a 30° angle.  The buildings are 50 meters apart.  Did he make it?
+
+  \begin{solution}
+    $v_x=21.7$, $v_y=12.5$
+    
+    Time in the air $t=2.6$ s.
+
+    Total distance forward $x=55.4$ m.
+  \end{solution}
+  
+
+\vs \hrule \vs
+
+\question
+
+  A Hollywood stunt woman drives a car off a cliff that is 94 m high.  With what velocity must she drive the car so that it lands on a barge 250 m away from the bottom of the cliff?
+
+  \begin{solution}
+    \begin{align*}
+      v_{0x} &= \text{ ?} &   v_{0y} &= 0\\
+      x_0 &= 0            &   y_0 &= 94\\
+      x &= 250            &   y &= 0\\
+      a_x &= 0            &   a_y &= -9.8
+    \end{align*}
+
+    $0=94-4.9t^2$, so $t = 4.38 s$.  $v_{0x}=250/4.38=57.1$ m/s
+
+    Extension: What was the velocity the moment before the car landed on the barge?
+
+    $v_x= 57.1$; $v_y= -42.9$
+    
+    $\vec{v} = 71.4$ m/s @ 36.9 degrees below horizontal
+
+
+  \end{solution}
+
+
+
+
+
+  \vs \hrule \vs
+
+\question
+  A baby eagle is in a nest atop a 36 m tall tree.  You are 13 m away from the base of the tree and need to throw some food up to the bird or it will starve!  With what initial resultant velocity and at what angle must the food be thrown?  You can assume that your food will be at its maximum height when it reaches the baby eagle.
+
+  \begin{solution}
+    $v_y=26.56$ m/s; $t=2.71$ s
+
+    $v_x=4.80$ m/s
+
+    $\vec{v}=26.99$ m/s @ 79.8 degrees above horizontal
+  \end{solution}
+
+\end{questions}
+
+
+
+
+\end{document}

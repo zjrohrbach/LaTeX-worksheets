@@ -47,7 +47,10 @@
     \renewcommand{\arraystretch}{1.65}
     \begin{center}
       \begin{tabular}
-        {|*{5}{>{\centering\arraybackslash}m{\cw}|}}
+        {
+          |*{4}{>{\centering\arraybackslash}m{\cw}|}
+          |>{\centering\arraybackslash}m{\cw}|
+        }
         \hline
         \multirow{2}{\cw}
           {\centering Time (s)} & 
@@ -71,9 +74,11 @@
     \end{center}
   }
 
+  \noindent
   Red Car:
   \datatable
 
+  \noindent
   Blue Car:
   \datatable
 

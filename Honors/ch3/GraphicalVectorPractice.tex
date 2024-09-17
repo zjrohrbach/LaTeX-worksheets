@@ -1,0 +1,73 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+
+\title{Graphical Vector Problems}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+
+\question
+  Draw the following vectors:
+  %
+  \begin{align*}
+    \vec{A} &= 4~\text{cm, \sc east} &
+    \vec{B} &= 2~\text{cm, \sc south} \\
+    \vec{C} &= 3~\text{cm @ } 30^\circ \text{ N {\it of} E} &
+    \vec{D} &= 4~\text{cm @ } 20^\circ \text{ W {\it of} S}
+  \end{align*}
+
+  \begin{tikzpicture}
+    \draw[dotted] (0,0) grid (15,8);
+  \end{tikzpicture}
+
+
+\question
+  Show that the following resultants are all equivalent:
+  %
+  \begin{align*}
+    \vec{R}_1 &= \vec{A} + \vec{B} 
+    \,\,\, \text{\it (using `tip-to-tail')} \\
+    \vec{R}_2 &= \vec{B} + \vec{A}
+    \,\,\, \text{\it (using `tip-to-tail')} \\
+    \vec{R}_3 &= \vec{A} + \vec{B} 
+    \,\,\, \text{\it (using a parallelogram)}
+  \end{align*}
+
+  \begin{tikzpicture}
+    \draw[dotted] (0,0) grid (15,8);
+  \end{tikzpicture}
+
+
+\question
+  Draw $\vec{R}_1=2\vec{A}$ and $\vec{R}_2=-3\vec{A}$.
+
+  \begin{tikzpicture}
+    \draw[dotted] (0,0) grid (15,4);
+  \end{tikzpicture}
+
+
+\question
+  Draw $\vec{R}=3.5\vec{A}-2\vec{B}$
+
+  \begin{tikzpicture}
+    \draw[dotted] (0,0) grid (15,8);
+  \end{tikzpicture}
+
+
+\question
+  Draw $\vec{R}=\vec{C}-2\vec{D}$.
+
+  \begin{tikzpicture}
+    \draw[dotted] (0,0) grid (15,8);
+  \end{tikzpicture}
+
+\end{questions}
+
+
+\end{document}

@@ -1,13 +1,13 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
 \usepackage{tikz}
+\usepackage[margin=0.4in]{geometry}
 
 
 \begin{document}
 \pagestyle{empty}
 
 \newcommand{\topmatter} {
-  {\noindent \Large \bf Unit 01 Test - Motion}
 
   \vspace{3em}
 
@@ -33,30 +33,38 @@
   \end{flushright}
 }
 
-\topmatter
 
-\begin{center}
+\begin{flushright}
   \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron-12Q.png}};
+    \node[anchor=south west] at (0,0) {\includegraphics[width=11.55cm]{scantron-12Q.png}};
     \fill (4.9,1.9) circle (0.25);
     \node[anchor=west] at (2,12.25) {Unit 01 Test: Motion};
+    \fill[white] (7.2,8.75) rectangle ++(1.1,-8);
+    \node[anchor=west, fill=white] at (7,9) {ZipGrade ID};
   \end{tikzpicture}
-\end{center}
+\end{flushright}
 
 \bottommatter
+
+\topmatter
+
 
 \pagebreak
 
-\topmatter
 
-\begin{center}
+\begin{flushright}
   \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron-12Q.png}};
+    \node[anchor=south west] at (0,0) {\includegraphics[width=11.55cm]{scantron-12Q.png}};
     \fill (5.45,1.9) circle (0.25);
     \node[anchor=west] at (2,12.25) {Unit 01 Test: Motion};
+    \fill[white] (7.2,8.75) rectangle ++(1.1,-8);
+    \node[anchor=west, fill=white] at (7,9) {ZipGrade ID};
   \end{tikzpicture}
-\end{center}
+\end{flushright}
 
 \bottommatter
+
+\topmatter
+
 
 \end{document}

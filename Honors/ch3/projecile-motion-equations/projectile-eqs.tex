@@ -1,0 +1,116 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[
+    top=0.3in,
+    bottom=0.3in,
+    left=0.5in,
+    right=.5in
+  ]{geometry}
+  \usetikzlibrary{arrows.meta}
+
+
+
+\title{Projectile Motion Equations (Honors Physics)}
+\author{Rohrbach}
+
+\newcommand{\printcontent}{
+  {\bf \noindent Projectile Motion Equations}
+
+  \vspace{1em}
+  \hrule
+  \vspace{-.5em}
+  \begin{multicols}{3}
+    \begin{center}
+
+      $\vec{v} = \vec{v}_0 + \vec{a} t$
+    
+      \emph{\footnotesize ``Old Faithful''}
+    
+    
+      $\vec{x} = \vec{x}_0 + \vec{v}_0 t + \frac{1}{2} \vec{a} t^2$
+    
+      \emph{\footnotesize``The Big Chalupa''}
+    
+
+      $\vec{v}^{\,2} = \vec{v}_0^{\,2}+ 2 \vec{a} \cdot 
+      \left(\vec{x}-\vec{x}_0 \right)$
+
+      \emph{\footnotesize ``Ain't Got No Time''}
+
+    \end{center}
+  \end{multicols}
+  \vspace{-8pt}
+  \hrule
+  \vspace{0.2em}
+
+  \begin{minipage}{2.2in}
+    \begin{center}
+      \begin{tikzpicture}[
+        every node/.append style={},
+        component/.append style={
+          dashed,
+          -{Stealth}
+        },
+        resultant/.append style={
+          ultra thick,
+          -{Stealth}
+        },
+    ]
+      \draw[resultant] 
+                (0,0) -- (4.5,3) 
+                  node[midway,anchor=south,rotate=33.7]{hypotenuse};
+      \draw[component] 
+                (0,0) 
+                -- (4.5,0) 
+                  node[midway,anchor=north]{adjacent} ;
+      \draw[component] 
+                (4.5,0)
+                -- (4.5,3) 
+                  node[midway,anchor=north,rotate=90]{opposite} ;
+      \draw[-Stealth] (1,0) node[anchor=south west]{$\theta$}
+                arc[
+                  start angle = 0,
+                  end angle = 31, 
+                  radius = 1
+                ];
+    \end{tikzpicture}
+
+
+    \end{center}
+  \end{minipage}
+  %
+  \begin{minipage}{4.9in}
+    \begin{center}
+      \begin{align*}
+        \sin{\theta} & =\frac{\text{opp}}{\text{hyp}} &
+        \cos{\theta} & =\frac{\text{adj}}{\text{hyp}} &
+        \tan{\theta} & =\frac{\text{opp}}{\text{adj}}
+      \end{align*}
+
+      \hrule 
+      
+      \begin{align*}
+        R &= \frac{v_0^{\,2} \sin\left(2\theta\right)}{g}
+      \end{align*}
+      \vspace{0em}
+
+      
+    \end{center}
+  \end{minipage}
+
+  \hrule
+}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+
+\end{document}

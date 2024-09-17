@@ -1,0 +1,99 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+
+
+\begin{document}
+
+%\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+
+\begin{questions}
+
+\vspace*{\stretch{1}}
+
+\question
+  A car accelerates from 14 m/s to 21 m/s in 6.0 s.  What is the car's acceleration?
+
+  \begin{solution}
+    1.17~m/s$^2$
+
+    Extension: How far does the car travel in this time? (105.1 m)
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\question
+  A world-class sprinter can reach a top speed (of about 11.5~m/s) in the first 18.0 meters of the race.  What is her average acceleration?  Assume she started from rest.
+
+  \begin{solution}
+    3.36~m/s$^2$
+
+    Extension: How long does it take her to reach that speed? (3.42 s)
+
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+
+\fi
+
+\question
+  A marble rolling down a track starts at rest and accelerates at a rate of \SI{1.2}{\meter\per\second^2}.  How much time does it take the marble to roll {\bf 85~cm}?
+
+  \begin{solution}
+    $\sqrt{1.42}=1.19$ s
+  \end{solution}
+
+  
+
+\vs \hrule \vs
+
+\question
+  In coming to a stop, a car leaves skid marks 65 m long on the highway.  Assuming a deceleration of \SI{-4.0}{\meter\per\second^2}, estimate the speed of the car just before braking.
+
+  \begin{solution}
+    $\sqrt{520}=22.8$ m/s
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+\fi
+
+\question
+  A car slows down from 28 m/s to rest in a distance of 88 m. What was its acceleration?
+
+  \begin{solution}
+    $-4.45$ m/s$^2$
+  \end{solution}
+
+\vs \hrule \vs[2]
+
+
+\end{questions}
+
+
+
+
+\end{document}
