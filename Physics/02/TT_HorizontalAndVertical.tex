@@ -1,0 +1,80 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+
+
+
+\begin{document}
+
+\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+
+\begin{questions}
+
+\vspace*{\stretch{1}}
+
+\question
+  What is the maximum height a rock will reach that is thrown up with a velocity of 18 m/s? 
+
+  \begin{solution}
+    16.5 m
+
+    Extension: Time in the air?  3.67 s
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\question
+  A car accelerates at a rate of 2.4~m/s$^2$ for 3.2~s, attaining a velocity of 17.5~m/s.  How fast must it have been going before it began accelerating?
+
+  \begin{solution}
+      9.82 m/s
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+
+\fi
+
+
+\question
+  How long would it take a penny to reach the bottom of the Empire State Building (which is approximately 380 m to the observation deck)?
+
+  \begin{solution}
+    8.81 s
+  \end{solution}
+
+\vs \hrule \vs
+
+\question
+  A diver jumps vertically upward with a velocity of 13 m/s from a diving board that is 1.5 m above the water.  How long will it take her to reach the water? 
+
+  \begin{solution}
+    2.76 s ($v_f=-14.1$ m/s)
+  \end{solution}
+
+  \vs
+
+
+\end{questions}
+
+
+
+
+\end{document}
