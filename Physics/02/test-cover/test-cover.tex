@@ -1,6 +1,7 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
 \usepackage{tikz}
+\usepackage[margin=0.3in]{geometry}
 
 
 \begin{document}
@@ -28,30 +29,33 @@
   %
 }
 
-\topmatter
 
-\begin{center}
+
+\begin{flushright}
   \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron.png}};
+    \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
     \fill (5.55,2) circle (0.25);
     \node[anchor=west] at (2,12) {\mytitle};
   \end{tikzpicture}
-\end{center}
+\end{flushright}
 
 \bottommatter
-
-\pagebreak
 
 \topmatter
 
-\begin{center}
+\pagebreak
+
+
+\begin{flushright}
   \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron.png}};
+    \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
     \fill (6.15,2) circle (0.25);
     \node[anchor=west] at (2,12) {\mytitle};
   \end{tikzpicture}
-\end{center}
+\end{flushright}
 
 \bottommatter
+
+\topmatter
 
 \end{document}

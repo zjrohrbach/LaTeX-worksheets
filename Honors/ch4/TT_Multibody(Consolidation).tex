@@ -1,0 +1,28 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+
+\title{Multi-Body Problem (Consolidation)}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent
+Two boxes have masses $m_1=20$ kg and $m_2=10$ kg and are sitting on a frictionless surface connected by a massless cord. If they are pulled with an applied force of $F_A=50$ N, calculate (a) their acceleration and (b) the tension in the cord connecting them.
+
+
+\tikzstyle{box}=[rounded corners,draw,minimum height=1cm,minimum width=1.5cm]
+
+\begin{tikzpicture}
+  \node[box] (one) at (0,0) {$m_1$};
+  \node[box] (two) at (3,0) {$m_2$};
+  \draw (one.east) -- (two.west);
+  \draw[->,ultra thick] (two.east) ++(0,0.2) -- +(1,0) node[anchor=south west] {$\vec{F}_A$};
+  \fill[pattern=north east lines] (-1,-0.5) rectangle ++(6,-0.25);
+\end{tikzpicture}
+
+\end{document}

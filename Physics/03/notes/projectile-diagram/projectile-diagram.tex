@@ -46,11 +46,12 @@
 
 \begin{tikzpicture}
   \begin{scope}[every node/.append style={fill=white}]
-    \def\scale{0.17}
+    \def\scale{0.15}
     \def\xscale{1.5}
     \def\axisloc{-2}
     \def\velscale{.05}
 
+    \draw[step=2.5*\scale, thin, gray!50] (-\xscale*0.5,-\scale*15) grid (\xscale*6.5,\scale*50);
 
     \draw[ball] (0,0) coordinate (a) 
       circle (6pt);
@@ -67,8 +68,8 @@
     \draw[ball] (\xscale*6,0) coordinate (g)
       circle (6pt);
 
-
-    \draw (2,-1) node[anchor=west] {
+    \draw[fill=white, rounded corners] (\xscale*1,0) rectangle (\xscale*5,-3.5);
+    \draw (1.7,-1) node[anchor=west] {
         - $v_x$ is \rule{10em}{0.15mm}
       }
       ++ (0,-2.5em) node[anchor=west]  {

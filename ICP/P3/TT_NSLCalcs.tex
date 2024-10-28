@@ -1,0 +1,193 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,fdsymbol,my-tikz-clipart}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+\newcommand{\h}{$\heartsuit$}
+\renewcommand{\c}{$\clubsuit$}
+\renewcommand{\d}{$\diamondsuit$}
+\newcommand{\s}{$\spadesuit$}
+\renewcommand{\ku}[3]{
+  \ifprintanswers
+    #1 #2 #3
+  \else
+    \begin{tabular}
+      {p{.2\textwidth}|p{.2\textwidth}|p{.2\textwidth}}
+      \small Knowns/Unknowns    &
+      \small  Plug \& Chug      & 
+      \small Answer w/ Units \\
+      \center #1 &
+      \center #2 &
+      \center #3 \\[3em]
+    \end{tabular}
+  \fi
+}
+
+
+\begin{document}
+
+%\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+
+\begin{questions}
+
+\vspace*{\stretch{1}}
+
+\question
+  You apply a force of 549 N to push a refrigerator forward.  The friction acting on the refrigerator is 493 N.
+  
+  \begin{parts}
+    \part Draw the Free-Body Diagram (\h)
+    \part The mass of the refrigerator is 720 kg.  Calculate the acceleration. 
+
+      \ku{\s}{\d}{\d}
+  \end{parts}
+
+  \begin{solution}
+    $F_{NET}=56$ N; $0.078$ m/s$^2$
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\question
+
+    A bucket in the a well is hoisted by a rope.  The mass of the bucket is 5.5 kg.
+
+    \ifprintanswers
+    \else
+      \begin{tikzpicture}
+        \path (0,-1.8) pic {bucket};
+        \filldraw[pattern=north east lines] 
+        (-.1,0) -- (.1,0) -- (.1,2) -- (-.1,2) -- cycle;
+      \end{tikzpicture}
+    \fi
+
+    \begin{parts}
+      \part Calculate the force of gravity acting on the bucket.
+      
+      \ku{\h}{\h}{\h}
+  
+      \part Draw a Free-Body Diagram of the bucket.  The tension on the rope is 71 N. (\s)
+  
+      \part Calculate the acceleration of the bucket
+  
+      \ku{\d}{\d}{\d}
+  
+  
+    \end{parts}
+  %
+
+  \begin{solution}
+    $F_G=53.9$ N; $F_{NET}=17.1$ N; $a=3.11$ m/s$^2$
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+
+\fi
+
+\question
+  When the astronaut Neil Armstrong was fully suited up with all of his equipment, he had a weight (that is, force of gravity) on Earth of 1600 N.
+
+  \begin{parts}
+    \part Calculate Neil Armstrong's mass
+
+    \ku{\s}{\s}{\s}
+
+    \part When Neil Armstrong walked on the moon, the acceleration of gravity was only $g=1.61$~m/s$^2$.  Calculate Neil's force of gravity on the moon
+    
+    \ku{\d}{\d}{\d}
+
+    \part Calculate Neil Armstrong's mass on the moon (\h)
+  \end{parts}
+
+  \begin{solution}
+    $m=163.27$ kg; $F_{G_{moon}}=262.86$ N
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\question
+  A certain elevator with mass 3200~kg is accelerating upward at a rate o 0.26~m/s$^2$.
+
+  \begin{parts}
+    \part Calculate the net force
+
+    \ku{\s}{\s}{\s}
+
+    \part Calculate the force of gravity
+    
+    \ku{\h}{\h}{\h}
+
+    \part The elevator is being lifted by cables.  Draw the Free-Body Diagram. (\d)
+
+
+    \part What must be the tension of the cables? (\d\h\s)
+
+  \end{parts}
+
+  \begin{solution}
+    $F_{NET}=\SI{832}{\newton}$; $F_G=\SI{31360}{\newton}$; $F_T=\SI{32192}{\newton}$
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+
+\fi
+
+\question
+  A loaded semi truck has a mass of \SI{36000}{\kilo\gram} It experiences \SI{16500}{\newton} of friction.  Its acceleration is \SI{0.12}{\meter\per\second^2}.
+
+  \begin{parts}
+    \part Calculate the net force acting on the truck.
+
+    \ku{\d}{\s}{\s}
+
+    \part Draw a Free-Body Diagram (\h)
+    \part Calculate the force needed to be applied by the truck's engine. (\d\s\h)
+  \end{parts}
+
+  \begin{solution}
+    $F_{NET}=\SI{4320}{\newton}$; $F_A=\SI{20820}{\newton}$
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\titledquestion{Challenge!}
+
+  A 25-kg box is pushed forward with an acceleration of of 4.56~m/s$^2$. There are 152 N of friction.  Draw a Free-Body Diagram and label the magnitude of all four foces acting on the box.
+
+  \begin{solution}
+    $F_{NET}=114$ N; $F_A=266$ N; $F_f=152$ N; $F_N=242$ N; $F_G=242$ N;
+  \end{solution}
+
+\vs
+
+
+\end{questions}
+
+
+
+
+\end{document}

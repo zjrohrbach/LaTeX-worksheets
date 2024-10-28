@@ -1,0 +1,268 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{multicol}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{f/.append style={-{Stealth[length=3mm,width=2mm]}}}
+\usepackage{graphicx}
+\graphicspath{{./FBDs}}
+
+\title{Net Force and Free-Body Diagrams}
+\author{Rohrbach}
+\date{\today}
+
+\newcommand{\hforce}[2]
+{
+  \draw[f] (a) -- ++(#1, 0) 
+        node[anchor=south] {#2};
+}
+\newcommand{\vforce}[2]
+{
+  \draw[f] (a) -- ++(0, #1) 
+        node[anchor=west] {#2};
+}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \question 
+  In each of the free-body diagrams below, calculate the 
+  {\bf magnitude} and {\bf direction} of the net force 
+  and draw it.
+
+
+  \begin{center}  
+    \begin{tikzpicture}[scale=0.5]
+      \newcommand{\createFBD}[1]
+        {
+          \filldraw (a) circle [radius=0.15];
+          \path (a) node {} 
+            + (-3,2.5) node {#1} ;
+        }
+
+      \begin{scope}
+        \node (a) at (0,0) {};
+        \createFBD{(a)}
+        \vforce{ 2}{\SI{18}{\newton}}
+        \vforce{-2}{\SI{18}{\newton}}
+
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (8,0) {};
+        \createFBD{(b)}
+        \vforce{  2  }{\SI{40}{\newton}}
+        \vforce{-1.25}{\SI{24}{\newton}}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (16,0) {};
+        \createFBD{(c)}
+        \vforce{ 2}{\SI{5}{\newton}}
+        \vforce{-2}{\SI{5}{\newton}}
+        \hforce{ 3}{\SI{7}{\newton}}
+        \hforce{-3}{\SI{7}{\newton}}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (24,0) {};
+        \createFBD{(d)}
+        \vforce{  2 }{\SI{17}{\newton}}
+        \vforce{ -2 }{\SI{17}{\newton}}
+        \hforce{  3 }{\SI{32}{\newton}}
+        \hforce{-1.5}{\SI{14}{\newton}}
+      \end{scope}
+    \end{tikzpicture}
+  \end{center}
+
+
+      
+\question 
+  In each of the free-body diagrams below, the net force 
+  is given, but one or more of the applied forces is 
+  missing.  Find the missing forces.
+
+  \begin{EnvUplevel}
+    \begin{tikzpicture}[scale=0.77]
+      \def\sep{5.2}
+
+      \newcommand{\createFBD}[2]
+        {
+          \filldraw (a) circle [radius=0.15];
+          \path (a) node {} 
+            + (0,-3) node {\footnotesize
+              $\Sigma\vec{F}=$ #2
+            }
+            + (-1.5,2.5) node {#1} ;
+        }
+      \newcommand{\forceblank}
+        {\,\fillin[][3em]\SI{}{\newton}}
+
+
+      \begin{scope}
+        \node (a) at (0,0) {};
+        \createFBD{(a)}{\SI{0}{\newton}}
+        \vforce{  2 }{\forceblank}
+        \vforce{ -2 }{\SI{20}{\newton}}
+        \hforce{ 1.5}{\SI{15}{\newton}}
+        \hforce{-1.5}{\forceblank}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (\sep,0) {};
+        \vforce{  2 }{\forceblank}
+        \vforce{ -1 }{\SI{200}{\newton}}
+        \createFBD{(b)}{\SI{150}{\newton}, up}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (2*\sep,0) {};
+        \createFBD{(c)}{\SI{45}{\newton}, left}
+        \vforce{  1.5 }{\SI{60}{\newton}}
+        \vforce{ -1.5 }{\forceblank}
+        \hforce{1.25}{\forceblank}
+        \hforce{ -2 }{\SI{80}{\newton}}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (3*\sep,0) {};
+        \createFBD{(d)}{\SI{23}{\newton}, right}
+        \vforce{  2 }{\forceblank}
+        \vforce{ -2 }{\forceblank}
+        \hforce{ 1.7}{\forceblank}
+        \hforce{ -1 }{\SI{36}{\newton}}
+      \end{scope}
+
+    \end{tikzpicture}
+  \end{EnvUplevel}
+
+\question
+  Fill in the blanks in each of the situations depicted 
+  below.  Draw the net force.
+
+  \begin{center}  
+    \begin{tikzpicture}[scale=0.6]
+      \newcommand{\createFBD}[4]
+        {
+          \filldraw (a) circle [radius=0.15];
+          \path (a) node {} 
+            + (-3,2.5) node {#1}
+            ++ (-1,-3.5) node[anchor=east] {$m=$}
+            ++ (0,  0) node[anchor=west] {#2}
+            ++ (0,-.8) node[anchor=east] {$a=$}
+            ++ (0,  0) node[anchor=west] {#3}
+            ++ (0,-.8) node[anchor=east] {$\Sigma\vec{F}=$ }
+            ++ (0,  0) node[anchor=west] {#4}
+            ;
+        }
+      \newcommand{\makeblank}{\fillin[][3em]{} }
+
+      \newcommand{\forceblank}
+        {\,\makeblank N}
+
+      \draw[dashed] (0,6) -- (0,-9);
+      \draw[dashed] (12,-1.5) -- (-12,-1.5);
+
+
+      \begin{scope}
+        \node (a) at (-7,4) {};
+        \createFBD
+          {(a)}{3 kg}{\makeblank m/s$^2$, \makeblank}{23 N, right}
+        \vforce{  2 }{\forceblank}
+        \vforce{ -2 }{29.4 N}
+        \hforce{ 3.5}{\forceblank}
+        \hforce{ -1}{5 N}
+
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (7,4) {};
+        \createFBD
+          {(b)}{2 kg}{8 m/s$^2$, left}{\makeblank N, \makeblank}
+        \vforce{  2 }{19.6 N}
+        \vforce{ -2 }{\forceblank}
+        \hforce{-1.8}{\forceblank}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (-7,-5) {};
+        \createFBD
+          {(c)}{5 kg}{12 m/s$^2$, left}{\makeblank N, \makeblank}
+        \vforce{  1.5 }{49 N}
+        \vforce{ -1.5 }{\forceblank}
+        \hforce{  1   }{7 N}
+        \hforce{ -3   }{\forceblank}
+      \end{scope}
+
+      \begin{scope}
+        \node (a) at (7,-5) {};
+        \createFBD
+          {(d)}{3 kg}{18 m/s$^2$, right}{\makeblank N, \makeblank}
+        \vforce{  2.5 }{\forceblank}
+        \vforce{ -2.5 }{\forceblank}
+        \hforce{  4   }{\forceblank}
+        \hforce{  -2   }{17 N}
+      \end{scope}
+    \end{tikzpicture}
+  \end{center}
+
+\pagebreak
+
+\question
+  For each of the sketches below, identify all the forces applied on all objects and draw a free body diagram.  Then come up with an expression for the net force.
+
+  \newcommand{\picframe}[1]{
+    \begin{center}
+      \begin{tikzpicture}
+        \clip (-3,-3) rectangle (3,3);
+        \node at (0,0) {\includegraphics{#1}};
+      \end{tikzpicture}
+    \end{center}
+  }
+
+  \begin{multicols}{2}
+    \begin{parts}
+      \part 
+        Lamp hanging from a chain
+
+        \picframe{light.png}
+
+      \part 
+        A car moving at a constant speed.
+
+        \picframe{car.png}
+
+      
+      \part 
+        A car accelerating
+
+        \picframe{car.png}
+
+      \columnbreak
+
+      \part 
+        A box being pushed forward on the ground (constant speed)
+
+        \picframe{box.png}
+
+      \part 
+        A skydiver before opening her parachute
+
+        \picframe{free-fall-diver.png}
+
+
+      \part 
+        Object sliding down an inclined plane.
+
+        \picframe{incline.png}
+
+      
+    \end{parts}
+    
+  \end{multicols}
+
+  
+\end{questions}
+\end{document}
