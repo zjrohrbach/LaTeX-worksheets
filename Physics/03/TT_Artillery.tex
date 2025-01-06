@@ -1,0 +1,52 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+
+
+
+\begin{document}
+
+\Large
+
+
+\vspace*{\stretch{1}}
+
+\newcommand{\theq}{
+  \noindent
+  During the Civil War, an artillery commander is preparing to fire a cannon positioned on level ground. The cannon is aimed at an angle of $30^\circ$ above the horizontal and fires a cannonball with an initial velocity of 200~m/s.  Calculate the horizontal distance where the cannonball would land.
+
+  \begin{solution}
+    \begin{align*}
+      v_{0x} &= 200 \cos(30^\circ) = 173.2 \, \text{m/s}\\
+      v_{0y} &= 200 \sin(30^\circ) = 100 \, \text{m/s} \\
+      t &= \frac{2 v_{0y}}{g} = \frac{2 \cdot 100}{9.81} = 20.39 \, \text{s} \\
+      R &= v_{0x} \cdot t = 173.2 \cdot 20.39 = 3525.5 \, \text{m}
+    \end{align*}
+
+    Extension A: if there is a hill halfway between you and your target that is 550 meters high, will your cannonball make it over?  (no, the  max height is 509.68~m).
+
+    Extension B: What could you do instead? (Try 60 degrees; same range, max height is 1521.5~m)
+\end{solution}
+}
+
+\theq
+
+\vs \hrule \vs
+
+\theq
+
+\vs
+
+\pagebreak
+
+\printanswers \theq
+
+
+
+
+
+\end{document}

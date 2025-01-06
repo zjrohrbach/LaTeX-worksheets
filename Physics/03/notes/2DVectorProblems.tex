@@ -101,7 +101,7 @@
 
     A ball is thrown with an initial resultant velocity of 12.5 m/s at angle 53$^\circ$ above horizontal.  Calculate the $x$- and $y$- components of the ball's initial velocity.
 
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale=1.5]
       \begin{scope}[thick, orange]
         \draw (0,1.2) circle (0.2);
         \coordinate (waiste) at (-.2,0);
@@ -115,7 +115,7 @@
           -- ++(-50:0.4);
         \fill[shading=ball] (throwing hand) ++ (63:0.3) coordinate(ball) circle (0.15);
         \draw[vector] (ball) -- (53:2.5)
-          node[midway, above, rotate=58] {\footnotesize 12.5 m/s};
+          node[midway, above, rotate=58] {12.5 m/s};
       \end{scope}
     \end{tikzpicture}
   }
@@ -126,16 +126,18 @@
     An airplane comes in for a landing at a speed of 67 m/s.  Its angle is 15 degrees below horizontal.  Calculate the $x$- and $y$- components of the airplane's velocity.
 
     \begin{tikzpicture}
-      \node at (0,0) 
-        {\includegraphics[angle=-15,origin=c,width=1.5cm]{airplane.png}};
-      \draw[vector] (.6,-.2) coordinate (a)
-        -- ++(-15:2.05) 
-        node[midway, below, rotate=-14] 
-        {\footnotesize 67 m/s};
-      \draw[dashed, thin] (a) -- ++(3,0);
-      \draw (-1,-1.1) -- ++(6,0);
-      \draw[->] (a) ++(1.2,0) arc (0:-15:1.2);
-      \node at (2.1,-.4) {\footnotesize $15^\circ$};
+      \begin{scope}[scale=2]
+        \node at (0,0) 
+          {\includegraphics[angle=-15,origin=c,width=3cm]{airplane.png}};
+        \draw[vector] (.6,-.2) coordinate (a)
+          -- ++(-15:2.05) 
+          node[midway, below, rotate=-14] 
+          {67 m/s};
+        \draw[dashed, thin] (a) -- ++(3,0);
+        \draw (-1,-1.1) -- ++(5.5,0);
+        \draw[->] (a) ++(.7,0) arc (0:-15:.7);
+        \node at (1.5,-.3) {$15^\circ$};
+      \end{scope}
     \end{tikzpicture}
 }
 
@@ -143,21 +145,18 @@
 \begin{document}
 \pagestyle{empty}
 
-\begin{multicols}{2}
+\begin{multicols*}{2}
   \probone
+  \vfill
+  \probtwo
+  \vfill\vspace*{1em}
   \columnbreak
   \probthree
-\end{multicols}
-
-\vspace{\stretch{1}}
-
-\begin{multicols}{2}
-  \probtwo
-  \columnbreak
+  \vfill
   \probfour
-\end{multicols}
+  \vfill\vspace*{1em}
+\end{multicols*}
 
-\vspace{\stretch{1}}
 
 
 \end{document}

@@ -1,0 +1,51 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\title{Friction Practice Problems}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+\question 
+  A 75-kg bookcase is pushed across a carpeted floor.  The static coefficient of friction is 0.8 and the kinetic coefficient of friction is 0.6.
+
+  \begin{parts}
+    \part 
+      How much force is required to start the bookcase moving?
+      \vs
+    \part 
+      If that same force is continually applied to the bookcase after it starts moving, what will be its acceleration?
+      \vs
+  \end{parts}
+
+\pagebreak
+
+\question
+    Consider the modified Atwood Machine shown with $m_1=4$~kg and $m_2=3$~kg.  If the coefficient of kinetic friction between the top box and the surface of the table is 0.2, what will be the acceleration of the system?
+
+    \tikzstyle{box}=[rounded corners,draw,minimum height=1cm]
+
+
+    \begin{tikzpicture}
+      \node[box,minimum width=1.5cm] (one) at (0,0) {$m_1$};
+      \node[box] (two) at (3.75,-3) {$m_2$};
+      \draw[very thick] (one.east) -- (3.5,0) arc (90:0:0.25) -- (two);
+      \fill[pattern=north east lines] (-3,-0.5) rectangle
+        ++(6,-0.25);
+      \draw (-3,-0.5) -- 
+        ++(6,0) coordinate (edge) -- 
+        ++(0,-1);
+      \draw (edge) -- (3.5,-0.25) circle (0.25);
+    \end{tikzpicture}
+
+
+
+\end{questions}
+
+\end{document}

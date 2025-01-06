@@ -1,0 +1,71 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+  
+
+
+\begin{document}
+
+
+
+\newcommand{\qu}{
+  What would be the speed of a satellite that orbits 500~km above the earth?
+
+
+  \begin{align*}
+    a_C        &= \frac{v^2}{r} &
+    \Sigma F_C &= ma_C = \frac{mv^2}{r}  &
+    v          &= \frac{2\pi r}{T} &
+    F_G        &= \frac{Gm_1 m_2}{r^2} \\
+    &&&&&& G   &= \SI{6.67e-11}
+                  {\newton\meter^2\per\kilo\gram^2}
+  \end{align*}
+
+
+  \begin{align*}
+    \Sigma F &= ma &
+    F_G      &= mg &
+    F_f      &= \mu F_N
+  \end{align*}
+
+
+  \begin{center}
+    \begin{tabular}{lll}
+      \hline
+      Earth: & Mass           & \SI{5.98e24}{\kilo\gram} \\
+            & Radius (mean)  & \SI{6.38e3}{\kilo\meter} \\
+      Moon:  & Mass           & \SI{7.35e22}{\kilo\gram} \\
+            & Radius (mean)  & \SI{1.74e3}{\kilo\meter} \\
+      Sun:   & Mass           & \SI{1.99e30}{\kilo\gram} \\
+            & Radius (mean)  & \SI{6.96e5}{\kilo\meter} \\ \hline
+      \multicolumn{2}{l}{Earth-Sun Distance (mean)} & 
+                                \SI{1.496e8}{\kilo\meter} \\
+      \multicolumn{2}{l}{Earth-Moon Distance (mean)} & 
+                                \SI{3.84e5}{\kilo\meter} \\
+                                \hline\hline
+    \end{tabular}
+  \end{center}
+}
+
+
+\qu
+\vs
+\hrule
+\vs
+\qu
+
+
+  
+
+
+
+
+
+
+\end{document}

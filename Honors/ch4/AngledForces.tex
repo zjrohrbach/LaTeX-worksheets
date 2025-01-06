@@ -1,0 +1,103 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\title{Forces at an Angle}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+  
+\question 
+  Calculate the (a) acceleration and (b) normal force acting on this block of $m=5$~kg being pulled by 85~N of tension at an angle of 25$^\circ$ above horizontal on a frictiionless surface.
+
+  \tikzstyle{box}=[rounded corners,draw,minimum height=1cm]
+
+  \begin{tikzpicture}
+    \node[box,minimum width=1.5cm] (box) at (0,0) {};
+    \fill[top color=gray] (-3,-0.5) rectangle
+      ++(6,-0.25);
+    \draw (-3,-0.5) -- ++(6,0);
+    \draw[red,very thick,-Stealth] (0,0) -- (25:3)
+      node[above] {85 N};
+    \draw[dashed] (0,0) -- (2,0);
+    \draw (1,0) node[anchor=south west]{$25^\circ$}
+    arc[
+      start angle = 0,
+      end angle = 25, 
+      radius = 1
+    ];
+  \end{tikzpicture}
+
+
+\pagebreak
+
+\question
+  \def\ang{30}
+  Consider a 17-kg box sitting on a ramp that has an angle of elevation of $\ang^\circ$.
+
+
+  \begin{parts}
+    \part 
+      Assuming the ramp is frictionless, calculate the acceleration.
+
+      \vspace{5em}
+
+      \begin{tikzpicture}
+        \draw[top color=gray] 
+          (0,0) coordinate (top) 
+          -- (-\ang:1) coordinate (location)
+          -- (-\ang:5) coordinate (bottom)
+          -| cycle;
+
+        \node[
+          box,minimum width=1cm,rotate=-\ang,anchor=south
+          ]  
+            (box) at (location) {};
+        \draw (bottom) ++ (-\ang:-1) 
+          arc[
+            start angle = 180-\ang,
+            end angle = 180, 
+            radius = 1
+          ]
+          node[anchor=south east]{$\ang^\circ$};
+      \end{tikzpicture}
+      \vs[4] 
+    \part
+      Assuming the ramp is frictionless, calculate the normal force acting on the box.
+      \vs
+    \part
+      Now, if there was friction, what would need to be the minimum coefficient of static friction such that the box would stay at rest and not slide down the ramp? 
+      \vspace{5em}
+
+      \begin{tikzpicture}
+        \draw[top color=gray] 
+          (0,0) coordinate (top) 
+          -- (-\ang:1) coordinate (location)
+          -- (-\ang:5) coordinate (bottom)
+          -| cycle;
+
+        \node[
+          box,minimum width=1cm,rotate=-\ang,anchor=south
+          ]  
+            (box) at (location) {};
+        \draw (bottom) ++ (-\ang:-1) 
+          arc[
+            start angle = 180-\ang,
+            end angle = 180, 
+            radius = 1
+          ]
+          node[anchor=south east]{$\ang^\circ$};
+      \end{tikzpicture}
+      \vs 
+
+  \end{parts}
+
+
+\end{questions}
+
+\end{document}

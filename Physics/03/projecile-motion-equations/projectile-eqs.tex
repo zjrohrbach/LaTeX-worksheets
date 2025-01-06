@@ -42,46 +42,48 @@
   \end{multicols}
   \vspace{-8pt}
   \hrule
-  \begin{multicols}{2}
-    \begin{center}
-      \begin{tikzpicture}[
-          every node/.append style={font=\large},
-          component/.append style={
-            dashed,
-            -{Stealth}
-          },
-          resultant/.append style={
-            ultra thick,
-            -{Stealth}
-          }
-      ]
-        \draw[resultant] 
-                  (0,0) -- (4.5,3) 
-                    node[midway,anchor=south east]{\bf $v_R$};
-        \draw[component] 
-                  (0,0) 
-                  -- (4.5,0) 
-                    node[midway,anchor=north]{$v_x$} ;
-        \draw[component] 
-                  (4.5,0)
-                  -- (4.5,3) 
-                    node[midway, anchor=west]{$v_y$} ;
-        \draw[-Stealth] (1,0) node[anchor=south west]{$\theta$}
-                  arc[
-                    start angle = 0,
-                    end angle = 31, 
-                    radius = 1
-                  ];
-      \end{tikzpicture}
-
+  \vspace{1em}
+  \begin{minipage}{2.5in}
+    \begin{tikzpicture}[
+        every node/.append style={font=\large},
+        component/.append style={
+          dashed,
+          -{Stealth}
+        },
+        resultant/.append style={
+          ultra thick,
+          -{Stealth}
+        }
+    ]
+      \draw[resultant] 
+                (0,0) -- (4.5,3) 
+                  node[midway,anchor=south east]{\bf $v_R$};
+      \draw[component] 
+                (0,0) 
+                -- (4.5,0) 
+                  node[midway,anchor=north]{$v_x$} ;
+      \draw[component] 
+                (4.5,0)
+                -- (4.5,3) 
+                  node[midway, anchor=west]{$v_y$} ;
+      \draw[-Stealth] (1,0) node[anchor=south west]{$\theta$}
+                arc[
+                  start angle = 0,
+                  end angle = 31, 
+                  radius = 1
+                ];
+    \end{tikzpicture}
+  \end{minipage}
+  %
+  \begin{minipage}{2.5in}
       \begin{align*}
-        v_x     &= v_R \cos \left( \theta \right) \\
-        v_y     &= v_R \sin \left( \theta \right) \\
-        \theta  &= \tan^{-1} \left( v_y / v_x \right) \\[1em]
-        v_x^2 + v_y^2 &= v_R^2
+        \theta  &= \tan^{-1} \left( v_y / v_x \right)\\
+        v_x^2 + v_y^2 &= v_R^2                       \\[1em]
+        v_x     &= v_R \cos \left( \theta \right)    \\
+        v_y     &= v_R \sin \left( \theta \right)
       \end{align*}
-    \end{center}
-  \end{multicols}
+  \end{minipage}
+  \vspace{1em}
   \hrule
 }
 

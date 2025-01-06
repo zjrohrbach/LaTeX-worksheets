@@ -1,0 +1,200 @@
+\documentclass[10pt]{exam}
+\usepackage[icp]{template-for-exam}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{
+  compat=1.18, 
+  every axis/.append style={
+    grid=major,
+    xtick={0,1,...,25},
+    ytick={-10,-9,...,15},
+    grid style = dashed,
+  },
+  empgraph/.append style={
+    xmin=0, xmax=9,
+    ymin=0, ymax=6,
+    width  = 5cm,
+    height = 4cm,
+    ylabel = {position},
+    xlabel={time},
+    xtick = \empty,
+    ytick = \empty,
+    axis y line = left,
+    axis x line = bottom,
+  },
+  soln/.append style={
+    red,
+    domain=0:7
+  }
+}
+\printanswers
+\shadedsolutions
+
+\title{P1-P3 Refresher}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+\uplevel{\section*{Unit P1: Motion}}
+
+  \question
+    Define the following terms: 
+    \begin{parts}
+        \part Velocity:
+          %
+          \begin{solution}[\stretch{1}]
+            how fast an object is moving and its direction (measured in m/s)
+          \end{solution}
+
+        \part Acceleration:
+          %
+          \begin{solution}[\stretch{1}]
+            the rate that velocity changes (measured in m/s/s or \SI{}{\meter\per\second^2})
+          \end{solution}
+    \end{parts}
+
+  \question
+    What is the acceleration of a car moving at a constant speed in a straight line?  How do you know?
+    %
+    \begin{solution}[\stretch{1}]
+      zero.  The velocity is not changing.
+    \end{solution}
+
+  \question
+    What are the three ways to accelerate?
+    %
+    \begin{solution}[\stretch{1}]
+      speed up, slow down, change direction
+    \end{solution}
+
+    \question
+    Draw the following distance-time graphs.
+
+    \newcommand{\empgraph}[1]{
+      \par
+      \begin{tikzpicture}
+        \begin{axis}[empgraph]
+        \ifprintanswers
+          \addplot[soln] {#1};
+        \fi
+        \end{axis}
+      \end{tikzpicture}
+    }
+
+    \begin{multicols}{2}
+      \begin{parts}
+        \part Not moving \empgraph{3}
+        \part Forward at a constant speed \empgraph{0.6*x}
+        \part Backward at a constant speed \empgraph{5-0.6*x}
+        \part Forward and speeding up \empgraph{(x/3)^2}
+      \end{parts}
+    \end{multicols}
+
+\vspace{-2em}
+
+\uplevel{\section*{Unit P2: Measurement}}
+
+  \question
+
+    %rowterminator
+    \newcommand{\rt}{&\\\hline}
+    %makecenter
+    \newcommand{\ct}{\centering}
+
+    \renewcommand{\arraystretch}{1.5}
+
+    Fill in the blanks on this table:
+
+    \begin{tabular}{|*{2}{m{.25\textwidth}|}m{.25\textwidth}c|}
+      \hline
+      \bf\ct Quantity & \bf\ct Tool & \bf\ct Units &\\\hline
+                      &             & \ct mL       \rt
+      \ct distance    &             &              \rt
+                      &\ct thermometer &           \rt
+                      &             & \ct seconds  \rt
+                      & \ct balance &              \rt
+    \end{tabular}
+
+\pagebreak
+
+  \question
+    Round these numbers to two decimal places
+
+    \begin{parts}
+      \part 6.23842\vspace{2em}
+      \part 0.31132\vspace{2em}
+    \end{parts}
+
+\uplevel{\section*{Unit P3: Forces \& Newton's Laws}}
+
+\question
+    What is {\bf inertia} and what law does it correspond to?
+
+    \begin{solution}[\stretch{1}]
+      Inertia is the tendency of object's to resist changes in motion.  It corresponds to Newton's First Law.
+    \end{solution}
+    
+  \question
+    Which of Newton's laws best explains each of these?  Explain your answer in at least one complete sentence.
+
+    \begin{parts}
+      \part 
+        Jen goes shopping at the grocery store. She notices that as she adds items to the cart it gets harder to push.   
+
+        \begin{solution}[\stretch{1}]
+          Second Law.  As the mass of the cart increases, it accelerates less.
+        \end{solution}
+
+      \part 
+        A rocket pushes fuel down so that the fuel can push the rocket up.
+
+        \begin{solution}[\stretch{1}]
+          Third law.  The action is the rocket pushing the fuel down; the reaction is the fuel pushing the rocket up.
+        \end{solution}
+    
+      \part
+        When you are in a car and you slam on your brakes, your body keeps moving forward.
+
+        \begin{solution}[\stretch{1}]
+          First law. Your body is in motion.  It tries to stay in motion even though the car stops
+        \end{solution}
+
+    \end{parts}
+
+  \question
+    You jump off the ground by pushing off of it.  The action force is the force of your feet pushing the ground down.  What is the reaction force?
+
+        \begin{solution}[\stretch{1}]
+          The force of the ground pushing your feet up.
+        \end{solution}
+
+
+  \question
+    What is the difference between mass and weight?
+
+    \begin{solution}[\stretch{1}]
+      \begin{itemize}
+        \item mass is a measure of an object's inertia
+        \item weight is the force of gravity on the object
+      \end{itemize}
+    \end{solution}
+
+
+	\question 
+    If you go to a different planet, what happens to your mass and your weight?
+
+    \begin{solution}[\stretch{1}]
+      Your mass stays the same, but your weight changes.
+    \end{solution}
+
+
+    
+
+
+
+\end{questions}
+\end{document}

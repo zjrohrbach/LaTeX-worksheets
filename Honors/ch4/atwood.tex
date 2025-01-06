@@ -1,0 +1,15 @@
+\documentclass[12pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\begin{document}
+\tikzstyle{box}=[rounded corners,draw,minimum height=1cm]
+\begin{tikzpicture}
+  \node[box] (one) at (-.75,0) {$m_1$};
+  \node[box] (two) at (.75,-0.5) {$m_2$};
+  \draw[very thick] (one.north) -- (-.75,3) 
+    arc (180:0:.75) -- (two.north);
+  \draw[very thick] (0,3) circle[radius=.75];
+\end{tikzpicture}
+
+\end{document}

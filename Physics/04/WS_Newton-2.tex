@@ -1,6 +1,8 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
 \usepackage{my-tikz-clipart}
+\usetikzlibrary{patterns.meta}
+
 
 \title{Newton \#2 (Free-Body Diagrams)}
 \author{Rohrbach}
@@ -121,13 +123,26 @@
         Make sure to include the net force.
 
         \begin{center}
-          \begin{tikzpicture}
-            \path (0,-1.8) pic {bucket};
+          \begin{tikzpicture}[scale=0.5]
+            \path (0,-1.8) node[
+              cylinder,draw,
+              rotate=90,
+              minimum width=.9cm,
+              minimum height=.9cm,
+              cylinder uses custom fill, 
+              cylinder end fill=blue!50,
+              cylinder body fill=blue!25
+            ] {};
+          \draw[ultra thick, blue] (.75,-1) arc[
+              start angle = 0,
+              end angle = 180,
+              x radius=.75cm,
+              y radius=1cm
+           ];
             \filldraw[pattern=north east lines] 
             (-.1,0) -- (.1,0) -- (.1,2) -- (-.1,2) -- cycle;
           \end{tikzpicture}
         \end{center}
-        \vs
         
       \part
         Calculate the net force on the bucket.
@@ -138,7 +153,7 @@
   \hrule
 
   \question 
-    Newtons Second Law gives us the equation 
+    Newton's Second Law gives us the equation 
     $F_{NET}=ma$.  A bicycle has a mass of 120 kg.  It 
     accelerates at a rate of 
     \SI{1.2}{\meter\per\second^2}.  
@@ -176,8 +191,55 @@
 
     \end{parts}
     
+
+    \hrule
   
-  
+    \question 
+    A large load has a weight (that is, force of gravity) of \SI{12000}{\newton}.  It is being lifted by a crane.
+
+    \begin{parts}
+    
+      \part 
+        Draw a free body diagram.  
+        
+
+        \begin{center}
+          \begin{tikzpicture}[scale=0.6]
+            \draw[
+              orange, 
+              thick, 
+              pattern={Hatch[angle=45,distance={6pt},line width=0pt,]},
+              pattern color=orange
+              ] 
+                (0,0) -- 
+                ++(3,4) -- 
+                ++(.1,0) coordinate (top) --
+                ++(.1,0) --
+                (1,0) --
+                cycle;
+            \filldraw[pattern=north east lines] 
+              (top) -- 
+              ++(-.05,0) --
+              ++(0,-2) coordinate (a) -- 
+              ++(.05,0) coordinate (b) -- 
+              ++ (0,1.95) --
+              cycle;
+            \draw (a) -- ++(-.5,-.5) coordinate (c);
+            \draw (b) -- ++(.5,-.5) coordinate (d);
+            \draw[
+                red, 
+                thick,
+                pattern=bricks, 
+                pattern color=red
+              ] (c) -- ++(0,-1) -| (d) -- cycle;
+          \end{tikzpicture}
+        \end{center}
+      
+      \part
+        The net force is 1500 N upward.  Calculate the {\bf tension} being provided by the crane.
+        \vs
+
+    \end{parts}
   
   
   

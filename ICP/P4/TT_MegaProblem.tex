@@ -1,0 +1,98 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+
+
+\begin{document}
+
+%\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+
+\begin{questions}
+
+\vspace*{\stretch{1}}
+
+\question
+  A 10-kg ball rolling down a hill accelerates from rest to 25~m/s in a time period of 2.7~seconds.  How much work was done if it rolled a total distance of 33.75~m?
+
+
+  \begin{solution}
+    \begin{align*}
+      a &= \frac {25-0}{2.7} 
+         = \SI{9.26}{\meter\per\second^2} \\
+      F_{NET} &= (10)(9.26)
+               = \SI{92.6}{\newton} \\
+      W &= (92.6)(33.75)
+         = \SI{3125.25}{\joule}
+    \end{align*}
+
+
+    Extension: what is the kinetic energy?  (should be same as work
+  \end{solution}
+
+
+\vs \hrule \vs
+
+\question
+  A certain cart has a mass of 450~kg and a kinetic energy of \SI{100000}{\joule}.  How far will it go in \SI{3.25}{\second}?
+
+  \begin{solution}
+      \begin{align*}
+        100000 &= \frac{1}{2}(450)v^2 \\
+        444.44 &= v^2 \\
+        \SI{21.08}{\meter\per\second}  &= v \\\\
+        %
+        21.08 &= \frac{d}{3.25} \\
+        \SI{68.51}{\meter} &- d
+      \end{align*}
+  \end{solution}
+
+\vs
+\ifprintanswers
+  \hrule \vs
+\else
+  \pagebreak
+  \vspace*{\stretch{1}}
+
+  \newcommand{\eqsheet}{
+    \section*{Equations}
+    \begin{align*}
+      v &= \frac{d}{t} &
+      a &= \frac{\left(v_f-v_i\right)}{t} &
+      F_{NET} &= ma \\\\\hline\\
+      W &= Fd &
+      KE &= \frac{1}{2}mv^2 &
+      PE &= mgh
+    \end{align*}
+  }
+
+  \eqsheet
+  
+  \vs \hrule \vs
+
+  \eqsheet
+
+  \vs 
+
+\fi
+
+
+
+\end{questions}
+
+
+
+
+\end{document}

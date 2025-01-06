@@ -1,0 +1,19 @@
+\documentclass[12pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\begin{document}
+\tikzstyle{box}=[rounded corners,draw,minimum height=1cm]
+\begin{tikzpicture}
+  \node[box,minimum width=1.5cm] (one) at (0,0) {$m_1$};
+  \node[box] (two) at (3.75,-3) {$m_2$};
+  \draw[very thick] (one.east) -- (3.5,0) arc (90:0:0.25) -- (two);
+  \fill[pattern=north east lines] (-3,-0.5) rectangle
+    ++(6,-0.25);
+  \draw (-3,-0.5) -- 
+    ++(6,0) coordinate (edge) -- 
+    ++(0,-1);
+  \draw (edge) -- (3.5,-0.25) circle (0.25);
+\end{tikzpicture}
+
+\end{document}
