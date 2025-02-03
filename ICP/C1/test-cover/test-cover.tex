@@ -45,11 +45,9 @@
 \newcommand{\drawscantron}[2]{
   \begin{flushright}
     \begin{tikzpicture}
-      \node[anchor=south west] at (0,0) {\includegraphics[width=4in]{scantron.png}};
+      \node[anchor=south west] at (0,0) {\includegraphics[height=6.5in]{45Q.png}};
       \fill (#1,#2) circle (0.2);
-      \node[anchor=west] at (2,10.9) {\small \mytitle};
-      \node[anchor=west, fill=white] at (6.4,7.8) {ZipGrade ID};
-      \fill[white] (6.4,7.5) rectangle ++(.9,-6.2);
+      \node[anchor=west] at (6.7,15.2) {\small \mytitle};
     \end{tikzpicture}
   
     \bottommatter
@@ -58,22 +56,22 @@
 
 
 
-  \drawscantron{4.5}{1.65}
+  \drawscantron{7.5}{1.9}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{4.9}{1.65}
+  \drawscantron{7.9}{1.9}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{5.4}{1.65}
+  \drawscantron{8.4}{1.9}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{5.8}{1.65}
+  \drawscantron{8.9}{1.9}
   \topmatter
 
 

@@ -1,0 +1,78 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tabularx}
+
+\title{Rotational Motion Equations}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\renewcommand{\arraystretch}{2.5}
+
+
+\begin{tabularx}{0.9\textwidth}
+  {*{3}{>{\centering\arraybackslash}X}}
+  \emph{linear/translational} &
+  \emph{rotational/angular} &
+  \emph{`bridge'} \\ \hline
+  %
+  && $\ell=r\theta$ \\\hline
+  %
+  $v \equiv \frac{\Delta x}{\Delta t}$ &
+  $\omega \equiv \frac{\Delta\theta}{\Delta t}$ &
+  $v = r \omega$ \\\hline
+  %
+  $a \equiv \frac{\Delta v}{\Delta t}$ &
+  $\alpha \equiv \frac{\Delta\omega}{\Delta t}$ &
+  $a_T = r \alpha$ \\\hline
+  && $a_C = a_R = \omega^2 r$ \\\hline
+  %
+  $F=ma$ & 
+  $\tau=I\alpha$ & 
+  $\tau \equiv r F_{\perp}$ \\\hline
+  %
+  $W\equiv F_{\parallel}d$ & 
+  $W_r = \tau \Delta\theta$ & \\\hline
+  %
+  $KE_t = \frac{1}{2} mv^2$ & 
+  $KE_r = \frac{1}{2} I\alpha^2$ & \\\hline
+  %
+  $PE = mgy$ && \\\hline
+  %
+  $p = mv$ & 
+  $L = I \omega$ & \\\hline
+  %
+  &&\\\hline
+  %
+  $v=v_0+at$ &
+  $\omega = \omega_0 + \alpha t$ &
+  \emph{``Old Faithful''} \\\hline
+  %
+  $x = x_0 + v_0 t + \frac{1}{2} at^2$ &
+  $\theta = \theta_0 + \omega_0 t + \frac{1}{2}\alpha t^2$ &
+  \emph{``The Big Chalupa''} \\\hline
+  %
+  $v^2 = v_0^2 + 2 a (x-x_0)$ &
+  $\omega^2 = \omega_0^2 + 2 \alpha (\theta - \theta_0)$ &
+  \emph{``Ain't Got No Time''} \\\hline
+  %
+  &&\\\hline
+  %
+  & $I \equiv mr^2 $&\\\hline
+  %
+  $I_{\text{hoop}}=MR^2$ &
+  $I_{\text{disc}} = \frac{1}{2} MR^2 $&
+  $I_{\text{sphere}} = \frac{2}{5} MR^2$ \\\hline
+  %
+  &&\\\hline
+  %
+  $1~\text{rev}=360^\circ=2\pi~\text{rad}$ &
+  $1~\text{rpm}=0.1047~\text{rad/s}$ &
+  \\\hline
+  %
+\end{tabularx}
+
+
+\end{document}
