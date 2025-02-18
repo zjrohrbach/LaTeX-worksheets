@@ -7,71 +7,50 @@
 \begin{document}
 \pagestyle{empty}
 
-\def\mytitle{P3 (Forces) Test}
+\def\mytitle{C2 (Gas Laws) Test}
 
 \newcommand{\topmatter} {
-  \vspace{2em}
-  {\noindent \Large \bf Instructions:}
-
-  \vspace{1em}
-
-  \noindent {\bf Please do not open this test until told to do so!}
-
-  \begin{itemize}
-    \item Put your name on both this \emph{and} the next page
-    \item Bubble in the number that is on your class notebook where it says ``ZipGrade ID''
-    \item When instructed, tear off this first page
-    \item Write your answers to the free-response questions directly on the packet.
-    \item Bubble in your answers to the multiple-choice questions here.
-    
-  \end{itemize}
-
-  \noindent {\bf When you are finished,}
-
-  \begin{enumerate}
-    \item Turn your test face down in front of you (Don't get up to turn it in).
-    \item Sit silently until everyone is done.
-    
-  \end{enumerate}
+  {\Large \mytitle}
 }
 \newcommand{\bottommatter}{
-  \begin{tikzpicture}
-    \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
-    \node at (0,0.2) {\bf !};
-  \end{tikzpicture}
-  \bf Don't forget to do the two pages of problems on the packet!
+
+  \paragraph{Question 26}
+  Pick one of the gas laws (Boyle's pressure--volume law, Charles' volume--temperature law, or Gay-Lussac's pressure--temperature law) and explain why it makes sense.  Make sure to explain what is happening to the particles in the gas.
+
+  \fillwithdottedlines{15em}
+
+
 }
 
 \newcommand{\drawscantron}[2]{
   \begin{flushright}
     \begin{tikzpicture}
-      \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron.png}};
-      \fill (#1,#2) circle (0.25);
+      \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{25Q.png}};
+      \fill (#1,#2) circle (0.2);
     \end{tikzpicture}
-  
-    \bottommatter
   \end{flushright}
+  \bottommatter
 }
 
 
-
-  \drawscantron{6.2}{1.9}
   \topmatter
+  \drawscantron{6.3}{1.85}
+
 
 \pagebreak
 
-  \drawscantron{6.7}{1.9}
   \topmatter
+  \drawscantron{6.8}{1.85}
+  
 
 \pagebreak
 
-  \drawscantron{7.2}{1.9}
   \topmatter
+  \drawscantron{7.3}{1.85}
 
 \pagebreak
 
-  \drawscantron{7.6}{1.9}
   \topmatter
-
+  \drawscantron{7.8}{1.85}
 
 \end{document}

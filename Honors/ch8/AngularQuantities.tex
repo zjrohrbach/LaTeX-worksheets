@@ -47,11 +47,11 @@
 \renewcommand{\arraystretch}{2}
 
 \begin{tabular}{p{9em}ccp{6.5em}}
-  Concept & Linear/Translational Quantity & Angular/Rotational Quantity & \hfill ``Bridge'' \\ \hline
-  position \\[2em]
-  displacement \\[1em] & units: & units:  \\
-  velocity \\[1em] & units: & units:  \\
-  acceleration \\[1em] & units: & units: 
+  Concept & Linear/Translational Quantity & Angular/Rotational Quantity & \hfill ``Bridge'' \\ \hline\hline
+  position \\[2em]\hline
+  displacement \\[1em] & units: & units:  \\\hline
+  velocity \\[1em] & units: & units:  \\\hline
+  acceleration \\[1em] & units: & units: \\\hline
 \end{tabular}
 
 
@@ -63,13 +63,13 @@
 \begin{questions}
   
 \question 
-  When you look at the Sun from the surface of the Earth, it subtends an angle of about 0.5$^\circ$ in the sky.  The Earth is 150 million km away from the Sun.  Estimate the radius of the Sun.
+  When you look at the Sun from the surface of the Earth, it subtends an angle of about 0.5$^\circ$ in the sky.  The Earth is 150 million km away from the Sun.  (a) Convert your angle to radians.  (b) Estimate the diameter of the Sun.
 
   \begin{tikzpicture}
     \draw[shading=ball] (0,0) circle (0.2);
     \draw (2.5:10) -- (0,0) -- (-2.5:10);
     \draw[->] (-2.5:4) arc (-2.5:2.5:4) 
-      node[midway,anchor=west] {$5^\circ$};
+      node[midway,anchor=west] {$0.5^\circ$};
     \fill[
       shading=ball, 
       ball color=orange,
