@@ -1,0 +1,182 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,my-tikz-clipart}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta}
+%\printanswers
+\shadedsolutions
+
+\title{Unit 08(A) Review (Simle Harmonic Motion)}
+\author{Rohrbach}
+\date{\today}
+
+\newcommand{\printeqs}{
+  \ifprintanswers
+  \else
+    \begin{center}
+      \begin{tabular}{|*{11}{c}|}
+        \hline 
+        &&&&&&&&&&\\
+        &
+        $T_P=2\pi\sqrt{\frac{\ell}{g}}$ &&
+        $T_S=2\pi\sqrt{\frac{m}{k}}$ &&
+        $F_P=-mg\theta$ &&
+        $F_S=-kd$ &&
+        $F_G=mg$ &\\
+        &&&&&&&&&&\\
+        \hline
+      \end{tabular}
+    \end{center}
+  \fi
+}
+
+
+\begin{document}
+\maketitle
+
+\printeqs
+
+\begin{questions}
+
+
+\question
+  A 0.3-kg mass is attached to a vertical spring. When the mass is attached, the spring stretches by 0.15~m. Calculate the spring constant of the spring.
+
+  \begin{solution}[\stretch{1}]
+    Knowns/Unknowns: $m=0.3$~kg, $d=-0.15$~m, $k=$~?.
+
+    Since the spring is being stretched by gravity, $F_S=F_G$.  Therefore,
+
+    \begin{align*}
+      F_S &= F_G \\
+      -kd &= mg  \\
+      -k(-0.15) &= (0.3)(9.8) \\
+      k &= \SI{19.6}{\newton\per\meter}
+    \end{align*}
+
+  \end{solution}
+
+\question
+  Calculate the period and frequency of a pendulum with length 1.4~m.
+
+  \begin{solution}[\stretch{1}]
+    Knowns/Unknowns: $\ell=1.4$~m, $T=$~?, $f=$~?.
+
+    \begin{align*}
+      T_P &= 2\pi \sqrt{\frac{\ell}{g}} 
+            = 2(3.14) \sqrt{\frac{1.4}{9.8}} 
+            = \SI{2.37}{\second} \\\\
+      f   &= \frac{1}{T} = \frac{1}{2.37} = \SI{0.42}{\hertz}
+    \end{align*}
+
+  \end{solution}
+
+\question
+  A spring makes 9 oscillations in 15 s. The spring constant is 80~N/m.  What mass is on the spring?
+  
+  \begin{solution}[\stretch{1}]
+    Knowns/Unknowns: $\#osc=9$, $t=15$~s, $k=80$~N/m $m=$~?.
+    
+    First, $T = \frac{15}{9} = \SI{1.67}{\second}$.  Then,
+    
+    \begin{align*} 
+      T_S  &= 2\pi \sqrt{\frac{m}{k}} \\
+      1.67 &= 6.28 \sqrt{\frac{m}{80}}\\
+      2.78 &= \frac{39.48m}{80} \\
+      \SI{5.67}{\kilo\gram} &= m
+    \end{align*}
+  \end{solution}
+
+\ifprintanswers
+\else
+  \begin{EnvUplevel}
+    \noindent
+    {\small Answers: \hspace{\stretch{1}}
+      (1) $k=\SI{19.6}{\newton\per\meter}$ 
+                                        \hspace{\stretch{1}}
+      (2) $T=\SI{2.37}{\second}$; $f=\SI{0.42}{\hertz}$
+                                        \hspace{\stretch{1}}
+      (3) $m=\SI{5.67}{\kilo\gram}$
+    }
+  \end{EnvUplevel}
+\fi
+
+\pagebreak
+
+\question
+  What are the four equations you need to have memorized?
+
+  \begin{solution}[\stretch{2}]
+    \begin{align*}
+      T &= \frac{t}{\#osc} &
+      f &= \frac{\#osc}{t} &
+      T &= \frac{1}{f} &
+      f &= \frac{1}{T} &
+    \end{align*}
+  \end{solution}
+
+\question
+  Define the following:
+
+  \begin{parts}
+    \part amplitude
+    
+      \begin{solution}[\stretch{1}]
+        the maximum displacement from equilibrium
+      \end{solution}
+
+    \part equilibrium
+
+      \begin{solution}[\stretch{1}]
+        the point where restoring force is zero
+      \end{solution}
+
+    \part frequency
+
+      \begin{solution}[\stretch{1}]
+        how many oscillations happen in a second
+      \end{solution}
+
+    \part period
+
+      \begin{solution}[\stretch{1}]
+        the time of one oscillation
+      \end{solution}
+
+    \part restoring force
+
+      \begin{solution}[\stretch{1}]
+        a force that pulls an object toward a fixed equilibrium point
+      \end{solution}
+
+    \part spring constant
+
+      \begin{solution}[\stretch{1}]
+        $k$, a measure of the stregth of the spring.  Measured in N/m.
+      \end{solution}
+
+  \end{parts}
+
+\question 
+  Explain why an oscillator keeps moving when it gets to equilibrium, even though the net force there is zero.
+
+  \begin{solution}[\stretch{2}]
+    the inertia carries it past
+  \end{solution}
+
+\question
+  Why doesn't amplitude affect period?
+
+  \begin{solution}[\stretch{2}]
+    Oscillators with a larger amplitude have a larger speed.  They also travel a farther distance.  These two effect counteract each other
+  \end{solution}
+
+\question 
+  What two factors affect the period of a spring?  What two factors affect the period of a pendulum?
+
+  \begin{solution}[\stretch{2}]
+    Mass and spring constant affect the period of a spring.  Length and acceleration of gravity affect the period of a pendulum.
+  \end{solution}
+
+\end{questions}
+
+\end{document}

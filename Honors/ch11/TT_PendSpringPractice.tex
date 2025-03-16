@@ -1,0 +1,76 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+
+
+\begin{document}
+
+\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \mystrut  \hfill}
+
+
+\begin{questions}
+
+  \vspace*{\stretch{1}}
+
+\question
+  A 250-gram mass oscillates according to the equation
+  %
+  \begin{align*}
+    x(t) = (0.8)\cos(34.56\cdot t) \, ,
+  \end{align*}
+  %
+  where $t$ is in seconds and $x$ is in meters. Find (a) amplitude, (b) frequency, (c) period, (d) spring constant, and (e) maximum speed.
+
+  \begin{solution}
+    \begin{align*}
+      A &= 0.8~\text{m} &
+      f &= 5.5~\text{Hz} &
+      T &= 0.18~\text{s} \\
+      k &= 298.6~\text{N/m} &
+      v_{MAX} &= 27.65~\text{m/s}
+    \end{align*}
+  \end{solution}
+
+\vs \hrule \vs
+
+\question
+   The length of a simple pendulum is 0.72~m and the mass of its bob is 0.295~kg.  It is released at an angle of 12$^\circ$ from vertical.  
+
+  \begin{parts}
+    \part Find the frequency.
+    \part Find the pendulum bob's speed when it passes through equilibrium.
+    \part Find the total energy stored in this oscillation.
+  \end{parts}
+
+  \begin{solution}
+    \begin{align*}
+      f &= \frac{1}{2\pi}\sqrt{\frac{g}{L}} \\
+        &= 0.59~\text{Hz} \\\\
+      mgy &= \frac{1}{2}mv^2 \\
+      mg\left(L-L\cos\theta\right) &= \frac{1}{2}mv^2 \\
+      0.55~\text{m/s} &= v \\\\
+      \Sigma E &= 0.046~\text{J}
+    \end{align*}
+  \end{solution}
+
+
+
+
+
+
+\end{questions}
+
+
+
+
+\end{document}

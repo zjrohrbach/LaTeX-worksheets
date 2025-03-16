@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+
+\begin{document}
+
+\begin{tikzpicture}[x=0.5cm, y=0.5cm]
+  \def\xs{7}
+  \draw[very thick] 
+    (1*\xs,7.3) 
+    to[in=180,out=0] (2*\xs,0)
+    to[in=180,out=0] (3*\xs,4.5)
+    to[in=180,out=0] (4*\xs,0);
+
+  \draw[|<->] (\xs,0) -- (\xs,7.2) 
+    node[midway,fill=white] {$h_1$};
+  \draw[|<->] (3*\xs,0) -- (3*\xs,4.4) 
+    node[midway,fill=white] {$h_2$};
+
+\end{tikzpicture}
+
+\end{document}
