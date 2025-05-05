@@ -1,0 +1,235 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{silence}
+\usepackage{tikz}
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\usepackage{pgfplots}
+\pgfplotsset{
+    compat=1.18,
+    pulseplot/.append style={
+      xmin =-6.5,
+      xmax = 6.5,
+      ymin =-2.5,
+      ymax = 2.5,
+      axis lines = none,
+      xtick = {},
+      ytick = {},
+      height = 5cm,
+      width = 7.5cm,
+      grid = major,
+      grid style = {thick, dotted},
+      tick label style = {font=\small}
+    },
+  }
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+\title{Wave Modeling \& Slinky Labs}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\vspace{-1em}
+
+
+\section{Wave Modeling}
+
+A transverse wave may be modeled when the marker moves back and forth perpendicularly to the direction of the moving paper.  If done carefully, you should see a nice consistent wave shape.
+
+\subsection{Data}
+
+Place the large sheet of butcher paper on the table.  One group member should steadily pull the paper across the table, while another member moves the marker back and forth over the paper.  The arm should swing freely like a pendulum.  One group member should use a stopwatch to measure the amount of time needed to sketch the wave motion across the entire length of the paper.
+
+\vspace{1em}
+
+\noindent
+Do your best to draw an equilibrium line down through the center of your wave.
+
+\vspace{2em}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabular}{p{.7\textwidth}p{.2\textwidth}}
+  \hline
+  Record the total time ($t$) of the wave motion. \\
+  & $t=$ \\\hline
+  Measure the total distance ($d$) that your wave traveled. \\
+  & $d=$ \\\hline
+  Record the total number of wavelengths ($\#osc$) for your wave (remember, a wavelength is measured from crest to crest and it is ok to have half of a wave). \\
+  & $\#osc=$ \\\hline
+  Determine your wave's period. \\
+  & $T=$ \\\hline
+  Use your period to find the frequency of the wave. \\
+  & $f=$ \\\hline
+  Label one full wavelength ($\lambda$) on your wave (measure and include its value).  Measure the rest of your wavelengths, and calculate the average wavelength for your wave. \\
+  & $\lambda=$ \\\hline
+  Label the amplitude ($A$) of one of the wave peaks (measure and include its value).  Measure the rest of your amplitudes (both crests and troughs) and calculate the average amplitude for your wave. \\
+  & $A=$ \\\hline
+\end{tabular}
+
+\pagebreak
+
+\begin{questions}
+  \uplevel{
+    \subsection{Calculations}
+  }
+
+  \question
+    Calculate the velocity of the wave using $v=d/t$. \vs 
+  \question 
+    Calculate the velocity of the wave using $v=f\lambda$. \vs 
+  \question 
+    Calculate the percent error using these two calculations.  Use \#1 as your expected value.
+    \begin{align*}
+      \text{\% error} &=  
+      \frac{
+        \left|\text{measured}-\text{expected}\right|
+        }{
+          \text{expected}
+        } 
+      \times 100
+    \end{align*}
+    \vs
+
+
+    \uplevel{
+      \subsection{Conclusion Questions}
+    } 
+
+    \question
+      How close were your two velocity calculations?  What could have caused the error?
+      \vs 
+
+    \question
+      How well do you think your wave turned out?  What could you do to get a better wave next time?
+      \vs
+    
+    \question
+      What would you have to do in order to increase the frequency of the wave?
+      \vs 
+
+    \question
+      What do you suppose would happen to the wavelength when you increased the frequency?
+      \vs
+
+  \uplevel{
+    \subsection{Challenge}
+  }
+
+    \question 
+      (\emph{time permitting}) See if you can graph your wave on Desmos or your graphing calculator.  Recall our SHM equations $x(t)=A\sin(\omega t + \phi)$ and $\omega = 2\pi f$.
+\end{questions}
+
+\pagebreak
+
+\begin{questions}
+
+  \uplevel{
+    \section{Slinkies}
+    \subsection{Pulses}
+  }
+  
+  \question
+    Send a {\bf transverse} pulse (one at a time, and just one person) down a stretched slinky.  Make sure to make them side to side. Observe the motion of the spring's coils. How are they moving?
+    \vs 
+  
+  \question
+    Send a large pulse and a small pulse down the slinky. Which one appears to travel faster? 
+    \vs
+  
+  
+  
+  \question
+    Change the tension of the spring by coming closer together or moving further apart.  How (if at all) does tension in the slinky seem to affect the speed of the wave?
+    \vs
+  
+  \question
+    Send another transverse pulse.  What happens to the orientation of the wave (right side up or upside down) when it reaches the other side of the slinky and bounces back?
+    \vs
+  
+  \question
+    Stretch the large spring and send a {\bf longitudinal} pulse down the spring.  Observe the motion of the spring coils.  How are they moving?
+    \vs
+  
+  \pagebreak
+
+  
+  \uplevel{
+    \subsection{Wave Interference}
+  }
+  
+  \question
+    Have each person send a {\bf singular wave pulse} down the spring at the same time.  Make sure the amplitudes of the waves are on the {\bf same} side of the spring.  
+  
+    \begin{parts}
+      \part 
+        Do the waves bounce off each other or pass through each other?
+
+        \begin{flushright}
+          \begin{tikzpicture}
+            \begin{axis}[pulseplot]
+              \addplot[smooth,domain=-6:6,samples=50,ultra thick] {1.3*(gauss(-4,.5)+gauss(4,.5))};
+              \draw[->,thick] (-3,.7) -- (-2,.7);
+              \draw[->,thick] (3,.7) -- (2,.7);
+            \end{axis}
+          \end{tikzpicture}
+        \end{flushright}
+
+
+      \part 
+        What do you observe where the waves meet (in the middle)? \vs
+      \part 
+        Which kind of interference is this? \vs 
+    \end{parts}
+  
+  
+  \question
+    Have each person send a singular wave pulse down the spring at the same time.  Make sure the amplitudes of the waves are on the {\bf opposite} sides of the spring.  What do you notice?
+  
+    \begin{parts}
+      \part 
+        Do you think the waves bounce off each other or pass right through?
+
+        \begin{flushright}
+          \begin{tikzpicture}
+            \begin{axis}[pulseplot]
+              \addplot[smooth,domain=-6:6,samples=50,ultra thick] {1.3*(gauss(-4,.5)-gauss(4,.5))};
+              \draw[->,thick] (-3,.7) -- (-2,.7);
+              \draw[->,thick] (3,-.7) -- (2,-.7);
+            \end{axis}
+          \end{tikzpicture}
+        \end{flushright}
+
+      \part 
+        What do you observe where the waves meet (in the middle)? \vs
+      \part 
+        Which kind of interference is this? \vs 
+    \end{parts}
+
+
+
+  \uplevel{
+    \subsection{Standing Waves}
+  }
+    
+  \question
+    While holding one end of the large spring firmly in place, move the other end of the spring continuously back and forth to send a continuous wave down the spring. See if you can achieve the third, fourth, and fifth harmonics.  Draw your results
+  
+    \begin{tikzpicture}
+      \draw[dotted] (0,0) grid[step=0.5cm] (15,5);
+    \end{tikzpicture}
+  
+  
+
+\end{questions}
+
+
+
+
+
+
+\end{document}

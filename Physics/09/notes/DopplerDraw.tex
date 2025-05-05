@@ -1,0 +1,91 @@
+\documentclass[10pt]{exam}
+\usepackage[
+  paperheight=8.5in, 
+  paperwidth=11in,
+  margin=.3in
+]{geometry}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{enumitem,multicol,tikz}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\content}{
+
+}
+
+\begin{multicols}{2}
+
+  \noindent
+  Consider a bug jumping at rest in the water.  The speed of water waves is 3~cm/s.
+
+  \begin{tikzpicture}[scale=0.4]
+  \draw[thin,gray] (0,0) grid (28,20);
+  \fill (14,10) circle (0.2);
+  \end{tikzpicture}
+
+  \vspace{1em}
+
+  \noindent
+  Consider a bug jumping forward at a speed of 2~cm/s.
+
+  \begin{tikzpicture}[scale=0.4]
+  \draw[thin,gray] (0,0) grid (28,22);
+  \fill (14,11) circle (0.2);
+  \fill (16,11) circle (0.2);
+  \fill (18,11) circle (0.2);
+  \end{tikzpicture}
+
+
+  \begin{itemize}
+    \item When an object moves {\bf toward} you, the frequency of waves is \fillin[higher][4em]
+    \item When an object moves {\bf away from} you, the frequency of waves is \fillin[higher][4em]
+  \end{itemize}
+
+
+  \columnbreak
+
+  \begin{tikzpicture}
+    
+    \draw (0,0) rectangle ++(7,3);
+    \node[align=left] at (8,2.50) {\Large$f=$};
+    \node[align=left] at (8,1.75) {\Large$f_s=$};
+    \node[align=left] at (8,1.00) {\Large$v=$};
+    \node[align=left] at (8,0.25) {\Large$v_s=$};
+    \node[align=left] at (8,-0.5) {\Large$v_o=$};
+
+
+  \end{tikzpicture}
+
+  \vspace{1em}
+
+
+  \begin{itemize}
+    \item when object is moving {\bf toward} the other one, use \fillin[top signs][7em]
+    \item when object is moving {\bf away from} the other one, use \fillin[top signs][7em]
+  \end{itemize}
+
+  \vspace{1em}
+
+  speed of sound in room-temperature air:
+  
+  \vspace{1em}
+
+  \paragraph{Example}
+  You are on the road driving at 35 m/s.  An ambulance approaches you from behind traveling at 42 m/s.  The sirens on the ambulance emit a frequency of 890 Hz.
+  
+  \vspace{1em}
+  
+  \begin{parts}
+    \part
+      What frequency do you hear?
+  
+    \part
+      After the ambulance passes you, what frequency do you hear?
+  \end{parts}
+
+
+\end{multicols}
+
+\end{document}

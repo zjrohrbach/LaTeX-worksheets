@@ -1,0 +1,60 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+\vspace*{\stretch{1}}
+
+
+\begin{questions}
+
+\Large
+
+\question
+The radio station WZPL broadcasts at a frequency of 99.5 MHz.  Radio waves travel at a speed of \SI{3.00e8}{\meter\per\second}.  (\emph{Hint:} $\SI{1}{\mega\hertz}=\SI{e6}{\hertz}$)
+
+\begin{parts}
+  \part How long is the wavelength of WZPL's radio waves? 
+  \part What is the period of these waves?
+\end{parts}
+
+
+
+
+\vs \hrule \vs
+
+\question
+A certain string has a length of 3.2 meters.  Its fourth harmonic occurs at 112 Hz.
+
+\begin{parts}
+  \part What is the wavelength?
+  \part How far apart are the nodes?
+  \part What is the fundamental frequency of the string?
+  \part What is the wave speed through the string?
+\end{parts}
+
+\vspace*{\stretch{1}}
+  
+\end{questions}
+
+
+
+
+
+
+
+
+\end{document}

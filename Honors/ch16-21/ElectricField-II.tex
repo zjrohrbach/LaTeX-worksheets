@@ -1,0 +1,40 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\title{Electric Field due to Multiple Charges}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+  \noindent
+  A charge of $q_1=+40$~nC sits 5~mm away from a charge of $q_2=-50$~nC. (\emph{Hint:} $\SI{1}{\nano\coulomb}=\SI{e-9}{\coulomb}$)
+
+  \vspace{1em}
+  
+  \begin{parts}
+    \part Draw the electric field lines. 
+    \part What is the magnitude and direction of the electric field halfway between the two charges?
+    \part What is the magnitude and direction of the electric field at $x=8$~mm?
+  \end{parts}
+
+  \vspace{1em}
+
+
+  \begin{tikzpicture}
+    \draw[->] (0,-3) -- (0,3) node[anchor=south west] {$y$};
+    \draw[->] (-1,0) -- (8,0) node[anchor=south west] {$x$};
+  
+  
+    \node[shape=circle,draw,fill=gray!50] at (0,0) {$q_1$};
+    \node[shape=circle,draw,fill=gray!50] at (5,0) {$q_2$};
+
+  
+  \end{tikzpicture}
+
+  
+
+\end{document}

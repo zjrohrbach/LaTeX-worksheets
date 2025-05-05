@@ -1,0 +1,60 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz}
+\usepackage[top=0.2in, bottom=0.5in, left=1in, right=1in]{geometry}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\def\mytitle{Unit 08(B) Test: Waves}
+
+\newcommand{\topmatter} {
+  \vspace{2em}
+  {\noindent \Large \bf Instructions:}
+
+  \vspace{1em}
+
+  \noindent {\bf Please do not open this test until told to do so!}
+
+  \begin{itemize}
+    \item Put your name on this page
+    \item Bubble in the number that is on your class notebook where it says ``ZipGrade ID''
+    \item When instructed, tear off this first page
+    \item Bubble in your answers to the multiple-choice questions here.
+    
+  \end{itemize}
+
+}
+\newcommand{\bottommatter}{
+  \begin{tikzpicture}
+    \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+    \node at (0,0.2) {\bf !};
+  \end{tikzpicture}
+  \bf Don't forget to do the problems on the back of this page!
+}
+
+\newcommand{\drawscantron}[1]{
+  \begin{flushright}
+    \begin{tikzpicture}
+      \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{6Q.png}};
+      \fill (#1,2) circle (0.25);
+      \fill[white] (8.7,1) rectangle ++(1.25,8.5);
+      \node[anchor=west] at (2,12) {\mytitle};
+    \end{tikzpicture}
+  \end{flushright}
+}
+
+
+
+  \drawscantron{4.4}
+  \topmatter
+
+\pagebreak
+
+  \drawscantron{4.95}
+  \topmatter
+
+
+
+\end{document}

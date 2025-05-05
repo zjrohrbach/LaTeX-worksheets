@@ -1,0 +1,84 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{circuitikz,ifthen,multicol,siunitx}
+\usepackage[margin=0.5in]{geometry}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+\newcommand{\speeds}
+{\begin{center}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{|crlc|crlc|}
+    \hline
+     & speed of light: & \SI{3.0e8}{\meter\per\second} & &
+     & speed of sound in air: & \SI{340}{\meter\per\second} &
+    \\\hline
+  \end{tabular}
+\end{center}}
+
+\begin{questions}
+
+  \Large
+
+\question
+  Infrared waves have wavelengths between \SI{7.8e-7}{\meter} and \SI{1.
+  0e-3}{\meter}.  What is the range of its frequencies?
+
+  \speeds
+
+  \vs\hrule\vs
+
+\question
+  A clarinet plays an ``A'', which has a frequency of 440~Hz.  
+
+  \begin{parts}
+    \part
+      Find the wavelength of the sound in air.
+    \part
+      Under water, the wavelength of this frequency is 3.37~meters.  What is the speed of sound under water?
+  \end{parts}
+  
+  \speeds
+  
+  \vs\hrule\vs
+
+
+  
+\question
+  A certain galaxy glows with a frequency of \SI{4.991e14}{\hertz} (orange).  When you observe the galaxy from a telescope, the color of light you see has a frequency of \SI{4.989e14}{\hertz} (slightly redder).
+
+  \begin{parts}
+    \part
+      Assume the earth is approximately stationary.  Is the galaxy moving toward the earth or away from the earth?
+    \part
+      How fast is the galaxy moving?
+  \end{parts}
+  
+
+  \speeds
+
+  \vspace*{\stretch{1}}
+  
+  
+  
+  
+  
+  
+  
+  
+\end{questions}
+
+
+\end{document}
