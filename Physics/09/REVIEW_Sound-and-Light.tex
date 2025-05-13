@@ -9,19 +9,22 @@
 \maketitle
 
 \newcommand{\printeq}{
-  \begin{center}
-    \begin{tabular}{|ccc|}
-      \hline
-      &&\\
-      \Large 
-      $v=f\lambda$ & &
-      \Large 
-      $f=f_s \left( \frac{v \pm v_o}{v \mp v_s} \right)$ \\[2em]
-      speed of sound in air = \SI{343}{\meter\per\second} & &
-      speed of light = \SI{3.0e8}{\meter\per\second} \\
-      &&\\\hline
-    \end{tabular}
-  \end{center}
+  \hrule
+  \small
+  \begin{align*}
+      v   &=  f\lambda
+    & f   &= f_s \left( \frac{v\pm v_o}{v\mp v_s} \right)
+    & \frac{1}{d_i} + \frac{1}{d_o} &= \frac{1}{f}
+    & M &= \frac{h_i}{h_0} = \frac{-d_i}{d_o}
+  \end{align*}
+  %
+  \begin{align*}
+    \text{Speeds of Sound: } & 
+    & \text{air: }   & \SI{340}{\meter\per\second}
+    & \text{water: } & \SI{1530}{\meter\per\second}
+    & \text{iron: }  & \SI{5100}{\meter\per\second}
+  \end{align*}
+  \hrule
 }
 
 \printeq
@@ -43,17 +46,61 @@
 
   \end{parts}
 
-
-\pagebreak
-
-\uplevel{\printeq}
-
 \question
   Red light has a wavelength of \SI{5.90e-7}{\meter}.  What is the frequency of red light? \vs 
 
 \question
   Find the wavelength of a \SI{10000}{\hertz} sound when it travels through the air. \vs
 
+\fullwidth{
+  \footnotesize
+  Answers: 
+  \hfill 1. (a) \SI{6955}{\hertz}
+  \hfill (b) \SI{6623}{\hertz}
+  \hfill (c) \SI{5484}{\hertz}
+  \hfill
+  \hfill 2. \SI{5.08e14}{\hertz}
+  \hfill 3. \SI{0.034}{\meter}
+
+}
+
+\pagebreak
+
+\uplevel{\printeq}
+
+\question
+Consider a converging lens with a focal length of 2 cm. An object is 10 cm away.
+
+\begin{parts}
+    \part What is the distance between the lens and the image? \vs
+    \part What is the magnification of the image? \vs
+    \part Is the image real or virtual? How do you know? \vs
+\end{parts}
+
+\question
+Consider a \emph{diverging} lens with a focal length of 3~cm. An object is 4~cm away.
+
+\begin{parts}
+    \part What is the distance between the lens and the image? \vs
+    \part What is the magnification of the image? \vs
+    \part Is the image real or virtual? How do you know? \vs
+\end{parts}
+
+
 \end{questions}
+
+\fullwidth{
+  \footnotesize
+  Answers: 
+  \hfill 4. (a) \SI{2.5}{\centi\meter}
+  \hfill (b) \SI{-0.4}{}
+  \hfill (c) real
+  \hfill
+  \hfill 5. (a) \SI{-6.0}{\centi\meter}
+  \hfill (b) \SI{1.5}{}
+  \hfill (c) virtual 
+}
+
+
 
 \end{document}

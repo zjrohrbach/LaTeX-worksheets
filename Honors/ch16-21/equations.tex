@@ -1,0 +1,53 @@
+\documentclass[14pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage[
+    top=0.3in,
+    bottom=0.3in,
+    left=0.5in,
+    right=.5in
+  ]{geometry}
+  \usetikzlibrary{arrows.meta}
+
+
+
+\title{Electricity Equations}
+\author{Rohrbach}
+
+\newcommand{\printcontent}{
+
+  \begin{align*}
+    F &= \frac{kq_1 q_2} {r^2} &
+    E &\equiv \frac{F}{q} = \frac{kq}{r^2} &
+    I &\equiv \frac{\Delta q}{t} &
+    V &= IR \\
+    &&
+    k &= \SI{9.0e9}{\newton\meter\per\coulomb^2} &
+    e &= \SI{1.60e-19}{\coulomb}
+  \end{align*}
+
+}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+\vspace{\stretch{1}}
+\printcontent
+
+
+\end{document}
+
+
+
+
+

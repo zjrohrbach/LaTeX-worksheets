@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\begin{document}
+
+\begin{tikzpicture}
+  \clip (-1,-1) rectangle (8,8);
+  \draw (0,5) to[bulb,l=1] (0,3);
+  
+  \draw (0,5)
+    to[short] (2,5)
+    to[bulb,l=2] ++(0,-2);
+  \draw (2,5)
+    to[short] ++(2,0)
+    to[bulb,l=3] ++(0,-2)
+    to[short] ++ (-2,0);
+  \draw (0,3) 
+    to[short] (0,2) 
+    to[battery] ++(3,0)
+    to[short]  ++(0,1);
+\end{tikzpicture}
+
+\end{document}

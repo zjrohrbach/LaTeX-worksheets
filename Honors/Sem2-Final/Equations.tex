@@ -1,0 +1,115 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{multicol,tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta}
+\usepackage{tabularx}
+%\usepackage[margin=0.5in]{geometry}
+
+
+\title{Honors Physics Equation Sheet (Spring Final Exam)}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Momentum}
+
+\begin{align*}
+  p &\equiv mv &
+  J &\equiv F\Delta t &
+  \Sigma F &= \frac{\Delta p}{t} &
+  \Sigma p &= \Sigma p' &
+  v_A+v_A' &= v_B+v_B' &
+  x_{CM} &= \frac{\Sigma m_i x_i}{m_i}
+\end{align*}
+
+\hrule
+
+\section*{Rotational Motion}
+
+\renewcommand{\arraystretch}{2}
+
+\begin{tabularx}{0.9\textwidth}
+  {*{3}{>{\centering\arraybackslash}X}}
+  $\omega \equiv \frac{\Delta\theta}{\Delta t}$ &
+  $v = r \omega$ &
+   $1~\text{rev}=360^\circ=2\pi~\text{rad}$ \\
+  %
+  $\alpha \equiv \frac{\Delta\omega}{\Delta t}$ &
+  $a_T = r \alpha$ &
+  $1~\text{rpm}=0.1047~\text{rad/s}$\\
+  %
+  $\tau=I\alpha$ & 
+  $\tau \equiv r F_{\perp}$ \\
+  %
+  $L = I \omega$ & 
+  $a_C=\omega^2 r$ &
+  $I = mr^2$ \\
+  %
+  $I_{\text{hoop}}=MR^2$ &
+  $I_{\text{disc}} = \frac{1}{2} MR^2 $&
+  $I_{\text{sphere}} = \frac{2}{5} MR^2$ \\
+  %
+  &&\\
+  $\omega = \omega_0 + \alpha t$ &
+  $\theta = \theta_0 + \omega_0 t + \frac{1}{2}\alpha t^2$ &
+  $\omega^2 = \omega_0^2 + 2 \alpha (\theta - \theta_0)$ \\
+  \emph{``Old Faithful''} &
+  \emph{``The Big Chalupa''} &
+  \emph{``Ain't Got No Time''} \\
+\end{tabularx}
+
+\hrule
+
+
+\section*{Simple Harmonic Motion \& Waves}
+
+\begin{align*}
+  F_S &= -kx &
+  KE &= \frac{1}{2}mv^2 &
+  PE_e &= \frac{1}{2}kx^2&
+  PE_g &= mgy \\
+  f_s &=\frac{1}{2\pi}\sqrt{\frac{k}{m}} &
+  f_p &=\frac{1}{2\pi}\sqrt{\frac{g}{L}} &
+  \omega &= 2\pi f &
+  x(t) &= A \sin\left(\omega t + \phi\right) \\
+  && v &= f \lambda &
+  f_n &= \frac{nv}{2L} = nf_1 &
+  f_{BEAT} &= \left|f_1-f_2\right| %s\\
+  %f' &= f\left( \frac{v_{snd}\pm v_{obs}}{v_{snd}\mp v_{src}} \right) &&&
+  %v_{snd} &= 343~\text{m/s at 20$^\circ$C}
+\end{align*}
+
+\hrule
+
+\section*{Electricity}
+
+\begin{align*}
+  F &= \frac{kq_1 q_2} {r^2} &
+  E &\equiv \frac{F}{q} = \frac{kq}{r^2} &
+  I &\equiv \frac{\Delta q}{t} &
+  V &= IR \\
+  &&
+  k &= \SI{9.0e9}{\newton\meter\per\coulomb^2} &
+  e &= \SI{1.60e-19}{\coulomb}
+\end{align*}
+
+\hrule
+
+\section*{Optics}
+
+\begin{align*}
+  n &= \frac{c}{v} &
+  n_1 \sin\theta_1 &= n_2\sin\theta_2 &
+  \sin\theta_c &= \frac{n_2}{n_1} \\
+  \frac{1}{d_i} + \frac{1}{d_o} &= \frac{1}{f} &
+  m &\equiv \frac{h_i}{h_o} = -\frac{d_i}{d_o} &
+  P &\equiv \frac{1}{f} \\
+  &&
+  c &= \SI {3.0e8}{\meter\per\second}
+\end{align*}
+
+
+
+\end{document}

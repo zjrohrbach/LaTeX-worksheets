@@ -1,0 +1,59 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+\Large
+
+
+\begin{questions}
+
+  %Same as Problem #1 on Light #2
+
+\question
+  A \emph{diverging} lens has a focal length of 9.0~cm, and an object is placed 3.0~cm from the lens.
+
+  \begin{parts}
+    \part What would be the distance of the image from the lens?
+    \part What is the magnification of the image?
+    \part Will the image be real or virtual?  How do you know?
+    \part Will the image be upright or inverted?  How do you know?
+  \end{parts}
+
+\vs \hrule \vs
+
+
+% not the same as Light #2
+
+\question
+  A projector LCD screen of height 0.5~cm is placed 1.2~cm away from a lens.  An inverted real image is projected 240~cm away.  
+
+  \begin{parts}
+    \part What would be the height of the image?
+    \part What is the magnification of the image?
+    \part What is the focal length of the lens?
+  \end{parts}
+
+
+\vs \hrule \vs
+
+
+\question
+  A \emph{converging} lens has a focal length of 5~cm.  What is the magnification of an object that is placed 3~cm in front of the lens?
+
+
+\end{questions}
+
+\end{document}

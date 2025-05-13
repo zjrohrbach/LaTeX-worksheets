@@ -1,0 +1,73 @@
+\documentclass[10pt]{exam}
+\usepackage[
+  paperheight=8.5in, 
+  paperwidth=11in,
+  margin=.3in
+]{geometry}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{enumitem,multicol}
+\usepackage{silence}
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{Label `part@}
+\WarningFilter{latex}{There were multiply-defined labels}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Example \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\content}{
+  \begin{questions}
+    \question
+      A converging lens has a focal length of 40~mm.  A 10-mm tall object is placed 60~mm in front of it.
+  
+        \begin{parts}
+          \part Find the distance to the image. \vspace{\stretch{2}}
+          \part Find the height of the image \vspace{\stretch{2}} 
+          \part Find the magnification of the image \vspace{\stretch{2}} 
+          \part Describe the image (\emph{i.e.} real or virtual? upright or inverted?) \vspace{\stretch{1}}
+        \end{parts}
+
+
+  \end{questions}
+}
+
+
+\begin{multicols*}{2}
+
+  \content
+
+  \columnbreak
+
+  \content
+
+\end{multicols*}
+
+\pagebreak
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\Large
+
+\content
+
+\vspace{\stretch{4}}
+
+\content
+
+\vspace{\stretch{4}}
+
+\content
+
+\end{document}
