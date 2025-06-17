@@ -1,0 +1,184 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz}
+
+\title{title}
+\author{Rohrbach}
+\date{\today}
+
+
+
+\newcommand{\drawscantron}[2]{
+  \begin{center}
+    \begin{tikzpicture}
+      \node[anchor=south west] at (0,0) {\includegraphics[width=5in]{45Q.png}};
+      \fill (#1,#2) circle (0.2);
+      \node at (8.3,15.2) {Physics Final Exam};
+    \end{tikzpicture}
+
+  \end{center}
+}
+
+\begin{document}
+
+\newcommand{\printcontent}[1]{
+  \vspace*{\stretch{1}}
+
+  \begin{center}
+    \Huge 
+    
+    \textbf{\sc Physics I}
+
+    \textbf{\sc Spring Final Exam}
+
+  \end{center}
+
+  \begin{center}
+    \Large (Version #1)
+  \end{center}
+
+  \vspace{2em}
+
+  \begin{center}
+    
+      \begin{tikzpicture}
+        \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+        \node at (0,0.2) {\bf !};
+      \end{tikzpicture}
+    
+    
+      {Please do not open this packet until instructed to do so!}
+  \end{center}
+
+
+
+
+  \paragraph{Rules} \hfill
+  \begin{enumerate}
+    \item \textbf{Phones, earbuds, headphones, and smartwatches must be put away in your backpacks during the entirety of the exam.  If electronics are out for \textit{any reason}, you will recieve a zero!}
+    \item Put your name three places: On your Scantron (back of this page), On your Equation Sheet (next page), and on the first page of the Exam Packet.
+    \item On your Scantron, bubble in your 3-digit ZipGrade ID from your notebook.
+    \item You may write on your equation sheet and on the exam.  There is space provided to show your work, but only your scantron will be graded.
+    \item When you are finished, turn in your scantron, equation sheet, and exam packet up front.
+    \item Stay silent until all your classmates are finished.  Electronics (especially phones, but also earbuds, headphones, laptops, smartwatches, etc.) need to be kept away until the instructor indicates that everyone is finished.
+
+  \end{enumerate}
+
+  \vs[2]
+}
+
+\newcommand{\eqs}{
+  {\Huge \bf Equation Sheet}
+
+  \vs
+  \hrule
+
+  \section*{Momentum}
+
+    \begin{align*}
+      F \cdot t &=  \Delta p
+    \end{align*}
+
+    \begin{align*}
+      \Delta p  &= p_f - p_i
+    \end{align*}
+
+    \begin{align*}
+        \Sigma p_i &= \Sigma p_f
+      & p &=mv
+    \end{align*}
+
+
+  \vs
+  \hrule
+  \section*{Energy}
+
+      
+    \begin{align*}
+        W   &=  Fd
+      & F_G &=  mg
+      & P   &=  \frac{W}{t}
+    \end{align*}
+
+    \begin{align*}
+        KE    &= \frac{1}{2}mv^2 
+      & PE    &= mgh
+      & KE_i + PE_i + W &= KE_f + PE_f
+    \end{align*}
+
+  \vs
+  \hrule
+  \section*{Simple Harmonic Motion}
+
+      
+    \begin{align*}
+        T_P &=  2\pi \sqrt{\frac{L}{g}}
+      & T_S &=  2\pi \sqrt{\frac{m}{k}}
+      & F_S &=  -kd
+      & F_G &=  mg
+      & v   &=  f\lambda
+    \end{align*}
+
+  \vs
+  \hrule
+  \section*{Light \& Sound}
+
+      
+    \begin{align*}
+        v   &=  f\lambda
+      & f   &= f_s \left( \frac{v\pm v_o}{v\mp v_s} \right)
+      & \frac{1}{d_i} + \frac{1}{d_o} &= \frac{1}{f}
+      & M &= \frac{h_i}{h_0} = \frac{-d_i}{d_o}
+    \end{align*}
+
+    \begin{align*}
+      \text{Speeds of Sound: } & 
+      & \text{air: }   & \SI{340}{\meter\per\second}
+      & \text{water: } & \SI{1530}{\meter\per\second}
+      & \text{iron: }  & \SI{5100}{\meter\per\second}
+    \end{align*}
+    %
+    \begin{align*}
+      \text{Speed of Light: }
+      \SI{3.0e8}{\meter\per\second}
+    \end{align*}
+}
+
+
+\printcontent{A}
+\pagebreak
+\drawscantron{7.5}{1.9}
+\pagebreak
+\eqs
+\pagebreak
+
+
+
+\printcontent{B}
+\pagebreak
+\drawscantron{8}{1.9}
+\pagebreak
+\eqs
+\pagebreak
+
+
+\printcontent{C}
+\pagebreak
+\drawscantron{8.45}{1.9}
+\pagebreak
+\eqs
+\pagebreak
+
+
+\printcontent{D}
+\pagebreak
+\drawscantron{8.95}{1.9}
+\pagebreak
+\eqs
+\pagebreak
+
+
+
+
+
+\end{document}

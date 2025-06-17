@@ -1,41 +1,51 @@
 \documentclass[10pt]{exam}
 \usepackage[icp]{template-for-exam}
 \usepackage{tikz,multicol}
-\usepackage[top=0.2in, bottom=0.5in, left=1in, right=1in]{geometry}
+\usepackage[top=0.2in, bottom=0.4in, left=0.5in, right=0.5in]{geometry}
 
 
 
 \newcommand{\drawscantron}[2]{
-  \begin{center}
+  \begin{flushright}
     \begin{tikzpicture}
-      \node[anchor=south west] at (0,0) {\includegraphics[width=5.5in]{55Q.png}};
+      \node[anchor=south west] at (0,0) {\includegraphics[width=5.5in]{60Q.png}};
       \fill (#1,#2) circle (0.19);
-      \node at (8,17) {ICP Final Exam};
+      \fill[white] (10,1.5) rectangle (10.875,7.6);
+      \node[fill=white] at (11.4,7.4) {\tiny ZipGrade ID};
+      \node at (7.5,17) {ICP Final Exam};
     \end{tikzpicture}
 
-  \end{center}
+  \end{flushright}
 }
 
 \newcommand{\writerules}{
-  \subsection*{PLEASE DO NOT OPEN UNTIL INSTRUCTED TO DO SO!}
+  \begin{center}
+    
+      \begin{tikzpicture}
+        \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+        \node at (0,0.2) {\bf !};
+      \end{tikzpicture}
+      %
+      \emph{Please do not open this packet until instructed to do so!}
+      %
+      \begin{tikzpicture}
+        \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+        \node at (0,0.2) {\bf !};
+      \end{tikzpicture}    
+  \end{center}
 
+
+
+
+  \paragraph{Rules} \hfill
   \begin{enumerate}
-    \item
-      Tear off this scantron and the Periodic Table on the back page.
-    \item 
-      Put your name two places: On your Scantron and on the first page of the Exam Packet.
-    \item 
-      On your Scantron, bubble in your 3-digit ZipGrade ID from your notebook.
-    \item 
-      Remember, you can use your notebook, but you cannot use review packets or any other materials.
-    \item 
-      You may write on your Periodic Table and on the exam.  There is space provided to show your work, but only your scantron will be graded.
-    \item 
-      {\bf
-        PHONES AND EARBUDS NEED TO BE PUT AWAY DURING THE EXAM.
-      }
-    \item 
-      When you are finished, turn your scantron and your exam {\bf face down on your desk} and sit silently until Mr. Rohrbach indicates that everyone has turned in their exam.
+    \item \textbf{Phones, earbuds, headphones, and smartwatches must be put away in your backpacks during the entirety of the exam.  If electronics are out for \textit{any reason}, you will recieve a zero!}
+    \item Put your name three places: On your Scantron (back of this page), On the Periodic Table (next page), and on the first page of the Exam Packet.
+    \item On your Scantron, bubble in your 3-digit ZipGrade ID from your notebook.
+    \item You may write on your periodic table and on the exam.  There is space provided to show your work, but only your scantron will be graded.
+    \item When you are finished, turn in your scantron, periodic table, and exam packet up front.
+    \item Stay silent until all your classmates are finished.  Electronics (especially phones, but also earbuds, headphones, laptops, smartwatches, etc.) need to be kept away until the instructor indicates that everyone is finished.
+
   \end{enumerate}
 }
 
@@ -44,22 +54,22 @@
 
 
 
-\drawscantron{8.85}{2}
+\drawscantron{8.25}{1.9}
 \writerules
 
 \pagebreak
 
-\drawscantron{9.3}{2}
+\drawscantron{8.7}{1.9}
 \writerules
 
 \pagebreak
 
-\drawscantron{9.75}{2}
+\drawscantron{9.1}{1.9}
 \writerules
 
 \pagebreak
 
-\drawscantron{10.2}{2}
+\drawscantron{9.5}{1.9}
 \writerules
 
 \pagebreak

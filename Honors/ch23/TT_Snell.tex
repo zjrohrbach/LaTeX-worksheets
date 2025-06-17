@@ -1,0 +1,91 @@
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\usepackage[margin=0.5in]{geometry}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+\usetikzlibrary{
+  calc,
+  patterns,
+  decorations.pathmorphing,
+  decorations.markings,
+  arrows,
+  shapes,
+  positioning,
+  math,
+  intersections,
+  fadings
+}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+\Large
+
+  \tikzstyle{directed}=
+    [postaction={decorate,decoration={markings,
+    mark=at position .65 with {\arrow[scale=1.5]{stealth}}}}]
+  \tikzstyle{reverse directed}=
+    [postaction={decorate,decoration={markings,
+    mark=at position .5 with {\arrowreversed[scale=1.5]{stealth}}}}]
+
+
+\begin{questions}
+
+
+\question
+  The speed of light in acryllic is \SI{2.01e8}{m/s}. 
+  
+  \begin{parts}
+    \part  
+      Calculate the angle of refraction as the ray of light below enters the acryllic block shown below.
+    \part 
+      Calculate the angle of refraction as the ray of light exits the acryllic block.
+  \end{parts}
+
+  \vspace{2em}
+
+  \begin{tikzpicture}[]
+    \def\angle{120}
+    \draw[fill=blue!30] (-5,0) rectangle (5,-4);
+    \draw[reverse directed,orange,very thick] 
+      (0,0) -- (\angle:4);
+    \draw[dashed] (0,-1) -- (0,3);
+    \draw (\angle:1.5) arc (\angle:90:1.5) node[above,midway] {$30^\circ$};
+
+  \end{tikzpicture}
+
+
+
+
+\vs \hrule \vs
+
+\question
+  You are under water and are shining a laser upward through the surface of the water.  The incident angle of the laser on the surface is $62^\circ$.  What will be the angle of refraction? (The index of refraction for water is 1.33).
+
+\end{questions}
+ 
+\vs \hrule \vs
+
+Task \#1 Answer
+
+$n=1.49$; $\theta_2=19.6^\circ$; $\theta_3=30^\circ$
+
+
+\vspace{1em}
+
+Task \#2 Answer
+
+undefined; $\theta_c=48.8^\circ$
+
+
+
+\end{document}

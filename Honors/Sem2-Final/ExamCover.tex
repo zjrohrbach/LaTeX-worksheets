@@ -1,0 +1,74 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\header{Name:}{Date:}{Period: \hspace{2cm}}
+
+\title{title}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+
+\newcommand{\printcontent}[1]{
+  \vspace*{\stretch{1}}
+
+  \begin{center}
+    \Huge 
+    
+    \textbf{\sc Honors Physics}
+
+    \textbf{\sc Spring Final Exam}
+
+  \end{center}
+
+  \begin{center}
+    \Large (Version #1)
+  \end{center}
+
+  \vspace{2em}
+
+  \begin{center}
+    
+      \begin{tikzpicture}
+        \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+        \node at (0,0.2) {\bf !};
+      \end{tikzpicture}
+    
+    
+      {Please do not open this packet until instructed to do so!}
+  \end{center}
+
+
+
+
+  \paragraph{Rules} \hfill
+  \begin{enumerate}
+    \item \textbf{Phones, earbuds, headphones, and smartwatches must be put away in your backpacks during the entirety of the exam.  If electronics are out for \textit{any reason}, you will recieve a zero!}
+    \item Check to make sure your scantron has your name on it.
+    \item Bubble in the Version Bubble on your scantron.
+    \item Put your name on this page, on the top of your scratch paper, and on the first page on the final exam
+    \item You may write on your equation sheet and on the exam.
+    \item The equation sheet is on the back of this page.  There is also scratch paper provided in your packet.
+    \item When you are finished, turn in your scantron, equation sheet, scratch paper, and exam packet up front.
+    \item Stay silent until all your classmates are finished.  Electronics (especially phones, but also earbuds, headphones, laptops, smartwatches, etc.) need to be kept away until the instructor indicates that everyone is finished.
+
+  \end{enumerate}
+
+  \vs[2]
+}
+
+\foreach \v in {A,B,C,D} {
+  \printcontent{\v}
+  \pagebreak
+}
+
+\foreach \v in {A,B,C,D,A,B,C,D} {
+  \noindent
+  {\Large \textbf{Scratch Work}}
+
+  \vfill 
+
+  \pagebreak
+}
+
+\end{document}

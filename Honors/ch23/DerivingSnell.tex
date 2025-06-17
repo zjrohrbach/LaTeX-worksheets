@@ -14,12 +14,14 @@
   fadings
 }
 
-\title{Snell's Law (of Refraction)}
+\title{Deriving Snell's Law}
 \author{Rohrbach}
 \date{\today}
 
 \begin{document}
 \maketitle
+
+
 
 
 \tikzfading[
@@ -46,7 +48,7 @@
   \def\incident{135}
   \def\refracted{-65}
 
-  \clip (-8,-4) rectangle (8,4);
+  \clip (-8,-4) rectangle (8,4.5);
   \fill[glass] (-8,0) rectangle (8,-5);
   \draw[ray,reverse directed] 
     (0,0) -- (\incident:6);
@@ -96,27 +98,5 @@
   
 \end{tikzpicture}
 
-\pagebreak
-
-\section*{Practice Problems}
-
-\begin{questions}
-  \question 
-    The speed of light in ice is \SI{2.29e8}{\meter\per\second}.  What is the index of refraction of ice?
-    \vs
-
-  \question
-    A flashlight beam strikes the surface of a pane of glass (n=1.56) at an angle of $67^\circ$ to the normal.  What is the angle of refraction?
-    \vs
-
-  \question
-    A diver shines a flashlight upward from beneath the water ($n=1.33$) at an angle $35^\circ$ to the vertical.  At what angle does the light leave the water?
-    \vs
-
-  \question
-    What is the critical angle for the interface between acryllic plastic ($n=1.49$) and water ($n=1.33$).  To be internally reflected, the light must start out in which medium?
-    \vs
- 
-\end{questions}
 
 \end{document}
