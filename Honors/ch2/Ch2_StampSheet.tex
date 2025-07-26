@@ -1,0 +1,175 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{multicol}
+
+
+
+\def\mytitle{Chapter 2 (One-Dimensional Kinematics)}
+\author{Rohrbach}
+\date{\today}
+
+\def\mymaketitle{
+  \begin{flushleft}
+    {\LARGE \textbf \mytitle \par}
+  \end{flushleft}
+}
+
+\newcommand{\printeqs}{
+  \section*{Equations} 
+  
+  \begin{center}
+    \begin{tabular}{cccccc}
+      $\bar{v} = \frac{\Delta x}{\Delta t}$       &   
+      $\bar{a} = \frac{\Delta v}{\Delta t}$       &&
+      $v = v_0 + a t$                             &
+      $x = x_0 + v_0t + \frac{1}{2}at^2$          &
+      $v^2 = v_0^2 + 2a \left( x - x_0 \right) $  \\
+          & & & ``Old Faithful'' & ``Big Chalupa'' & ``Ain't Got No Time'' \\
+    \end{tabular}
+
+    \vspace{1em}
+
+    $\SI{1}{\meter\per\second}=\SI{3.6}{\kilo\meter\per\hour}$
+  \end{center}
+}
+
+\newcommand{\bs}[2]{\textbf{#1} (\sc #2 Points)}
+
+\begin{document}
+
+
+\mymaketitle
+
+
+
+\newcommand{\stampbox}[1]{
+
+  \hfill
+  \begin{tikzpicture}[every text node part/.style={align=center}]
+     \node[gray!50,draw,rounded corners] at (0,0) 
+      {\sc Stamp \\ \sc Here \\ \small #1 \sc Points};
+  \end{tikzpicture}
+  \vspace{1em}
+  
+  \hrule
+
+}
+
+\section*{Homework Check A (collected XXXXXX)}
+
+%%%%%%%%%%%
+
+\subsection*{Reading}
+
+Please read the following on your own in the OpenStax textbook by the dates given.  It will give good context for class discussion.  Check off when you have completed them.
+
+\vspace{1em}
+
+\begin{checkboxes}
+  \choice 2.1 Displacement \dotfill XXXXXX
+  \choice 2.2 Vectors, Scalars, and Coordinate Systems \dotfill XXXXXX
+  \choice 2.3 Time, Velocity, and Speed \dotfill XXXXXX 
+  \choice 2.4 Acceleration \dotfill XXXXXX 
+  \choice 2.8 Graphical Analysis \dotfill XXXXXX
+\end{checkboxes}
+
+
+\subsection*{Problems and Conceptual Question}
+
+
+Get stamps from your instructor as you complete each of the following problems.  The conceptual questions (CQ) require at least one sentence of explanation.
+
+\vspace{1em}
+
+
+\begin{tabular}{|*{2}{p{7cm}|}}
+  \hline
+  %
+  \bs{2.1}{3}    & \bs{2.3}{3}  \\
+  P \#1-4        &  P \#5-7     \\
+  CQ \#1-3       &  CQ \#6      \\[2.5cm]\hline
+  %
+  \bs{2.4}{5}   & \bs{2.8}{4}  \\
+  P \#16,17,19  &  P \#59,61   \\
+  CQ \#13-15    &  CQ \#26-29  \\[2.5cm]\hline
+  %
+
+\end{tabular}
+
+
+
+\vspace{1em}
+\hrule 
+\printeqs
+
+
+%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+
+
+\pagebreak
+
+\mymaketitle
+
+\section*{Homework Check B (collected on Test Day)}
+
+\subsection*{Reading}
+
+Please read the following on your own in the OpenStax textbook by the dates given.  It will give good context for class discussion.  Check off when you have completed them.
+
+\vspace{1em}
+
+\begin{checkboxes}
+  \choice 2.5 Motion Equations \dotfill XXXXXX
+  \choice 2.6 Problem Solving Basics \dotfill XXXXXX
+  \choice 2.7 Falling Objects \dotfill XXXXXX
+\end{checkboxes}
+
+
+\subsection*{Problems and Conceptual Question}
+
+
+Get stamps from your instructor as you complete each of the following problems.  The conceptual questions (CQ) require at least one sentence of explanation.
+
+\vspace{1em}
+
+
+\begin{tabular}{|*{2}{p{7cm}|}}
+  \hline
+  %
+  \bs{2.5}{10}                & \bs{2.7}{10}  \\
+  P \#20,22,23,27,28,30,31    & P \#41,43,45,47,49,51 \\
+  \textbf{HW Quiz on XXXXXXXXXX} & CQ \#20,21,22,24      \\[2.5cm]\hline
+
+\end{tabular}
+
+
+
+%%%%%%%%%%%%%%
+
+\vspace{1em}
+
+\hrule
+
+\paragraph{Bonus Problems!} P\#32, 55, 57
+\dotfill Turn in separately on test day!
+  
+
+\vspace{1em}
+\hrule
+
+%%%%%%%%%%%%%%
+
+\paragraph{Test will be on XXXXXXXXXX.} \hfill
+
+
+
+
+\vspace{1em}
+\hrule 
+\printeqs
+
+
+\end{document}
