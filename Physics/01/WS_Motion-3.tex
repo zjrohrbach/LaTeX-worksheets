@@ -1,81 +1,41 @@
-\documentclass[12pt]{exam}
+\documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
-\usepackage{empheq}
-
-\newcommand{\printeqs}{
-  \begin{center}
-    \vspace{-1cm}
-    \begin{empheq}[box=\fbox]{align*}
-     &
-     & 
-      v &= \frac{d}{t}        &    
-      a &= \frac{\Delta v}{t} &
-      \Delta v &= v_f - v_i   &
-     &
-    \end{empheq}
-  \end{center}
-}
+\usepackage{my-tikz-clipart}
 
 \title{Motion \#3}
 \author{Rohrbach}
-
+\date{\today}
 
 \begin{document}
 \maketitle
 
-\printeqs
-
-\noindent
-{\bf Please use the proper problem-solving method.}  (1) Draw a picture; (2) knowns \& unknowns; (3) pick an equation; (4) plug \& chug; (5) answer with units.
-
-
+\vspace{-2em}
 \begin{questions}
 
-\question
-  What is the velocity of an ATV that travels 13 m in 2 s?
-  \vs
-
-\question
-  How long does it take for a car that is traveling 
-  35 m/s to drive {\bf 23 km}?
-  \vs
-
-\question
-  How far can a person go if they run at a velocity of 
-  8 m/s for {\bf 3 minutes}?
-  \vs
-
-\question
-  What is the acceleration of a unicycle that goes from 
-  3 m/s to 5 m/s in 7 s?
-  \vs
-
-\pagebreak
-
-\printeqs
-
-
-\question
-  What is the final velocity of a roller coaster 
-  that starts at rest and accelerates at a rate of 
-  \SI{5}{\meter\per\second^2} for 0.8 s?
-  \vs
-
-
-\question
-  How much time would it take an object accelerating 
-  at \SI{9}{\meter\per\second^2} to go from 25 m/s to 56 m/s?
-  \vs
-
-
-\question
-  After accelerating at a rate of \SI{-5}{\meter\per\second^2}
-  for 8 seconds, you are now traveling at 11.3 m/s.  How fast 
-  were you going before you started accelerating?
-  \vs
-
-
-
   
+
+  \begin{EnvUplevel}
+    \paragraph{Acceleration}
+      A brand new ride has opened at King's Island.  Use the information provided to answer the questions.
+  \end{EnvUplevel}
+
+  \question
+    The ride starts at rest and then gets up to a speed of 50 m/s in 1.9 s.  What is its acceleration?
+    \vs
+
+  \question
+    Once it is traveling at \SI{50}{\meter\per\second}, it accelerates at a rate of \SI{-9.2}{\meter\per\second^2} for \SI{3.0}{\second}.  What is its velocity after this time?
+    \vs
+
+  \question
+    The ride now maintains a constant velocity for 10 s.  What is its acceleration during this time?
+    \vs
+
+  \question
+    Finally, the ride comes to an abrupt a stop in \SI{0.88}{\second}. What is its acceleration?
+    \vs
+
+
+ 
 \end{questions}
 \end{document}

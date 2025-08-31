@@ -14,7 +14,7 @@
   \noindent {\bf Please do not open this test until told to do so!}
 
   \begin{itemize}
-    \item Put your name on both the front \emph{and} the back of this page.
+    \item Put your name on both this page \emph{and} the next page.
     \item Bubble in the number that is on your class notebook where it says “Student ID”
     \item When instructed, tear off this first page.
     \item Write your answers to the free-response questions directly on the packet.
@@ -33,37 +33,38 @@
   \end{flushright}
 }
 
-
-\begin{flushright}
+\newcommand{\scantron}[2]{
+  \begin{flushright}
   \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=11.55cm]{scantron-12Q.png}};
-    \fill (4.9,1.9) circle (0.25);
-    \node[anchor=west] at (2,12.25) {Unit 01 Test: Motion};
-    \fill[white] (7.2,8.75) rectangle ++(1.1,-8);
-    \node[anchor=west, fill=white] at (7,9) {ZipGrade ID};
+    \node[anchor=south west] at (0,0) {\includegraphics[width=11.55cm]{13Q.png}};
+    \fill (#1,#2) circle (0.25);
+    \node[anchor=west] at (2.3,12.1) {Unit 01 Test: Motion};
   \end{tikzpicture}
 \end{flushright}
+}
 
+
+
+\scantron{5.65}{2}
 \bottommatter
-
 \topmatter
 
 
 \pagebreak
 
-
-\begin{flushright}
-  \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=11.55cm]{scantron-12Q.png}};
-    \fill (5.45,1.9) circle (0.25);
-    \node[anchor=west] at (2,12.25) {Unit 01 Test: Motion};
-    \fill[white] (7.2,8.75) rectangle ++(1.1,-8);
-    \node[anchor=west, fill=white] at (7,9) {ZipGrade ID};
-  \end{tikzpicture}
-\end{flushright}
-
+\scantron{6.2}{2}
 \bottommatter
+\topmatter
 
+\pagebreak
+
+\scantron{6.85}{2}
+\bottommatter
+\topmatter
+
+\pagebreak
+\scantron{7.35}{2}
+\bottommatter
 \topmatter
 
 

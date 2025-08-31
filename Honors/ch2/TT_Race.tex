@@ -1,0 +1,44 @@
+ 
+ \documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,silence}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+
+
+\newcommand{\prob}{
+
+  \noindent
+  Sara, an amazingly well-rounded athlete, participates in a grueling race. Use the information to determine the answers to each question.
+
+ \begin{questions}
+ 
+  \question 
+      Sara begins the race by running 5~km from the starting line to checkpoint~A in 20 minutues and 40 seconds.  What is her velocity (in m/s)?
+    \question
+      Next, Sara swims \SI{500}{\meter} from checkpoint~A to checkpoint~B with a velocity of \SI{1.1}{\meter\per\second}.  How much time does it take her?
+    \question
+      From checkpoint~B she rides a bike with a velocity of 4.9 m/s for 1~hour.  What is the distance between checkpoint~B to checkpoint~C?
+    \question
+      Sara must now run all the way back to the starting line to finish the race.  Completely exhausted, Sara climbs into her single-engine airplane and flies back to the starting line.  What is her velocity to go from checkpoint~C to the starting line if the plane ride is 19 minutes and 17 seconds?
+    \question
+      Calculate Sara's {\bf average speed} for the entire race and her {\bf average velocity}.
+ \end{questions}
+}
+
+
+\begin{document}
+
+  \large
+
+  \prob
+  \hrule
+  \vs
+  \prob
+
+\end{document}

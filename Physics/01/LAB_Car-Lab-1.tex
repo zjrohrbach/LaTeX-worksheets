@@ -1,6 +1,6 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
-\usepackage{enumitem,multirow}
+\usepackage{enumitem,multirow,tikz,multicol}
 
 \title{Car Lab \#1}
 \author{Rohrbach}
@@ -54,7 +54,7 @@
         \hline
         \multirow{2}{\cw}
           {\centering Time (s)} & 
-        \multicolumn{4}{c|}{Distance Traveled (m)} \\
+        \multicolumn{4}{c|}{Displacement (m)} \\
         \cline{2-5}
         & Trial \#1 & Trial \#2 & Trial \#3 & Average \\
         \hline
@@ -83,20 +83,51 @@
   \datatable
 
   \paragraph{Graph:} 
-    Make a graph on Desmos.  Submit a link to the graph on Schoology
-    
-    \begin{enumerate}[label=\alph*),topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
-      \item 
-        Start by making a table by clicking the “+” icon at the top 
-      \item
-        Make sure to label the axes using the wrench icon at the right.
-      \item
-        Zoom out so that you can see the whole graph and so that it fills the page. (you can use the Zoom Fit magnifying glass to do this.)
-      \item
-        Create a best fit lines by graphing the equations: $y_1 \sim m_1 x_1 + b_1$ and $y_2 \sim m_2 x_2 + b_2$.
-      \item
-        Copy the “share this link” link in the export button.  Paste it to the appropriate place on Schoology
-    \end{enumerate}
+    Go to \texttt{www.desmos.com/calculator} to graph your data.  Make sure to submit a link to your graph on Schoology
+
+\begin{multicols}{2}
+
+  \begin{enumerate}[label=\alph*),topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+    \item \label{table} Start by making a table by clicking the “+” icon at the top left.  You will need to create two separate tables.
+    \item \label{wrench} Make sure to label the axes using the wrench icon at the right.
+    \item \label{zoom} Zoom out so that you can see the whole graph and so that it fills the page.  You can do this using the ``Zoom Fit'' option, but be careful that your fit does not cut off one of the graphs
+    \item \label{linear} Create best fit lines for each graph using the ``Linear Regression'' tool
+    \item Copy a link to your graph using the export button and clicking ``Share a Snapshot''.  Paste this link on the appropriate place in Schoology.
+  \end{enumerate}
+
+  \begin{tikzpicture}
+    \node[anchor=north west] at (0,0) 
+      {\includegraphics[width=3cm]{desmos1}};
+
+
+    \node[anchor=north west] at (3.5,0) 
+      {\includegraphics[width=3.5cm]{desmos2}};
+
+        \draw (2,0) 
+      node[fill=red!20,rounded corners] (table)
+      {\ref{table} Create a table};
+    \draw[red] (0.4,-.4) coordinate (a) circle (0.3);
+    \draw[<-,red,very thick] (a) +(0.3,0) -- (table.south);
+
+    \node[fill=blue!20,rounded corners] at (2.5,-1.5) (linear) {\ref{linear} Linear Regression};
+    \draw[blue] (0.3,-1) coordinate (a) circle (0.3);
+    \draw[<-,blue,very thick] (a) +(0.3,0) -- (linear.north);
+
+    \node[fill=green!20,rounded corners] at (2,-2.5) (zoom) {\ref{zoom} Zoom Fit};
+    \draw[green, ultra thick] (0.3,-3.5) coordinate (a) circle (0.3);
+    \draw[<-,green,very thick] (a) +(0.3,0) -- (zoom.west);
+
+    \node[fill=orange!20,rounded corners] at (4.5,-0.5) (wrench) {\ref{wrench} Axis Labels};
+    \draw[orange, ultra thick] (6.9,-.3) coordinate (a) circle (0.3);
+    \draw[<-,orange,very thick] (a) +(-0.3,0) -- (wrench.east);
+
+    \draw[->,orange,very thick] (wrench.south) -- (5.2,-2.3);
+
+    \draw[orange, ultra thick, rounded corners] (3.8,-2.3) rectangle ++(2.8,-0.5);
+    \draw[orange, ultra thick, rounded corners] (3.8,-3.1) rectangle ++(2.8,-0.5);
+  \end{tikzpicture}
+
+\end{multicols}
 
   \paragraph{Best fit lines:}
     Write down the equations for each of the best fit lines below:

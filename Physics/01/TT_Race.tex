@@ -1,0 +1,43 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen}
+\usepackage[margin=0.5in]{geometry}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+
+
+\begin{document}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+\begin{questions}
+
+  \Large
+
+  \question 
+    Sara, an amazingly well-rounded athlete, participates in a grueling race.  She begins the race by running 5000~m from the starting line to checkpoint~A in {\bf 20 minutues and 40 seconds}.  What is her velocity (in m/s)?
+    \vs\hrule\vs
+  \question
+    Next, Sara swims \SI{500}{\meter} from checkpoint~A to checkpoint~B with a velocity of \SI{1.1}{\meter\per\second}.  How much time does it take her?
+    \vs\hrule\vs
+  \question
+    From checkpoint~B she rides a bike with a velocity of 4.9 m/s for {\bf 1~hour}.  What is the distance between checkpoint~B to checkpoint~C?
+    \vs\hrule\vs
+  \question
+    Sara must now run all the way back to the starting line to finish the race.  Completely exhausted, Sara climbs into her single-engine airplane and flies back to the starting line.  What is her velocity to go from checkpoint~C to the starting line if the plane ride is {\bf 19 minutes and 17 seconds}?
+    \vs\hrule\vs
+  \question
+    Calculate Sara's {\bf average speed} for the entire race and her {\bf average velocity}.
+ \end{questions}
+
+
+
+
+\end{document}

@@ -1,5 +1,6 @@
-\documentclass[10pt]{exam}
+\documentclass[11pt]{exam}
 \usepackage[phy]{template-for-exam}
+\usepackage{wrapfig}
 \usepackage{multicol}
 
 \title{Measurement \#2}
@@ -9,86 +10,146 @@
 \begin{document}
 \maketitle
 
+
+% \begin{center}
+%   \begin{tabular}{ccc}
+%     \hline
+%     \multicolumn{3}{c}{Metric Prefixes}                 \\
+%     \hline
+%     \SI{}{\kilo\relax}  & kilo-            & \SI{e3}{}  \\
+%            --           & (\textit{base})  & $10^0$     \\
+%     \SI{}{\centi\relax} & centi-           & \SI{e-2}{} \\
+%     \SI{}{\milli\relax} & milli-           & \SI{e-3}{} \\
+%     \SI{}{\micro\relax} & micro-           & \SI{e-6}{} \\
+%     \SI{}{\nano\relax}  & nano-            & \SI{e-9}{} \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+
 \begin{questions}
 
-  \uplevel{Complete the following unit conversions}
 
-  \question
-    $\SI{14}{\centi\meter} = $ ? \SI{}{\meter}
-    \vs
-
-  \question
-    $\SI{250}{\meter} = $ ? \SI{}{\kilo\meter}
-    \vs
-
-  \question
-    $\SI{198}{\gram} = $ ? \SI{}{\milli\gram}
-    \vs
-
-  \question
-    $\SI{0.5}{\milli\gram} = $ ? \SI{}{\micro\gram}
-    \vs
-
-  \question
-    $\SI{2.3}{\micro\meter} = $ ? \SI{}{\nano\meter}
-    \vs
-
-  \hrule
-
-  \uplevel{
-    Convert each of the following measurements to their
-    proper MKS unit.  \textit{Some measurements may not
-    need to be converted!}
-  }
+  
+  \question Complete the following unit conversions.
 
   \begin{multicols}{2}
-    \question
-      $\SI{35}{\centi\meter}$
-      \vspace{3em}
+    \begin{parts}
+      \part 
+        $\SI{2500}{\micro\meter}=$ ? \SI{}{\meter} 
+        \vspace{3em}
 
-    \question
-      $\SI{435}{\gram}$
-      \vspace{3em}
+      \part 
+        $\SI{326000}{\milli\gram}=$ ? \SI{}{\kilo\gram} 
+        \vspace{3em}
+      
+      \part 
+        $\SI{4.8}{\meter}=$ ? \SI{}{\milli\meter} 
+        \vspace{3em}
 
-    \question
-      $\SI{2.1}{\kilo\gram}$
-      \vspace{3em}
+      \part 
+        $\SI{2.1}{\second}=$ ? \SI{}{\milli\second} 
+        \vspace{3em}
 
-    \question
-      $\SI{1.5}{\centi\meter}$
-      \vspace{3em}
-
-    \question
-      $1.5$ hr
-      \vspace{3em}
-
-    \question
-      $\SI{72}{\gram}$
-      \vspace{3em}
-
-    \question
-      $\SI{2.1}{\micro\meter}$
-      \vspace{3em}
-
-    \question
-      $\SI{25}{\kilo\meter}$
-      \vspace{3em}
-
-    \question
-      $\SI{25}{\minute}$
-      \vspace{3em}
-
-    \question
-      $\SI{1300}{\second}$
-      \vspace{3em}
-
-
+    \end{parts}
   \end{multicols}
-  \vs
+
+  \question Express each of these measurements in MKS units:
+
+  \begin{multicols}{2}
+    \begin{parts}
+      \part \SI{9.1}{\kilo\meter} \vspace{2em}
+      \part \SI{53}{\centi\meter} \vspace{2em}
+      \part \SI{320}{\gram} \vspace{2em}
+      \part \SI{1.2}{\hour} \vspace{2em}
+    \end{parts}
+  \end{multicols}
+
+  % \question Express these numbers in scientific notation.
+
+  % \begin{multicols}{2}
+  %   \begin{parts}
+  %     \part \SI{0.025}{} \vspace{2em}
+  %     \part \SI{1150000}{} \vspace{2em}
+  %     \part \SI{0.0000771}{} \vspace{2em}
+  %     \part \SI{6070}{} \vspace{2em}
+  %   \end{parts}
+  % \end{multicols}
+
+  % \question Express these numbers in standard form.
+
+  % \begin{multicols}{2}
+  %   \begin{parts}
+  %     \part \SI{2.96e7}{} \vspace{2em}
+  %     \part \SI{6.02e-3}{} \vspace{2em}
+  %     \part \SI{6.67e-11}{} \vspace{2em}
+  %     \part \SI{9.8e5}{} \vspace{2em}
+  %   \end{parts}
+  % \end{multicols}
 
 
-    
+ %\pagebreak
 
+
+  % \question 
+  %   Use your calculator to perform the following calculations:
+
+  % \begin{multicols}{2}
+  %   \begin{parts}
+  %     \part
+  %       $
+  %       \left( \SI{5.95e15}{} \right) \div 
+  %       \left( \SI{7.35e-20}{} \right) =
+  %       $
+  %       \vspace{4em}
+
+  %     \part
+  %       $
+  %       \left( \SI{1.23e9}{} \right) \times
+  %       \left( \SI{4.23e-8}{} \right) =
+  %       $
+  %       \vspace{4em}
+
+  %   \end{parts}
+  % \end{multicols}
+
+  \question
+    You perform an experiment to measure the density of
+    aluminum.  After performing five trials, you get the
+    following results:
+    %
+    \begin{center}
+      \begin{tabular}{cc}
+        \hline
+        \bf Trial & {\bf Result} (g/mL) \\
+        \hline
+          1       &   2.5               \\
+          2       &   3.2               \\
+          3       &   2.9               \\
+          4       &   3.0               \\
+          5       &   2.6               \\
+        \hline \hline
+      \end{tabular}
+
+      \begin{parts}
+
+        \part 
+          Are your measurements precise?  Explain. \vs
+
+        \part 
+          The widely accepted value for the density of
+          aluminum is \SI{2.7}{\gram\per\milli\liter}. Are 
+          your measurements accurate?  Explain. \vs
+
+        \part
+          Calculate the percent error based upon your 
+          average measurement.  Is your percent error 
+          reasonable?  Explain. \vs
+
+      \end{parts}
+    \end{center}
+  
 \end{questions}
+
 
 \end{document}

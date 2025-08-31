@@ -1,0 +1,44 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+\printanswers
+
+
+
+\begin{document}
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+\begin{questions}
+
+  \Large
+  \vspace*{\stretch{1}}
+
+\question
+  A minivan starts at rest and then accelerates at a rate of 3 m/s$^2$ for 10 seconds.  How far does the minivan travel in this time?
+  \vs \hrule \vs
+
+\question
+  In coming to a stop, a car leaves skid marks 20 meters long on the highway.  Assuming a deceleration of 4.0~m/s$^2$, estimate the speed of the car just before braking. 
+  \vs \hrule \vs
+
+\question
+  You are traveling at 24 m/s on the onramp.  As you get ready to merge onto the interstate, you accelerate over a distance of 50 meters to 46 m/s.  What was your acceleration?
+  \vspace*{\stretch{1}}
+  
+
+
+
+\end{questions}
+
+
+
+
+\end{document}
