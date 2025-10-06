@@ -1,0 +1,91 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{my-tikz-clipart}
+\usepackage{multicol}
+\usepackage{graphicx}
+\graphicspath{{./FBDs}}
+
+
+\title{Free-Body Diagrams \& Single-Body Force Problems}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \question
+  For each of the sketches below, identify all the forces applied on all objects and draw a free body diagram.  Then come up with an expression for the net force.
+
+  \newcommand{\picframe}[1]{
+    \begin{center}
+      \begin{tikzpicture}
+        \clip (-3,-3) rectangle (3,3);
+        \node at (0,0) {\includegraphics{#1}};
+      \end{tikzpicture}
+    \end{center}
+  }
+
+  \begin{multicols}{2}
+    \begin{parts}
+      \part 
+        Lamp hanging from a chain
+
+        \picframe{light.png}
+
+      \part 
+        A car moving at a constant speed.
+
+        \picframe{car.png}
+
+      
+      \part 
+        A car accelerating
+
+        \picframe{car.png}
+
+      \columnbreak
+
+      \part 
+        A box being pushed forward on the ground (constant speed)
+
+        \picframe{box.png}
+
+      \part 
+        A skydiver before opening her parachute
+
+        \picframe{free-fall-diver.png}
+
+
+      \part 
+        Object sliding down an inclined plane.
+
+        \picframe{incline.png}
+
+      
+    \end{parts}
+    
+  \end{multicols}
+  
+\question
+  Neal is stealing a refrigerator from the bank.  The mass of the refrigerator is \SI{173}{\kilo\gram} and its kinetic friction has a magnitude of \SI{254}{\newton}.  How hard must he push it forward in order to accelerate it at \SI{1.27}{\meter\per\second^2}?
+
+  \vs
+
+\question 
+  Joe pulls up on a rope attached to a 5.5-kg bucket.  The bucket accelerates at \SI{2.1}{\meter\per\second^2}.  With what force did Joe pull?
+
+  \vspace{1em}
+
+  \begin{tikzpicture}
+    \path (0,-1.8) pic {bucket};
+    \filldraw[pattern=north east lines] 
+    (-.1,0) -- (.1,0) -- (.1,2) -- (-.1,2) -- cycle;
+  \end{tikzpicture}
+  \vs
+
+
+\end{questions}
+
+\end{document}

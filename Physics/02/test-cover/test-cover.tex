@@ -29,33 +29,35 @@
   %
 }
 
+\newcommand{\scantron}[2]{
+  \begin{flushright}
+    \begin{tikzpicture}
+      \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
+      \fill (#1,#2) circle (0.25);
+      \node[anchor=west] at (2,12) {\mytitle};
+    \end{tikzpicture}
+  \end{flushright}
+
+  \bottommatter
+
+  \topmatter
+}
 
 
-\begin{flushright}
-  \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
-    \fill (5.55,2) circle (0.25);
-    \node[anchor=west] at (2,12) {\mytitle};
-  \end{tikzpicture}
-\end{flushright}
 
-\bottommatter
-
-\topmatter
+\scantron{5.55}{2}
 
 \pagebreak
 
+\scantron{6.15}{2}
 
-\begin{flushright}
-  \begin{tikzpicture}
-    \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
-    \fill (6.15,2) circle (0.25);
-    \node[anchor=west] at (2,12) {\mytitle};
-  \end{tikzpicture}
-\end{flushright}
+\pagebreak
 
-\bottommatter
+\scantron{6.75}{2}
 
-\topmatter
+\pagebreak
+
+\scantron{7.35}{2}
+
 
 \end{document}

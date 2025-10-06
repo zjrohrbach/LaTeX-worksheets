@@ -2,7 +2,7 @@
 \usepackage[hon]{template-for-exam}
 \usepackage{enumitem}
 \setlist[enumerate,itemize]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
-\usepackage{multicol}
+\usepackage{multicol,multirow}
 
 \title{Lab -- Air Rockets!}
 \author{Rohrbach}
@@ -11,26 +11,58 @@
 \begin{document}
 \maketitle
 
-\section*{Problem} You will be given a target.  The goal is to hit the target with an air rocket in three launches. The air rockets have adjustable pressure and an adjustable launch angle.
+\section*{Problem} You will be given a target.  The goal is to hit the target with an air rocket in four launches. The air rockets have adjustable pressure and an adjustable launch angle.
+%
+\begin{align*}
+  R &= \frac{v_0^2\sin\left(2\theta\right)}{g} &
+  g &= \SI{9.8}{m/s^2} = \SI{10.72}{yd/s^2}
+\end{align*}
 
 
-\section*{Pre-Lab} You only have three launches so think about what you are going to be doing with each trial.  What calculations do you need to make each time?
+\section*{Data and Calculations} Make sure to record the angle you use, the pressure you use, and the range.  Also include any calculations.  Make sure to explain what you plan to change for the next launch.  Your first launch should have a pressure between 60 PSI and 85 PSI.
 
+\newcommand{\datatable}{
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    Pressure & Angle $\theta$ & Measured range & Calculated $v_0$ \\\hline
+            &                &                &                  \\[1em]
+    \hline
+  \end{tabular}
+  
+  \vspace{0.4em}
+
+  
+  {\small Show any calculations \& explain adjustments for next trial:}
+}
+
+\paragraph{Launch \#1:}\hfill
+
+\datatable
+\vs
+
+\paragraph{Launch \#2:}\hfill
+
+\datatable
+\vs
+
+\paragraph{Launch \#3:}\hfill
+
+\datatable
 \vs
 
 
-\section*{Data and Calculations} Make sure to record the angle you use, the pressure you use, and the range.  Also include any calculations.  For Trials \#2 \& 3, make sure to jot down a few notes about what changes you've made since the previous trial and why.
+\paragraph{Launch \#4:}\hfill
 
-\vspace{2em}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Pressure & Angle $\theta$ & Measured range \\\hline
+           &                &                \\[1em]
+  \hline
+\end{tabular}
 
-Trial \#1:  
-\vs
+\vspace{0.5em}
 
-Trial \#2:
-\vs
-
-Trial \#3:  
-\vs
+{\small Did you hit your target?  Why or why not?}
 
 \pagebreak
 
@@ -62,6 +94,7 @@ Your conclusion should do the following things in narrative form:
   \item[\bf 3:] The purpose is not accurate or too vague.
 \end{itemize}
 
+\vspace{-0.25em}
 
 \paragraph{Procedure} It is easy for the reader to get an idea of what you did during the experiment and to follow the calculations.
 \begin{itemize}
@@ -71,6 +104,8 @@ Your conclusion should do the following things in narrative form:
   \item[\bf 4:] Does not meet standard.  Although this section exists, there is not nearly enough detail given.
 \end{itemize}
 
+\vspace{-0.25em}
+
 \paragraph{Data} All relevant measurements are provided and well-labeled.  Changes made at each trial are explained.	
 \begin{itemize}
   \item[\bf 10:] Meets standard.	
@@ -78,6 +113,8 @@ Your conclusion should do the following things in narrative form:
   \item[\bf 6:] Your data exists, but it is unclear what measurements are or where they came from.
   \item[\bf 4:] Does not meet standard.  Although this section exists, there is not nearly enough detail given.
 \end{itemize}
+
+\vspace{-0.25em}
 
 \paragraph{Conclusion} Your conclusion is complete and answers all of the questions.  It thoroughly covers what you learned and what the errors might have been	
 \begin{itemize}
