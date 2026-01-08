@@ -1,0 +1,22 @@
+\documentclass[10pt]{standalone}
+\usepackage{tikz,my-tikz-clipart}
+
+
+\begin{document}
+
+\begin{tikzpicture}
+  \path (0,0) coordinate (one) pic[scale=0.5] {car} 
+    +(1.25,0.45) node[fill=white, shape=circle] {$m$}
+    +(1.25, -0.5) node {Car \#1};
+  \draw[->,blue,very thick] 
+    (one) ++(2.5,0.25) -- ++(3,0) 
+    node[anchor=west] {$3v$};
+  \path (0,-2) coordinate (two) pic[scale=0.5] {car}
+    +(1.25,0.45) node[fill=white, shape=circle] {$4m$}
+    +(1.25, -0.5) node {Car \#2};
+  \draw[->,blue,very thick] 
+    (two) ++(2.5,0.25) -- ++(1,0)
+    node[anchor=west] {$v$};
+\end{tikzpicture}
+
+\end{document}

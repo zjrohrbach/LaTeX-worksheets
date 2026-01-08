@@ -3,7 +3,8 @@
 \usepackage{tikz}
 \usetikzlibrary{shadings,shadows}
 
-\title{Circular \#2}
+\title{Circular \#2
+}
 \author{Rohrbach}
 \date{\today}
 
@@ -66,30 +67,6 @@
 \uplevel{\printdata}
 
 \question
-	A satellite orbits the earth at a distance 1,120 km (\SI{1.12e6}{\meter}) {\bf above the Earth's surface}.  If the force of gravity acting on the satellite is \SI{2100}{\newton}, what is the mass of the satellite? (\emph{Hint:} think carefully about what the radius is.)
-  
-  \begin{tikzpicture}
-    \draw[shading=ball] (0,0) circle (.6);
-    \draw[dashed,gray] (0,0) circle (1);
-    \node[fill=white] at (1.6,.3)
-      {\footnotesize \SI{1.12e6}{\meter}};
-    \draw[<->] (.6,0) -- (1,0);
-
-
-    \begin{scope}
-      \fill (340:1) coordinate (satellite) 
-        circle (0.1);
-      \draw (satellite) 
-        -- ++(.2,0) ++(0,.1) -- ++ (0,-.2);
-      \draw (satellite) 
-        -- ++(-.2,0) ++(0,.1) -- ++ (0,-.2);
-    \end{scope}
-
-  \end{tikzpicture}
-  
-  \vs[3]
-
-\question
 	A person has a mass of 92 kg. 
 
   \begin{parts}
@@ -134,7 +111,29 @@
 
   \end{parts}
 	
+\question
+	A satellite orbits the earth at a distance 1,120 km (\SI{1.12e6}{\meter}) {\bf above the Earth's surface}.  If the force of gravity acting on the satellite is \SI{2100}{\newton}, what is the mass of the satellite? (\emph{Hint:} think carefully about what the radius is.)
+  
+  \begin{tikzpicture}
+    \draw[shading=ball] (0,0) circle (.6);
+    \draw[dashed,gray] (0,0) circle (1);
+    \node[fill=white] at (1.6,.3)
+      {\footnotesize \SI{1.12e6}{\meter}};
+    \draw[<->] (.6,0) -- (1,0);
 
+
+    \begin{scope}
+      \fill (340:1) coordinate (satellite) 
+        circle (0.1);
+      \draw (satellite) 
+        -- ++(.2,0) ++(0,.1) -- ++ (0,-.2);
+      \draw (satellite) 
+        -- ++(-.2,0) ++(0,.1) -- ++ (0,-.2);
+    \end{scope}
+
+  \end{tikzpicture}
+  
+  \vs[3]
 
 
 

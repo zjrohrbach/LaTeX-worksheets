@@ -1,0 +1,46 @@
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage[margin=0.5in]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+
+\input{problems.tex}
+
+\newcommand{\mycontent}{
+  \paragraph{Ex \#1} 
+    \one
+    \vspace*{\stretch{1}}
+
+  \paragraph{Ex \#2} 
+    \two
+    \vspace*{\stretch{1}}
+}
+
+
+\setlength{\columnsep}{1in}
+\begin{multicols*}{2}
+  
+  \paragraph{Ex \#1} 
+    \one
+    \vspace*{\stretch{1}}
+
+  \paragraph{Ex \#2} 
+    \two
+    \vspace*{\stretch{1}}  
+
+  \columnbreak
+
+  \paragraph{Ex \#3} 
+    \three
+    \vspace*{\stretch{1}}
+
+  \paragraph{Ex \#4} 
+    \four
+    \vspace*{\stretch{1}}  
+
+\end{multicols*}
+
+
+
+\end{document}

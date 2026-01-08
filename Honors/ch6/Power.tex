@@ -1,5 +1,6 @@
 \documentclass[10pt]{exam}
 \usepackage[hon]{template-for-exam}
+\usepackage{tikz}
 
 \title{Power}
 \author{Rohrbach}
@@ -8,26 +9,62 @@
 \begin{document}
 \maketitle
 
-\begin{questions}
-  \question
-      A compact fluorescent 60-watt replacement bulb only requires~13 W of power. Over the course of an hour, how many Joules of energy are saved?
-      \vs[3]
+\section*{Notes}
 
+Power: 
+
+\vspace{3em}
+
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) rectangle (6,1.5);
+    \end{tikzpicture}
+    %
+    \hspace{7em} Units:
+  \end{center}
+
+\vspace{3em}
+
+\noindent
+Horsepower:
+
+\vspace{3em}
+
+\section*{Practice}
+
+\begin{questions}
+  \question 
+    A cable lifts a 2600-kg elevator a distance of 30~m in a time of 8 seconds.  
+    
+    \begin{parts}
+      \part What power does the motor output in accomplishing this task?  Express in horsepower. \vs
+
+      \part If the time to lift the elevator doubled to 16~seconds, what would the power output be? \vs
+
+      \part In which case was more work done: question (a) or question (b)? Explain. \vs
+      
+    \end{parts}
+  \pagebreak 
   \question
-    Two cars travel 12 km. They both have the same mass and the same aerodynamic properties. It takes Car A a half hour to go this distance. It takes car B 4~mins.
+    Two cars travel 12 km.  They travel against identical friction and air drag forces totalling 2500~N.  Car~A travels at a constant speed of 30~m/s; Car~B travels at a constant speed of 45~m/s.
 
     \begin{parts}
       \part
-        Which car exerted more work?
+        Which car's engine exerted more work?
         \vs
       \part
-        Which car had a greater output of power?
+        Which car's engine had a greater output of power?
         \vs
       \part
-        Assuming that Car B's average speed was 50~m/s and it had an engine capable of providing 5,000~N of force, what was its power output in hp? (Hint: 
-        $1~\text{hp} \equiv 746~\text{W}$)
+        Calculate each car's power output in horsepower.
         \vs[2]
     \end{parts}
+
+      
+    \question
+      A compact fluorescent 60-watt replacement bulb only requires~13 W of power. Over the course of an hour, how many Joules of energy are saved?
+      \vs[3]
+
 
   \question
     You get an electric bill for 50 kWh (killowatt-hours). How much electrical work was done by your house in Joules.

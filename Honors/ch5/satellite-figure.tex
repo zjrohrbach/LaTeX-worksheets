@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{tikz,graphicx}
+\begin{document}
+
+\begin{tikzpicture}
+\node {\includegraphics[width=1cm]{earth.png}};
+\clip (-6,-6) rectangle (6,6);
+\begin{scope}
+  \fill (340:2) coordinate (satellite) 
+    circle (0.1);
+  \draw (satellite) 
+    -- ++(.2,0) ++(0,.1) -- ++ (0,-.2);
+  \draw (satellite) 
+    -- ++(-.2,0) ++(0,.1) -- ++ (0,-.2);
+  \draw[dashed] circle (2);
+  \node[below=0.2cm, left=0.1cm] at (satellite) {Satellite A};
+\end{scope}
+
+\begin{scope}
+  \fill (35:4) coordinate (satellite) 
+    circle (0.1);
+  \draw (satellite) 
+    -- ++(.2,0) ++(0,.1) -- ++ (0,-.2);
+  \draw (satellite) 
+    -- ++(-.2,0) ++(0,.1) -- ++ (0,-.2);
+  \draw[dashed] circle (4);
+  \node[above=0.2cm, right=0.1cm] at (satellite) {Satellite B};
+\end{scope}
+
+
+\end{tikzpicture}
+\end{document}

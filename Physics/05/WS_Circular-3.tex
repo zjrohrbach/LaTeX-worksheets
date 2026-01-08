@@ -7,84 +7,155 @@
 \author{Rohrbach}
 \date{\today}
 
+\newcommand{\printdata}{
+  \begin{center}
+    \begin{tabular}{ll}
+      \hline
+      Reference Data  & \\
+      \hline
+      Mass of Earth   & \SI{5.98e24}{\kilo\gram} \\
+      Mass of Sun     & \SI{1.99e30}{\kilo\gram} \\
+      Radius of Earth & \SI{6.38e6}{\meter}      \\
+      \hline
+    \end{tabular}
+  \end{center}
+}
+
 \begin{document}
 \maketitle
 
+\printdata
+
 \begin{questions}
   
+  \question 
+    When a spaceship is orbiting the earth and wants to land, it fires \emph{retro thrusters}, which are rockets that fire in the opposite direction than the spaceship is moving.  This causes the spaceship to slow down.  Explain why slowing down will cause the ship to come in for a landing. \vs
+
   \question
-    The earth ($m_E=\SI{5.972e24}{\kilo\gram}$) is \SI{1.496e11}{\meter} away from the sun ($m_S=\SI{1.989e30}{\kilo\gram}$).
+    If the Sun and its gravity were to suddenly disappear, what would happen to the motion of the earth? \vs
 
-    
+  \question A certain astronaut has a mass of 92~kg.
 
-    \begin{parts}
-      \part
-        Find the force of gravity between the earth and the sun. \label{FG} 
+  \begin{parts}
+    \part Find the force of gravity acting on the astronaut when she is on the earth. \vs
 
-        \vspace{2em}
-        \begin{tikzpicture}[scale=0.5]
-      
-          \fill[
-              shading=ball, 
-              ball color=orange,
-              circular glow={fill=yellow}, 
-              draw=yellow
-            ] 
-            (0,0) circle (.6);
-          \draw[dashed] (0,0) circle (4);
-          \draw[shading=ball] 
-            (40:4) coordinate (earth) circle (0.2);
-          \draw[<->] (0,0) -- (earth) node[midway,fill=white] {\footnotesize \SI{1.496e11}{\meter}};
-      
-        \end{tikzpicture}
-        \vspace{2em}
+    \part The International Space Station (ISS) orbits at a radius of \SI{6.78e6}{m} from the center of the Earth.  Calculate the force of gravity acting on the astronaut when she is aboard the ISS. \vs
 
-      \part
-        Find the tangential velocity of the earth.  (\emph{use your answer from part \ref{FG}}) \label{vT} \vs[3]
-      \part
-        Find how long it takes for the earth to complete one rotation (\emph{use your answer from part \ref{vT}}) \label{T} \vs[2]
-      \part
-        Your answer to part \ref{T} is in seconds.  Convert it to days.  What do you notice? \vspace{5em}
+    \part It should be clear from these calculations that even though the astronaut has a moderately lower force of gravity, it is nowhere near zero gravity.  Why, then, does the astronaut experience ``weightlessness''? \vspace{5em}
+  \end{parts}
 
-    \end{parts}
+
 
   \pagebreak
+  \uplevel{\printdata}
 
-  \question
-    The Moon ($m_M=\SI{7.35e22}{\kilo\gram}$) is $\SI{3.9e8}{\meter}$ from the center of the Earth ($m_E=\SI{5.972e24}{\kilo\gram}$).
+  \question A 2500-kg weather satellite orbits about 22,000 miles above the Earth's equator.  This is a radius of \SI{4.23e7}{m} from the center of the Earth.  %The mass of the earth is \SI{5.98e24}{\kilo\gram}.
 
-    
-
-    \begin{parts}
+  \begin{parts}
       \part
-        Find the force of gravity between the Moon and the Earth. 
+        Find the force of gravity between the earth and the satellite. \label{FG} 
 
         \vspace{2em}
-        
         \begin{tikzpicture}
-          \fill[
-              shading=ball, 
-              ball color=blue,
-              draw=yellow
-            ] 
-            (0,0) circle (.6);
-          \draw[dashed] (0,0) circle (2);
-          \draw[
-              shading=ball,
-              ball color=gray
-            ] 
-            (110:2) coordinate (moon) circle (0.2);
-          \draw[->,very thick,red] (moon) -- ++(200:1.5);
-          \draw[<->] (0,0) -- (moon) node[midway,fill=white] {\footnotesize \SI{3.9e8}{\meter}};
-    
-        \end{tikzpicture}
+          \node {\includegraphics[width=2cm]{Worldmap_northern.png}};
+          \begin{scope}
+            \fill (340:2) coordinate (satellite) 
+              circle (0.1);
+            \draw (satellite) 
+              -- ++(.2,0) ++(0,.1) -- ++ (0,-.2);
+            \draw (satellite) 
+              -- ++(-.2,0) ++(0,.1) -- ++ (0,-.2);
+            \draw[dashed] circle (2);
+          \end{scope}
 
-        \vs
+          \draw[<->] (0,0) -- (20:2);
+          \node[fill=white] at (2,.1)
+            {\footnotesize \SI{4.23e7}{m}};
+        \end{tikzpicture}
+        \vspace{2em}
+
       \part
-        Find the tangential velocity of the Moon.  \vs[2]
+        Find the tangential velocity of the satellite.  (\emph{use your answer from part \ref{FG}}) \label{vT} \vs[3]
+      \part
+        Find how long it takes for the satellite to complete one rotation (\emph{use your answer from part \ref{vT}}) \label{T} \vs[2]
+      \part
+        Your answer to part \ref{T} is in seconds.  Convert it to hours.  \label{hr} \vs
+        
+      \part 
+        Look at your answer to part~\ref{hr}.  This type of orbit is known as a \emph{``geosynchronous orbit''}.  Can you explain why? \vs
 
     \end{parts}
 
+
+  % \question
+  %   The Moon ($m_M=\SI{7.35e22}{\kilo\gram}$) is $\SI{3.9e8}{\meter}$ from the center of the Earth ($m_E=\SI{5.972e24}{\kilo\gram}$).
+
+    
+
+  %   \begin{parts}
+  %     \part
+  %       Find the force of gravity between the Moon and the Earth. 
+
+  %       \vspace{2em}
+        
+  %       \begin{tikzpicture}[scale=0.9]
+  %         \node at (0,0) {\includegraphics[width=1.4cm]{earth.png}};
+  %         \draw[dashed] (0,0) circle (2);
+  %         \draw[
+  %             shading=ball,
+  %             ball color=gray
+  %           ] 
+  %           (110:2) coordinate (moon) circle (0.2);
+  %         \draw[->,very thick,red] (moon) -- ++(200:1.5);
+  %         \draw[<->] (0,0) -- (moon) node[midway,fill=white] {\footnotesize \SI{3.9e8}{\meter}};
+    
+  %       \end{tikzpicture}
+
+  %       \vspace{2em}
+  %     \part
+  %       Find the tangential velocity of the Moon.  \vs[2]
+
+  %   \end{parts}
+
+
+
+  % \question
+  %   The earth ($m_E=\SI{5.972e24}{\kilo\gram}$) is \SI{1.496e11}{\meter} away from the sun ($m_S=\SI{1.989e30}{\kilo\gram}$).
+
+    
+
+  %   \begin{parts}
+  %     \part
+  %       Find the force of gravity between the earth and the sun. \label{FG2} 
+
+  %       \vspace{0.5em}
+  %       \begin{tikzpicture}[scale=0.5]
+      
+  %         \fill[
+  %             shading=ball, 
+  %             ball color=orange,
+  %             circular glow={fill=yellow}, 
+  %             draw=yellow
+  %           ] 
+  %           (0,0) circle (.6);
+  %         \draw[dashed] (0,0) circle (4);
+  %         \draw[shading=ball] 
+  %           (40:4) coordinate (earth) circle (0.2);
+  %         \draw[<->] (0,0) -- (earth) node[midway,fill=white] {\footnotesize \SI{1.496e11}{\meter}};
+      
+  %       \end{tikzpicture}
+  %       \vspace{0.5em}
+
+  %     \part
+  %       Find the tangential velocity of the earth.  (\emph{use your answer from part \ref{FG2}}) \label{vT2} \vs[3]
+  %     \part
+  %       Find how long it takes for the earth to complete one rotation (\emph{use your answer from part \ref{vT2}}) \label{T2} \vs[2]
+  %     \part
+  %       Your answer to part \ref{T2} is in seconds.  Convert it to days.  What do you notice? \vspace{5em}
+
+  %   \end{parts}
+
+  % \pagebreak
 
 
 \end{questions}
