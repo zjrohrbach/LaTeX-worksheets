@@ -1,0 +1,42 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\vspace*{\stretch{1}}
+
+\question 
+  Starting from rest, a child zooms down a frictionless slide from an initial height of 3.00 m.  What is her speed at the bottom of the slide?  Assume she has a mass of 25.0 kg.
+
+  \vs \hrule \vs
+
+\question
+  You slide a trashcan ($m = \SI{10.2}{\kilo\gram}$) across the floor with an initial velocity of 7.9 m/s.
+  
+  \vspace{1em}
+  
+      (a) If the trashcan eventually stops, what is the work done by friction?
+      
+      (b) If the force of friction is \SI{-29.4}{\newton}, how far does the trash can go?
+  \vs
+
+\end{questions}
+\end{document}

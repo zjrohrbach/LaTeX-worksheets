@@ -1,0 +1,204 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Mon, Apr 13}
+
+\def\content{
+\begin{questions}
+  \question Consider the wave below:
+
+  \begin{tikzpicture}[scale=0.6]
+    \def\ymax{1}
+    \def\xmax{16}
+    \def\amp{0.5}
+    \def\wl{5}
+    \draw[dotted,thick,gray] 
+      (0,-\ymax*1cm) grid[step=0.5cm] (\xmax*1cm,\ymax*1cm);
+    \draw 
+      (0,-\ymax*1cm) grid[step=1cm] (\xmax*1cm,\ymax*1cm);
+    \foreach \x in {0,...,\xmax}{
+      \draw (\x*1cm,-\ymax*1cm) ++(0,-.3cm) node {\x};
+    }
+    \foreach \y in {-\ymax,...,\ymax}{
+      \node[anchor=east] at (-0.1cm,\y*1cm) {\y};
+    }
+    \draw[very thick,->] 
+      (0,0) -- (\xmax*1cm,0) -- ++(0.5cm,0);
+    \draw[very thick,->] 
+      (0,-\ymax*1cm) -- (0,\ymax*1cm) -- ++(0,0.2cm);
+
+    \clip (0,-\ymax*1cm) rectangle (\xmax*1cm,\ymax*1cm);
+      \draw[ultra thick] (0,0) 
+        sin (0.25*\wl, \amp) cos (0.5*\wl, 0) 
+        sin (0.75*\wl,-\amp) cos (\wl, 0)
+        sin (1.25*\wl,\amp)  cos (1.5*\wl, 0)
+        sin (1.75*\wl,-\amp) cos (2*\wl, 0)
+        sin (2.25*\wl,\amp)  cos (2.5*\wl, 0)
+        sin (2.75*\wl,-\amp) cos (3*\wl, 0)
+        sin (3.25*\wl,\amp)  cos (3.5*\wl, 0)
+        sin (3.75*\wl,-\amp) cos (4*\wl, 0)
+        sin (4.25*\wl,\amp)  cos (4.5*\wl, 0)
+        sin (4.75*\wl,-\amp) cos (5*\wl, 0);
+  \end{tikzpicture}
+
+
+  \begin{parts}
+    \part 
+      Make the following measurements:
+
+      \hfill
+
+      Amplitude: \fillin
+
+      \hfill
+
+      Wavelength: \fillin
+
+      \hfill
+
+    \part 
+      How many waves are shown in the picture above?  Give your answer to the nearest 0.25. \vs
+
+  \end{parts}
+
+
+
+\question
+  Draw the interference that happens in each of these cases and label it as \emph{constructive} or \emph{destructive}.
+
+    \begin{tikzpicture}[scale=0.6]
+    \def\ymax{1}
+    \def\xmax{16}
+    \def\amp{0.5}
+    \def\wl{1.5}
+
+
+    \begin{scope}
+      \clip (0,-\ymax*1cm) rectangle (\xmax*1cm,\ymax*1cm);
+        \draw[ultra thick] (0,0) 
+          sin (0.25*\wl, \amp) cos (0.5*\wl, 0) 
+          sin (0.75*\wl,-\amp) cos (\wl, 0)
+          sin (1.25*\wl,\amp)  cos (1.5*\wl, 0)
+          sin (1.75*\wl,-\amp) cos (2*\wl, 0)
+          sin (2.25*\wl,\amp)  cos (2.5*\wl, 0)
+          sin (2.75*\wl,-\amp) cos (3*\wl, 0)
+          sin (3.25*\wl,\amp)  cos (3.5*\wl, 0)
+          sin (3.75*\wl,-\amp) cos (4*\wl, 0)
+          sin (4.25*\wl,\amp)  cos (4.5*\wl, 0)
+          sin (4.75*\wl,-\amp) cos (5*\wl, 0);
+    \end{scope}
+
+    \node at (3.75,-1) {\bf +};
+    \node at (9.00,-1) {\bf =};
+
+
+    \begin{scope}[shift={(0,-2)}]
+      \clip (0,-\ymax*1cm) rectangle (\xmax*1cm,\ymax*1cm);
+        \draw[ultra thick] (0,0) 
+          sin (0.25*\wl, \amp) cos (0.5*\wl, 0) 
+          sin (0.75*\wl,-\amp) cos (\wl, 0)
+          sin (1.25*\wl,\amp)  cos (1.5*\wl, 0)
+          sin (1.75*\wl,-\amp) cos (2*\wl, 0)
+          sin (2.25*\wl,\amp)  cos (2.5*\wl, 0)
+          sin (2.75*\wl,-\amp) cos (3*\wl, 0)
+          sin (3.25*\wl,\amp)  cos (3.5*\wl, 0)
+          sin (3.75*\wl,-\amp) cos (4*\wl, 0)
+          sin (4.25*\wl,\amp)  cos (4.5*\wl, 0)
+          sin (4.75*\wl,-\amp) cos (5*\wl, 0);
+    \end{scope}
+
+    \begin{scope}[shift={(0,-5)}]
+      \clip (0,-\ymax*1cm) rectangle (\xmax*1cm,\ymax*1cm);
+        \draw[ultra thick] (0,0) 
+          sin (0.25*\wl, \amp) cos (0.5*\wl, 0) 
+          sin (0.75*\wl,-\amp) cos (\wl, 0)
+          sin (1.25*\wl,\amp)  cos (1.5*\wl, 0)
+          sin (1.75*\wl,-\amp) cos (2*\wl, 0)
+          sin (2.25*\wl,\amp)  cos (2.5*\wl, 0)
+          sin (2.75*\wl,-\amp) cos (3*\wl, 0)
+          sin (3.25*\wl,\amp)  cos (3.5*\wl, 0)
+          sin (3.75*\wl,-\amp) cos (4*\wl, 0)
+          sin (4.25*\wl,\amp)  cos (4.5*\wl, 0)
+          sin (4.75*\wl,-\amp) cos (5*\wl, 0);
+    \end{scope}
+
+    \node at (3.75,-6) {\bf +};
+    \node at (9.00,-6) {\bf =};
+
+
+    \begin{scope}[shift={(0,-7)}]
+      \clip (0,-\ymax*1cm) rectangle (\xmax*1cm,\ymax*1cm);
+        \draw[ultra thick] (0,0) 
+          sin (0.25*\wl, -\amp) cos (0.5*\wl, 0) 
+          sin (0.75*\wl, \amp) cos (\wl, 0)
+          sin (1.25*\wl,-\amp)  cos (1.5*\wl, 0)
+          sin (1.75*\wl, \amp) cos (2*\wl, 0)
+          sin (2.25*\wl,-\amp)  cos (2.5*\wl, 0)
+          sin (2.75*\wl, \amp) cos (3*\wl, 0)
+          sin (3.25*\wl,-\amp)  cos (3.5*\wl, 0)
+          sin (3.75*\wl, \amp) cos (4*\wl, 0)
+          sin (4.25*\wl,-\amp)  cos (4.5*\wl, 0)
+          sin (4.75*\wl, \amp) cos (5*\wl, 0);
+    \end{scope}
+
+    \draw (0,-3.5) -- ++ (18,0);
+
+
+  \end{tikzpicture}
+
+
+\end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

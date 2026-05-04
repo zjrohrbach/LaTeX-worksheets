@@ -11,38 +11,31 @@
 
 \newcommand{\topmatter} {
   \vspace{2em}
-  {\noindent \Large \bf Instructions:}
+  \hrule
 
   \vspace{1em}
 
-  \noindent {\bf Please do not open this test until told to do so!}
+  \section*{Equations}
 
-  \begin{itemize}
-    \item Put your name on this page
-    \item Bubble in the number that is on your class notebook where it says ``ZipGrade ID''
-    \item When instructed, tear off this first page
-    \item Write your answers to the free-response questions on the back of this page.
-    \item Bubble in your answers to the multiple-choice questions here.
-    
-  \end{itemize}
+  \begin{align*}
+    T_P &=2\pi\sqrt{\frac{\ell}{g}} &
+    T_S &=2\pi\sqrt{\frac{m}{k}} &
+    F_S &= -kd &
+    F_G &= mg  &
+    v   &= f\lambda & &&
+    g   &= \SI{9.8}{m/s^2}
+  \end{align*}
 
 }
 \newcommand{\bottommatter}{
-  \begin{tikzpicture}
-    \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
-    \node at (0,0.2) {\bf !};
-  \end{tikzpicture}
-  \bf Don't forget to do the problems on the back of this page!
+
 }
 
 \newcommand{\drawscantron}[2]{
   \begin{flushright}
     \begin{tikzpicture}
-      \node[anchor=south west] at (0,0) {\includegraphics[width=.7\textwidth]{scantron.png}};
-      \fill (#1,#2) circle (0.25);
-      \node[anchor=west] at (2,12.25) {\small \mytitle};
-      \fill[white] (7.1,9) rectangle (8.25,1.5);
-      \node[fill=white] at (8.4,9.2) {\bf ZipGrade ID:};
+      \node[anchor=south west] at (0,0) {\includegraphics[width=4in]{11Q.png}};
+      \fill (#1,#2) circle (0.2);
     \end{tikzpicture}
   
     \bottommatter
@@ -51,14 +44,23 @@
 
 
 
-  \drawscantron{4.8}{1.95}
+  \drawscantron{2.95}{1.7}
   \topmatter
 
 \pagebreak
 
-  \drawscantron{5.35}{1.95}
+  \drawscantron{3.4}{1.7}
   \topmatter
 
+\pagebreak
+
+  \drawscantron{3.86}{1.7}
+  \topmatter
+
+\pagebreak
+
+  \drawscantron{4.35}{1.7}
+  \topmatter
 
 
 \end{document}

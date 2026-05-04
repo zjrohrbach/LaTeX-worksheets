@@ -1,6 +1,6 @@
 \documentclass[10pt]{exam}
 \usepackage[hon]{template-for-exam}
-\usepackage{graphicx}
+\usepackage{graphicx, tikz}
 
 \title{Potential Difference}
 \author{Rohrbach}
@@ -8,6 +8,17 @@
 
 \begin{document}
 \maketitle
+
+\section*{Electric Potential Energy vs. Gravitational Potential Energy}
+
+\vs 
+
+\section*{Potential Difference or ``Voltage''}
+\begin{tikzpicture}
+  \draw (0,0) rectangle ++(7,2);
+\end{tikzpicture}
+
+\section*{Practice Problems}
 
 \begin{questions}
   \question
@@ -24,14 +35,18 @@
         Assuming that all the work turns into kinetic energy, how fast would the electron be going when it made it across the entire tube? \vs
     \end{parts}
 
-  \question 
-    What is the work done on a $\text{He}^{2+}$ ion that accelerates through a potential difference of $-2.5$~kV. Express your answer in J and in eV. \vs[2]
-
 \pagebreak
+
+  \question 
+    What is the work done on a $\text{He}^{2+}$ ion that accelerates through a potential difference of $-2.5$~kV.  The charge of a $\text{He}^{2+}$ is $+2e$ (\emph{i.e.} the charge of two protons).  % Express your answer in J and in eV.  
+    \vs[2]
+
   \question
     Use the equipotential lines below to draw an electric field. What kind of charges are these?
 
     \includegraphics{equipotential.png}
+
+    \vs
 
 
 \end{questions}

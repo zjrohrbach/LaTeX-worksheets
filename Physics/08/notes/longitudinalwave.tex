@@ -1,0 +1,29 @@
+\documentclass[10pt,landscape]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \def\amp{0.3}
+  \def\wl{2}
+  
+  \begin{axis}[
+    width=12cm, height=4cm,
+    declare function ={myfunc(\x) = \x+\amp*sin(deg(2*pi*\x/\wl));},
+    axis y line = none,
+    axis x line = left,
+    xlabel = {meters}
+  ]
+    \addplot[
+      only marks,
+      mark = *,
+      mark size=0.5pt,
+    ]
+      table [x expr={myfunc(\thisrow{x})}, y=y] {longitudinalwavepoints.dat};
+    %\addplot[samples=100,smooth] {myfunc(x)};
+  \end{axis}
+\end{tikzpicture}
+
+
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Tue, Feb 24 (Pd 1, 6) / Wed, Feb 25 (Pd 4)}
+
+\def\content{
+\begin{questions}
+  \question Today, we are starting a new unit is called \emph{Simple Harmonic Motion}.  Think about the word \textbf{\emph{harmonic}}.  What does it make you think of? \vs[2] 
+
+  \question One example of Simple Harmonic Motion is a \emph{pendulum}, which is a mass on the end of a string that swings back and forth.  What do you know about pendulums or where have you seen them before?
+
+  \begin{tikzpicture}[
+    bob/.style={
+      draw=black, fill=white, circle, radius=0.3
+    }
+  ]
+    \draw (-125:3) node[bob,shading=ball] {} -- (0,0);
+    \draw (-110:3) node[bob,shading=ball] {} -- (0,0);
+    \draw (-90:3) node[bob,shading=ball] {} -- (0,0);
+    \draw (-70:3) node[bob,shading=ball] {} -- (0,0);
+    \draw (-55:3) node[bob,shading=ball] {} -- (0,0);
+    \draw[<->] (-55:3.5) arc (-55:-125:3.5);
+  \end{tikzpicture}
+
+  \vspace{3em}
+
+  \question Think about Kinetic Energy and Potential Energy.  When would the pendulum have the most KE?  When would it have the most PE? \vs
+\end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

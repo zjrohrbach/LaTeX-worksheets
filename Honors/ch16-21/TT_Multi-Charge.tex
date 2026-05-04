@@ -1,0 +1,56 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+\Large
+
+\newcommand{\content}{
+  \noindent
+  Three point charges $q_1$, $q_2$, and $q_3$ lie along the $x$-axis at $x=-0.4$ m, $0$ m, and $1.0$ m, respectively.  Calculate the magnitude and direction of electrostatic force on charge $q_3$ when
+  %
+  \begin{align*}
+  q_1 &=+\SI{1.3e-5}{\coulomb}\, ,  \\
+  q_2 &=-\SI{6.0e-5}{\coulomb}\, \text{, and} \\
+  q_3 &=-\SI{5.7e-5}{\coulomb}\, .
+  \end{align*} 
+
+  \begin{tikzpicture}[scale=0.9]
+    \draw[->] (0,-1) -- (0,1) node[anchor=south west] {$y$};
+    \draw[->] (-4.6,0) -- (11,0) node[anchor=south west] {$x$};
+
+
+    \node[shape=circle,draw,fill=gray!50] at (-4,0) {$q_1$};
+    \node[shape=circle,draw,fill=gray!50] at ( 0,0) {$q_2$};
+    \node[shape=circle,draw,fill=gray!50] at (10,0) {$q_3$};
+
+  \end{tikzpicture}
+}
+
+\vs
+
+\content
+
+\vs \hrule \vs 
+
+\content 
+
+\vs
+
+
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\vspace*{\stretch{1}}
+
+\question Find the length of pendulum that has a period of 0.6~seconds.
+
+\vs \hrule \vs
+
+\question The shock absorber in a car is a spring that has a constant of \SI{130000}{N/m}.  When the car goes over a bump, the spring oscillates 10.0 times in 7.0~seconds.  What is the mass of the car? \vs
+
+\vs \hrule \vs
+
+\question By how much is the spring displaced due to the mass of the car?
+
+\vs
+
+
+
+\end{questions}
+\end{document}

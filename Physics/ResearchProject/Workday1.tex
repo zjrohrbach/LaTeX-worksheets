@@ -1,6 +1,8 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
-\usepackage{hyperref,enumitem}
+\usepackage{hyperref,enumitem,hanging,setspace,fancybox,soul,enumitem}
+\usepackage[dvipsnames]{xcolor}
+
 
 \setlist[]{
     itemsep=-1ex,
@@ -28,7 +30,7 @@
 \section*{What to do before we go to the library}
 
 \subsection*{Step 1}
-Start by writing down your topic from \texttt{\href{https://go.rohrbachscience.com/project-topics}{\bf https://go.rohrbachscience.com/project-topics}}.  Make sure to include any information in parentheses, as that information may help guide your research.
+Start by writing down your topic from \texttt{\href{https://go.rohrbachscience.com/project-topics}{https://go.rohrbachscience.com/project-topics}}.  Make sure to include any information in parentheses, as that information may help guide your research.
 
 \begin{center}
   \fillin[][0.9\textwidth]
@@ -36,11 +38,11 @@ Start by writing down your topic from \texttt{\href{https://go.rohrbachscience.c
 
 \subsection*{Step 2}
 
-Please download and edit the template posted at \texttt{\href{https://go.rohrbachscience.com/bib-template}{\bf https://go.rohrbachscience.com/bib-template}}.
+Please download and edit the template posted at \texttt{\href{https://go.rohrbachscience.com/bib-template}{https://go.rohrbachscience.com/bib-template}}.
 
 \subsection*{Step 3}
 
-Open up Mrs. Kovach's Research Pathfinder at \texttt{\href{https://go.rohrbachscience.com/pathfinder}{\bf https://go.rohrbachscience.com/pathfinder}}.  There are excellent links to help you get started on your research.  
+Open up Mrs. Kovach's Research Pathfinder at \texttt{\href{https://go.rohrbachscience.com/pathfinder}{https://go.rohrbachscience.com/pathfinder}}.  There are excellent links to help you get started on your research.  
 
 \section*{Your Assignment: An Annotated Bibliography}
 
@@ -63,7 +65,7 @@ Please see the last few pages of the Research Pathfinder includes instructions o
 \vspace{1em}
 
 \noindent
-Your Annotated Bibliography should be double spaced and have a hanging indent. It should be uploaded to Schoology by {\bf Wed, Feb 8 at 11:59pm}. 
+Your Annotated Bibliography should be double spaced and have a hanging indent. It should be uploaded to Schoology by {\bf Sun, Feb 8 at 11:59pm}. 
 
 
 \section*{Questions to Guide Your Research}
@@ -80,17 +82,149 @@ Your Annotated Bibliography should be double spaced and have a hanging indent. I
 \section*{Project Timeline}
 
 \begin{tabular}{ll}
-  Wed, Feb 8 & 
-  Annotated Bibliography due on Schoology by 11:59pm
-  \\[1em]
-  Tue-Thu, Feb 18-20 & 
-  Library Research Day \#2 (Focus will be on preparing your presentation)
-  \\[1em]
-  Week of Mar 17-21 & 
+  Sun, Feb 8 (11:59pm on Schoology) & 
+  Annotated Bibliography due
+  \\[0.5em]
+  Fri, Feb 20 (Pd 2, 3, 5) / Mon, Feb 23 (Pd 1, 4, 6)& 
+  Library Research Day \#2
+  \\[0.5em]
+  Week of Mar 16-20 & 
   Presentations in class
-  \\[1em]
-  Sat, Mar 22 &
+  \\[0.5em]
+  Sat, Mar 21 &
   Spring Break!
 \end{tabular}
+
+
+\pagebreak
+
+\section*{Types of Citations}\label{types-of-citations}
+
+\newenvironment{examplecitation}{
+  \begin{Sbox}\begin{minipage}{6.3in}
+    \doublespacing
+    \textbf{Example:}
+    
+    \begin{hangparas}{.5in}{1}
+}{
+    \end{hangparas}
+    \vspace{1em}
+  \end{minipage}\end{Sbox}
+  \doublebox{\TheSbox}
+}
+
+\newenvironment{mycitation}{
+    \doublespacing    
+    \begin{hangparas}{.25in}{1}
+      \noindent
+}{
+    \end{hangparas}
+}
+
+Please make sure to set up a hanging indent on your document.  To create a hanging indent in Microsoft Word, highlight your text, right-click, and select \textbf{Paragraph}. Under the ``Indentation" section, go to \textbf{Special} and select \textbf{Hanging} from the dropdown menu, setting it to 0.5 inches.  If you use the template provided, the hanging indent is already set up for you.
+
+\subsection*{Professional Website with an author:}
+
+\begin{mycitation}
+  \color{ForestGreen} Last Name of Author, First initial$^\ast$. \color{purple} (Year, Month Date$^\dagger$). \emph{\color{red} Title of Page}. \color{black} Site Name. \color{blue} Website address
+\end{mycitation}
+
+\vspace{1em}
+
+\begin{examplecitation}
+    \raggedright
+    \color{ForestGreen} Hubilla, C. \color{purple}(2023, July 27). \color{red}\emph{Solving the mystery of Prince Rupert's Drop: Scientists reveal the secret behind its incredible strength}. \color{black} Science Times.
+    \color{blue} \texttt{https://www.sciencetimes.com/articles/ 44555/20230627/solving-mystery-prince-rupert-drop-scientists-reveal-secret- behind-incredible.htm}    
+\end{examplecitation}
+
+\vspace{1em}
+
+$^\ast$\textbf{If there are two authors}, list by their last names and initials. Separate author names with a comma. Use the ampersand (\&) instead of "and." \hfill \emph{Example:} ``{\color{ForestGreen} Soto, C. J., \& John, O. P.}''
+
+\textbf{For 3 to 20 Authors}, list by last names and initials; commas separate author names, while the last author's name is preceded again by ampersand. \hfill \emph{Example:}  ``{\color{ForestGreen} Nguyen, T., Carnevale, J. J., Scholer, A. A., Miele, D. B., \& Fujita, K.}'' 
+
+\vspace{1em}
+\subsection*{Professional Website with no author:}
+
+
+\begin{mycitation}
+  \color{ForestGreen} Sponsor of Website. \color{purple} (Year, Month Date$^\dagger$). \emph{\color{red} Title of Page}. \color{blue} Website address
+\end{mycitation}
+
+\vspace{1em}
+
+\begin{examplecitation}
+    \raggedright
+    \color{ForestGreen} Physics Classroom. \color{purple}(n.d.). \color{red}\emph{Rainbow Formation}.
+  \color{blue}\texttt{https://www.physicsclassroom.com/class/refrn/ Lesson-4/Rainbow-Formation}   
+\end{examplecitation}
+
+\vspace{1em}
+
+
+$^\dagger$\textbf{If there is not a publication date}, you may write write ``{\color{purple}(n.d.)}'' (for ``no date'').
+
+\vspace{1em}
+
+
+\subsection*{Database Citation:}
+
+\begin{mycitation}
+  The citation is located at the end of the article. (Make sure to select ``APA style.'')    
+\end{mycitation}
+
+
+\vspace{1em}
+
+%\noindent
+\begin{examplecitation}
+  \raggedright
+  Toupin, L. (2014). Rainbows. In K. L. Lerner \& B. W. Lerner (Eds.), \emph{The Gale Encyclopedia of} \emph{Science} (5th ed.). Gale. \texttt{https://link.gale.com/apps/doc/CV2644031869/SCIC?u=avon12 \&sid=bookmark-SCIC\&xid=2ce15470}
+\end{examplecitation}
+
+
+\pagebreak
+
+\section*{Annotated Bibliography}
+
+Pieces to include: 
+
+\begin{enumerate}
+  \item \sethlcolor{gray!30} \hl{APA Citation.}
+  \item \sethlcolor{yellow} \hl{A summary about the source. }
+  \item \sethlcolor{green} \hl{A sentence that evaluates the source. }
+  \begin{itemize}[topsep=-2ex,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+    \item How do you know it is a reliable source? 
+    \item Is it a professional website or a database article? \vspace{0.5em}
+  \end{itemize}
+  \item \sethlcolor{cyan!70} \hl{A sentence that explains why this source is helpful to your research.}
+\end{enumerate}
+
+\vspace{1em}
+
+
+\noindent
+\begin{examplecitation}
+  \raggedright
+
+  \sethlcolor{gray!30}
+
+  \hspace{0px}\hl{Andrews, T. M. (2017, May 17). \emph{The head of this teardrop-shaped glass can withstand bullets.} Washington Post. 
+  \texttt{https://link.gale.com/apps/doc/A491862572/SCIC?u=avon12\&sid= bookmark-SCIC\&xid=d68948b4}}
+  \end{hangparas} 
+
+  \vspace{0.5em}
+
+  \sethlcolor{yellow}
+
+  
+  \begin{hangparas}{.5in}{0}
+  %\raggedright
+  \hspace{0px}\hl{This resource has information about Prince Rupert's drops.  These drops resemble tadpoles. The head of the drop is extraordinarily strong and can withstand being hit by a hammer or a shot from a .22-caliber handgun. However, the drop's tail is very fragile and once it is broken the whole drop will shatter into fine dust.  Although the drops have been around since the 17 Century, it was only recently that researchers from Purdue University, University of Cambridge, and Tallinn University of Technology were able to measure the compressive strength of the drops by using a technique called integrated photoelasticity.}  \sethlcolor{green}
+  \hl{This is a reliable source of information, because it is a database article from the Gale in Context: Science database and was originally published in the Washington Post.} 
+  \sethlcolor{cyan!70}
+  \hl{This source is extremely helpful to use for research purposes because it has necessary Information about compressive forces and tensile forces, and how they apply to the stress distribution within Prince Rupert's drops.}
+\end{examplecitation}
+
 
 \end{document}

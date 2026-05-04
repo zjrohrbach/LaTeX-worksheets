@@ -1,4 +1,4 @@
-\documentclass[border=1cm]{standalone}
+\documentclass[border=1cm,12pt]{standalone}
 \usepackage{tikz}
 \usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
 
@@ -11,17 +11,24 @@
   \draw[fill=blue!70] (8,0) circle (4);
   \fill (8,0) circle (0.1);
   \draw[->,very thick] (8,0) ++(70:6) arc (70:140:6)
-    node[midway,anchor=south east] {\Large 25 rad/s};
+    node[midway,anchor=south east] {\Huge 25 rad/s};
   \draw[->,very thick] (0,0) ++(120:4) arc (120:60:4)
-    node[midway,anchor=south east] {\Large ?};
+    node[midway,anchor=south east] {\Huge ?};
   \draw (0,0) -- ++(140:3) 
-    node[midway,sloped, above] {\Large 30 cm};
+    node[midway,sloped, above] {\Huge 30 cm};
   \draw (8,0) -- +(-20:5) 
-    node[midway,sloped, above] {\Large 50 cm};
-  \path (0,0) ++(240:4) node[red] {\Large \bf A};
-  \path (8,0) ++(30:6) node[blue] {\Large \bf B};
+    node[midway,sloped, above] {\Huge 50 cm};
+  \path (0,0) ++(240:4) node[red] {\Huge \bf A};
+  \path (8,0) ++(30:6) node[blue] {\Huge \bf B};
 
 
+  \node[text width=7cm] at (18,3) {\Large
+Calculate the angular velocity needed on wheel A in order to make wheel B achieve an angular velocity of 25~rad/s. Assume the radius of A is 30~cm and the radius of B is 50~cm.  The wheels are in contact with each other and do not slip.};
 
 \end{tikzpicture}
+
+
+
+
+
 \end{document}

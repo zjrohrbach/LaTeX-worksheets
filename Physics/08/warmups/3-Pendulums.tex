@@ -1,0 +1,96 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,tikz}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Mon, Mar 2}
+
+\def\content{
+\begin{questions}
+  \question
+    Of the three things you adjusted in the lab last week, what was the only thing that affected the period of the pendulum? \vs
+  \question 
+    Take a look at the equation for period ($T$) of a pendulum: $T_P=2\pi\sqrt{\frac{\ell}{g}}.$. Other than your answer for \#1 what else affects the period of the pendulum?  Why didn't we see that in the lab? \vs
+  \question
+    Pendulum A and pendulum B are identical, except that pendulum A has twice as much amplitude.
+
+    \begin{tikzpicture}[
+      bob/.style={
+        draw=black, fill=white, circle, radius=0.3
+      }
+      ]
+
+        \begin{scope}
+          \draw[<->] (-120:3.4) arc (-120:-60:3.4);
+          \draw (-130:3) node[bob] {A} -- (0,0);
+          \draw (-90:3) node[bob] {A} -- (0,0);
+          \draw (-50:3) node[bob] {A} -- (0,0);  
+        \end{scope}
+
+        \begin{scope}[shift={(4,0)}]
+          \draw[<->] (-106:3.4) arc (-106:-74:3.4);
+          \draw (-110:3) node[bob] {B} -- (0,0);
+          \draw (-90:3) node[bob] {B} -- (0,0);
+          \draw (-70:3) node[bob] {B} -- (0,0);  
+        \end{scope}
+    \end{tikzpicture}
+
+        \begin{parts}
+      \part 
+        Which pendulum has the longer period?  How do you know?
+        \vs
+      \part 
+        Which pendulum has the faster top speed?  How do you know?
+        \vs
+    \end{parts}
+\end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

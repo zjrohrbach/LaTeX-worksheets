@@ -1,13 +1,13 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
 \usepackage{tikz}
-\usepackage[top=0.2in, bottom=0.5in, left=1in, right=1in]{geometry}
+\usepackage[top=0.2in, bottom=0.5in, left=0.4in, right=0.4in]{geometry}
 
 
 \begin{document}
 \pagestyle{empty}
 
-\def\mytitle{Unit 06 Test: Momentum}
+\def\mytitle{Unit 07 Test: Energy}
 
 \newcommand{\topmatter} {
 
@@ -17,7 +17,7 @@
 
   \begin{itemize}
     \item Put your name on both this page and the next page.
-    \item Bubble in the number that is on your class notebook where it says “Student ID”
+    \item Bubble in your Student ID Number
     \item When instructed, tear off this first page.
     \item Write your answers to the free-response questions directly on the packet.
     \item Bubble in your answers to the multiple-choice questions here.
@@ -26,7 +26,10 @@
   \end{itemize}
 
 
-  \vspace{4em}
+  \vs
+
+  \hrule
+  \section*{Equations}
 
   \begin{center}
     \begin{tabular}{|*{11}{c}|}
@@ -45,6 +48,12 @@
     \end{tabular}
   \end{center}
 
+\vs
+
+\hrule
+\vspace{1em}
+\hfill {\large\sc Physics I}
+
 }
 \newcommand{\bottommatter}{
 }
@@ -52,8 +61,10 @@
 \newcommand{\drawscantron}[2]{
   \begin{flushright}
     \begin{tikzpicture}[scale=0.8]
-      \node[anchor=south west] at (0,0) {\includegraphics[width=.56\textwidth]{14Q.png}};
+      \node[anchor=south west] at (0,0) {\includegraphics[width=.56\textwidth]{13Q-FullID.png}};
       \fill (#1,#2) circle (0.25);
+
+      \node[anchor=west] at (-10,17) {\LARGE \bf \sc \mytitle};
     \end{tikzpicture}
   
     \bottommatter
@@ -62,12 +73,22 @@
 
 
 
-  \drawscantron{5.4}{2.1}
+  \drawscantron{3.95}{2.3}
   \topmatter
 
-\pagebreak
+  \pagebreak
 
-  \drawscantron{6}{2.1}
+  \drawscantron{4.6}{2.3}
+  \topmatter
+
+  \pagebreak
+
+  \drawscantron{5.25}{2.3}
+  \topmatter
+
+  \pagebreak
+
+  \drawscantron{5.85}{2.3}
   \topmatter
 
 

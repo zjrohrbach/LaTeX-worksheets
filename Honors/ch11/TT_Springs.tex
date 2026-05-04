@@ -1,23 +1,52 @@
-\documentclass[10pt]{exam}
-\usepackage[hon]{template-for-exam}
+\documentclass[12pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz,ifthen,multicol,siunitx}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
 
-\title{Spring Problems}
-\author{Rohrbach}
-\date{\today}
+
 
 \begin{document}
-\maketitle
+
+\Large
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \mystrut  \hfill}
+
+
+
+  \vspace*{\stretch{1}}
 
 \begin{questions}
   
   \question
     You hang 0.5 kg of oranges on a grocery scale and the spring stretches 4~cm. Calculate the spring constant.
-    \vs
+
+
+    \vs \hrule \vs
 
   \question
     When you hang 0.60 kg~on a certain spring, it oscillates at 3.0 Hz. What will be the frequency if you take the 0.60~kg off and instead hang 0.38~kg on the spring?
+
+    \vs \hrule \vs
+
+  \question
+    The springs of a 1700-kg car compress 5.0~mm when its 66-kg driver gets into the driver's seat.  If the car goes over a bump, what will the frequency of oscillations be?
+
     \vs
 
+  
 \end{questions}
+
+
+
+
+
+
+
 
 \end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt,landscape]{exam}
+\usepackage[margin=.3in]{geometry}
+\setlength{\columnsep}{.6in}
+\usepackage{multicol}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\mycontent}{
+  \section*{Newton's First Law}
+  \begin{tabular}{p{1.8in}|p{2.7in}}
+    An object maintains its state of rest or uniform motion in a straight line unless acted on by a net force. &
+    \vspace{1em}
+    \raggedright
+    An object maintains its \fillin[momentum][9em] unless acted on by an \fillin[outside impulse][11em]\\[1em]
+  \end{tabular}
+  \vspace{1em}
+  \hrule
+
+  \section*{Newton's Second Law}
+  \begin{tabular}{p{1.8in}|p{2.7in}}
+    Acceleration is inversely proportional to mass, directly proportional to net force, and in the same direction as the net force. & \\
+    &\\[1em]
+    \centering $F_{NET}=ma$ & \\
+    &\\
+    & \fillin[impulse][12em] is equal to \fillin[change in momentum][2.7in] \\[1em]
+  \end{tabular}
+  \vspace{1em}
+  \hrule
+
+
+  \section*{Newton's Third Law}
+  \begin{tabular}{p{1.8in}|p{2.7in}}
+    When one object apples a force on a second object, the second object applies an equal and opposite force on the first object. & \\
+    &\\[1em]
+    \centering $F_A=-F_B$ & \\
+    &\\[3em]
+    & Momentum is \fillin[conserved][10.4em]
+  \end{tabular}
+}
+
+\begin{multicols}{2}
+
+  \mycontent
+
+  \columnbreak
+
+  \mycontent
+
+\end{multicols}
+
+\end{document}

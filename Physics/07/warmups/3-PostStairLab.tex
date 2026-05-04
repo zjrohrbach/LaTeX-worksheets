@@ -1,0 +1,71 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Fri, Jan 30 (Pd 4)}
+
+\def\content{
+Think about the stair lab you did yesterday and write a few sentences that answer the following questions:
+\begin{questions}
+  \question While climbing the stairs…
+  \begin{parts}
+      \part …did you do more work if you were going fast or slow?
+      \part …did you output more power if you were going fast or slow?
+  \end{parts}
+  \question While climbing at a constant speed…
+  \begin{parts}
+    \part …did you do more work if you climbed the short stairs or tall stairs?
+    \part …did you output more power if you climbed the short stairs or tall stairs?
+  \end{parts}
+\end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

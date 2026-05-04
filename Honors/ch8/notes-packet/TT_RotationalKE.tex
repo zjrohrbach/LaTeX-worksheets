@@ -1,0 +1,49 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+
+
+\Large
+
+\newcommand{\myproblem}{
+  \noindent
+  Consider a solid disc that is released from rest at the top of a ramp that is 5 meters tall. Assume that the disc does not slip and is perfectly round. How fast will the disc be going when it gets to the bottom of the ramp?
+}
+
+\vspace*{1em}
+
+\myproblem
+
+\vs \hrule \vs 
+
+\myproblem
+
+\vs \hrule \vs
+
+\myproblem
+
+\vs \hrule \vs
+
+\myproblem
+
+\vspace{1em}
+
+
+
+\end{document}
