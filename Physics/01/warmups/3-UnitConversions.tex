@@ -1,0 +1,93 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Tue, Aug 4}
+
+\def\content{
+
+    \begin{tabular}{ccc}
+      \hline
+      \multicolumn{3}{c}{Metric Prefixes}                 \\
+      \hline
+      \SI{}{\kilo\relax}  & kilo-            & \SI{e3}{}  \\
+             --           & (\textit{base})  & $10^0$     \\
+      \SI{}{\centi\relax} & centi-           & \SI{e-2}{} \\
+      \SI{}{\milli\relax} & milli-           & \SI{e-3}{} \\
+      \SI{}{\micro\relax} & micro-           & \SI{e-6}{} \\
+      \SI{}{\nano\relax}  & nano-            & \SI{e-9}{} \\
+      \hline
+    \end{tabular}
+    
+  \begin{questions}
+    \question 
+      Convert \SI{35000}{\milli\gram} to \SI{}{\kilo\gram}.
+      \vs
+    \question 
+      Convert \SI{1.35}{\meter} to \SI{}{\centi\meter}
+      \vs
+    \question 
+      Convert \SI{7500}{\micro\meter} to \SI{}{\centi\meter}.
+      \vs
+    \question 
+      Express \SI{37}{\centi\meter} in MKS Units.
+      \vs
+    \question
+      Express \SI{450}{\gram} in MKS Units.
+      \vspace*{2em}
+    
+  \end{questions}
+
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

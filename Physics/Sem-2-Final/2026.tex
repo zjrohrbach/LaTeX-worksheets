@@ -1,0 +1,97 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz}
+
+\title{title}
+\author{Rohrbach}
+\date{\today}
+
+
+
+\newcommand{\drawscantron}[2]{
+  \begin{center}
+    \begin{tikzpicture}
+      \node[anchor=south west] at (0,0) {\includegraphics[width=6in]{47Q.png}};
+      \fill (#1,#2) circle (0.25);
+    \end{tikzpicture}
+
+  \end{center}
+}
+
+\begin{document}
+
+\newcommand{\printcontent}[1]{
+  \vspace*{\stretch{1}}
+
+  \begin{center}
+    \Huge 
+    
+    \textbf{\sc Physics I}
+
+    \textbf{\sc Spring Final Exam}
+
+  \end{center}
+
+  \begin{center}
+    \Large (Version #1)
+  \end{center}
+
+  \vspace{2em}
+
+  \begin{center}
+    
+      \begin{tikzpicture}
+        \draw (-0.3,0) -- (0.3,0) -- (0,0.530) -- cycle;
+        \node at (0,0.2) {\bf !};
+      \end{tikzpicture}
+    
+    
+      {Please do not open this packet until instructed to do so!}
+  \end{center}
+
+
+
+
+  \paragraph{Rules} \hfill
+  \begin{enumerate}
+    \item \textbf{Phones, earbuds, headphones, and smartwatches must be put away in your backpacks during the entirety of the exam.  If electronics are out for \textit{any reason}, you will recieve a zero!}
+    \item Put your name three places: On your Scantron (back of this page), On your Equation Sheet (next page), and on the first page of the Exam Packet.
+    \item On your Scantron, bubble in your Student ID.
+    \item You may write on your equation sheet and on the exam.  There is space provided to show your work, but only your scantron will be graded.
+    \item When you are finished, turn in your scantron, equation sheet, and exam packet up front.
+    \item Stay silent until all your classmates are finished.  Electronics (especially phones, but also earbuds, headphones, laptops, smartwatches, etc.) need to be kept away until the instructor indicates that everyone is finished.
+
+  \end{enumerate}
+
+  \vs[2]
+}
+
+\printcontent{A}
+\pagebreak
+\drawscantron{6.8}{2.15}
+\pagebreak
+
+
+
+\printcontent{B}
+\pagebreak
+\drawscantron{7.35}{2.15}
+\pagebreak
+
+
+\printcontent{C}
+\pagebreak
+\drawscantron{7.85}{2.15}
+\pagebreak
+
+
+\printcontent{D}
+\pagebreak
+\drawscantron{8.35}{2.15}
+\pagebreak
+
+
+
+
+
+\end{document}

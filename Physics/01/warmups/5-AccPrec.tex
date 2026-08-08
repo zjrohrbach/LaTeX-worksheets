@@ -1,0 +1,99 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,pgfplots}
+\pgfplotsset{
+  compat=1.18,
+    axis y line = box,
+    axis x line = box,
+    axis y line shift = 0,
+    axis line style = thin,
+    xlabel={time (seconds)},
+    ylabel={displacement (m)},
+    ymin=0,
+    ymax=9,
+    xmin=0,
+    xmax=5,
+    grid=both,
+    xtick = {0,...,5},
+    ytick = {0,...,9},
+    width = 8cm,
+    height = 3cm
+}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Fri, Aug 7}
+
+\def\content{
+Three students do an experiment to find the acceleration of gravity using the slope of a velocity-time graph.  The expected value is \SI{9.8}{m/s^2}.
+
+
+\noindent
+\begin{minipage}[b]{2in}
+  \includegraphics[width=2in]{image.png}
+\end{minipage}
+%
+\begin{minipage}[b]{2.6in}
+  \begin{questions}
+    \vspace*{2em}
+    \question Which student's graph is most accurate?  Explain. \vspace{8em} 
+    \question Which student's graph is most precise?   Explain. \vspace{8em}
+    \question Calculate each percent error.  \vspace{2em}
+  \end{questions} 
+\end{minipage}
+
+
+
+
+
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,graphicx,xcolor}
+
+\title{Newton's Law of Universal Gravitation.}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{The Newtonian Synthesis}
+
+\definecolor{mygreen}{HTML}{669c35}
+
+\begin{tikzpicture}
+  \fill[rounded corners,mygreen,draw=black] 
+    (0,2.4) -- (-0.5,0) -- (0.5,0) -- cycle;
+  \node at (0,0) {\includegraphics[height=4cm,angle=-50]{earth.png}};
+\end{tikzpicture}
+
+\vs
+
+\section*{The Law}
+
+\begin{itemize}
+  \item all objects with mass \fillin[attract][10em] all other objects in the universe with a force called gravity.
+  \item gravity is \fillin[directly proportional][15em] to the product of the two masses.
+  \item gravity is \fillin[inversely proportional][15em] to the square of the separation between the two objects.
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) rectangle (8,2);
+    \end{tikzpicture}
+  \end{center}
+
+
+  \item $G$ is the \fillin[universal gravitational constant][20em], which is a measure of the strength of gravity
+  
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) rectangle (12,2);
+    \end{tikzpicture}
+  \end{center}
+
+\end{itemize}
+
+\pagebreak
+
+\section*{Examples}
+
+\begin{questions}
+  \question 
+    Calculate the force of gravity between a 5-kg bowling ball and a 0.4-kg paperweight that are separated by 20~cm.
+    \vs
+
+
+  \question 
+    Calculate the \emph{acceleration of gravity} on the surface of the Earth.
+    \vs
+\end{questions}
+
+
+
+
+\end{document}

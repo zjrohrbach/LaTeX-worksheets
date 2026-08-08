@@ -1,0 +1,78 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{multicol}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\question 
+
+  \hfill
+
+  \begin{multicols}{2}
+
+    \begin{parts}
+      \part 5.3 m = ? cm
+      \part 5.3 km = ? cm
+      \part 5.3 km = ? mm
+      \part 5.3 cm = ? mm
+    \end{parts}
+  
+  \end{multicols}
+
+\vfill \hrule \vfill
+
+\question 
+
+  \begin{parts}
+    \part How many seconds are in 1 hour?
+    \part How many milliseconds are in 1 hour?
+  \end{parts}
+
+\vfill \hrule \vfill
+
+\question 
+
+  \begin{parts}
+    \part 15 g = ? kg
+    \part 2.3 kg = ? g 
+    \part 17,000 mg = ? kg
+  \end{parts}
+
+\vfill \hrule \vfill
+
+\question 
+  Express each of these measurements using metric prefixes in ways that are less awkward.
+
+  \begin{parts}
+    \part \SI{5000000}{g}
+    \part \SI{0.0023}{s}
+    \part \SI{0.00000045}{m}
+  \end{parts}
+
+\vfill \hrule \vfill
+
+\question 
+  Estimate how many seconds there were in Summer Break.  Show your work.
+
+
+
+\end{questions}
+\end{document}

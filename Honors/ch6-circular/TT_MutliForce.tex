@@ -1,0 +1,64 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+
+\newcommand{\prob}{
+  \noindent
+A roller coaster car of mass 600~kg goes around a loop of radius 8 meters with an (assumed constant) speed of 9~m/s.  Find the normal force of the track on the coaster at the bottom of the loop.
+
+    \vspace{1em}
+
+    \begin{tikzpicture}
+
+      \fill[gray] (4,0) rectangle ++(4,0.2);
+      \draw (4,0) -- ++(4,0);
+      \draw (4,0.2) -- ++(4,0);
+    
+      \coordinate (c) at (4,2);
+      \draw[fill=gray] (c) circle (2);
+      \draw[fill=white] (c) circle (1.8);
+    
+      \fill[gray] (0,0) rectangle ++(4,0.2);
+      \draw (0,0) -- ++(4,0);
+      \draw (0,0.2) -- ++(4,0);
+    
+      \draw (4,0) +(-0.2,0.3) circle (0.1)
+                  +(0.2,0.3)  circle (0.1)
+                  ++(-0.4,0.4) rectangle ++(0.8,0.3);
+
+      \draw[thin,gray] (3.5,0.65) -- +(-0.4,0)
+                  ++(0.05,-.15) -- +(-0.4,0)
+                  ++(-0.05,-.15) -- +(-0.15,0);
+    
+    
+    \end{tikzpicture}
+}
+
+
+\begin{document}
+
+\Large
+
+\vs
+\prob
+\vs
+\hrule
+\vs
+\prob
+\vs
+
+
+  
+
+
+
+
+
+
+\end{document}

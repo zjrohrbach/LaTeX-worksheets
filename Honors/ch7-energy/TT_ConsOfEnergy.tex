@@ -1,0 +1,76 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz,ifthen,multicol}
+\footer{}{}{}
+\header{}{}{}
+\shadedsolutions
+%\printanswers
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+
+\newcommand{\prob}{
+  \noindent
+  A rollercoaster ($m = 1000$ kg) starts from rest at the top of a 50 m hill.  The tracks are frictionless.
+
+  \vspace{1em}
+
+
+  \begin{parts}
+    \part
+      If the hill goes all the way down to the ground, how fast should it be going at that point?
+    \part
+      Next, the rollercoaster continues to the top of the next hill, which is 35 m high.  What is its velocity at the top of the next hill?
+  \end{parts}
+
+  \vspace{1em}
+
+      
+  \begin{tikzpicture}[x=0.7cm, y=0.7cm]
+    \def\xs{3}
+    \draw[very thick] 
+      (1*\xs,5) 
+      to[in=180,out=0] (2*\xs,0) node[above] {(a)}
+      to[in=180,out=0] (3*\xs,3.5) node[above] {(b)}
+      to[in=180,out=0] (4*\xs,0);
+
+    \draw[|<->|] (.8*\xs,0) -- (.8*\xs,5) 
+      node[midway,fill=white] {50 m};
+    \draw[|<->|] (4.2*\xs,0) -- (4.2*\xs,3.5) 
+      node[midway,fill=white] {35 m};
+
+
+    \begin{scope}[scale=0.4,shift={(5,13.3)}]
+      \filldraw[top color=red!50, draw=black, rounded corners] 
+        (0,0) -- (0,1) -- 
+        (4,1) -- (4,0) -- cycle;
+      \draw[fill=gray!50, draw=black, ultra thick] 
+        (1,0) circle (.5);
+      \draw[fill=gray!50, draw=black, ultra thick] 
+        (3,0) circle (.5);
+    \end{scope}
+
+  \end{tikzpicture}
+
+}
+
+
+\begin{document}
+
+
+\vspace*{\stretch{1}}
+\prob
+\vs
+\hrule
+\vs
+\prob
+\vs
+
+
+  
+
+
+
+
+
+
+\end{document}

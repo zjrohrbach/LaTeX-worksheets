@@ -1,0 +1,40 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\question 
+    A baseball is thrown by a pitcher with a velocity of 43 m/s. The batter hits {\bf straight back} at the pitcher with a velocity of 56 m/s. If the ball was in contact with the bat for 0.0057~seconds and has a mass of 0.145~kg, what is the force on the baseball?
+
+\vs \hrule \vs  
+
+\question
+  While washing your car, water comes out of the hose at a rate of 1.5 kg/s and a speed of 20 m/s.  How much force does the water impart to your car?
+
+
+\vs \hrule \vs  
+
+\question
+  Rain is falling at a rate of 2.5~cm/hr and accumulates in a pan.  If the raindrops hit at 8.0~m/s, estimate the force on the bottom of the 1.0-square-meter pan due to the impacting rain which we assume does not rebound.  The density of water is \SI{1000}{kg/m^3}.  
+
+
+\end{questions}
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[11pt,landscape]{exam}
+\usepackage[margin=0.3in]{geometry}
+\usepackage{multicol,tikz,graphicx}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+
+\newcommand{\thecontent}{
+
+\begin{tabular}{p{7em}p{23em}}
+  \bf accuracy: & how close a measurement is to its \fillin[][8em]. \\[5em]
+  \bf precision: & how \fillin[][8em] a set of measurements is. \\[5em]
+\end{tabular}
+
+
+\tikzset{
+  target/.pic = {
+    \fill[red!25] circle (1.5);
+    \fill[white] circle (1);
+    \fill[red!25] circle (0.5);
+  }
+}
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw (0,0) pic[scale=0.8] {target};
+    \draw (4,0) pic[scale=0.8] {target};
+    \draw (8,0) pic[scale=0.8] {target};
+  \end{tikzpicture}
+\end{center}
+
+\vspace{10em}
+
+
+\begin{tabular}{p{7em}p{23em}}
+   \bf percent error: & percentage that quantifies how \fillin[][8em] a measurement is. \\[5em]
+\end{tabular}
+
+\vspace{10em}
+
+\begin{center}
+  \it In this class, a measurement is considered accurate if \fillin[][9em]
+\end{center}
+
+
+
+
+}
+
+
+
+\begin{document}
+
+\begin{multicols}{2}
+
+  \thecontent
+
+  \columnbreak
+
+  \thecontent
+
+\end{multicols}
+
+\end{document}
