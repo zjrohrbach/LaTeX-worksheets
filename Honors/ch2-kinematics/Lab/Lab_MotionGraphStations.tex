@@ -1,0 +1,71 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{enumitem,multicol,multirow,tikz,fancybox,graphicx}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns,calc}
+\setlist[enumerate,itemize]{topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex}
+\graphicspath{{./figures}}
+\usepackage[export]{adjustbox}
+
+\title{Motion Graph Stations}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Pendulum}
+
+\section{Cart on an Incline}
+
+\section{Collision between Carts}
+
+\pagebreak
+
+\section{Graph Match}
+
+\emph{\small This station is based off of Experiment \#1 in} Physics with Vernier\emph{, and the images have been taken from there.}
+
+\begin{multicols}{2}
+
+\subsection{Setup}
+\begin{enumerate}
+  \item %Place the motion detector so that it points toward an open space at least 2 m long. Use short strips of masking tape on the floor to mark distances of 0.5 m, 1 m, 1.5 m, and 2 m from the motion detector.  
+  Set the switch on your motion detector should be set to Ball/Walk. \includegraphics[height=2em,valign=t]{switch}
+  
+
+  \item Connect the motion detector to your computer. Launch \texttt{Graphical Analysis}.  Set up the software for data collection.
+  \item If two graphs are displayed, click or tap View, \includegraphics[height=1.2em]{view}, and choose 1 Graph (a graph of a position vs. time should be displayed).
+  \item Monitor the position readings and practice walking toward the motion detector. Sometimes you will have to walk backwards. Confirm that the position values make sense as you move back and forth. 
+
+\includegraphics[width=4cm]{walking.png}
+\end{enumerate}
+
+
+\subsection{Position vs. Time Matching}\begin{enumerate}[resume]
+  \item Click or tap Graph Tools, \includegraphics[height=1.2em]{graph-tools}, and choose Add Graph Match. Choose Position. A position target graph is displayed for you to match.
+  \item Think about how you would walk to reproduce the target graph.  To test your prediction, choose a starting position. Start data collection, then walk in such a way that the graph of your motion matches the target graph on the screen.
+  \item If you were not successful, start data collection again when you are ready to begin walking. Repeat this process until your motion closely matches the graph on the screen.
+  \item Have every member of your group try. To perform a second position graph match, click or tap Graph Tools, \includegraphics[height=1.2em]{graph-tools}, choose Add Graph Match, and then Position.
+\end{enumerate}
+
+\subsection*{Velocity vs. Time Matching}\begin{enumerate}[resume]
+  \item \texttt{Graphical Analysis} can also generate random target velocity graphs for you to match. Click or tap Graph Tools,  \includegraphics[height=1.2em]{graph-tools}, and choose Add Graph Match. Choose Velocity to view a velocity target graph. 
+  \item Try to reproduce the target graph.  Keep repeating until you get something that closely matches.
+  \item Repeat for every member of your group.  To perform a second velocity graph match, click or tap Graph Tools, \includegraphics[height=1.2em]{graph-tools}, choose Add Graph Match, and then Velocity.
+\end{enumerate}
+
+\end{multicols}
+
+
+\subsection*{Analysis}
+
+\begin{enumerate}[resume]
+  \item Explain the significance of the slope of a position vs. time graph. Include a discussion of positive and negative slope. \vs 
+  \item What type of motion is occurring when the slope of a position vs. time graph is zero? \vs
+  \item What type of motion is occurring when the slope of a position vs. time graph is constant? \vs
+  \item What type of motion is occurring when the slope of a velocity vs. time graph is zero? \vs
+\end{enumerate}
+ 
+
+
+\end{document}

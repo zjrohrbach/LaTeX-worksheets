@@ -1,0 +1,264 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{endnotes,graphicx}
+\usepackage{tikz,graphicx,enumitem,multicol,float,my-tikz-clipart,silence,cclicenses}
+\graphicspath{{./figures/}}
+\WarningFilter{latex}{Label `part}
+\WarningFilter{latex}{There were multiply-defined labels}
+
+\footer{}{\thepage}{\sc \myclass}
+
+
+%\def\answer#1{\footnotetext{#1}}
+%\def\myquestion{\item\stepcounter{footnote}}
+
+\def\enoteheading{}
+\def\answer#1{\endnotetext{#1}}
+\def\theanswers{\theendnotes}
+\def\myquestion{\item\stepcounter{endnote}}
+
+\newenvironment{myquestions}{
+  \begin{multicols}{2}\begin{enumerate}[resume]
+}{
+  \end{enumerate}\end{multicols}
+}
+\makeatletter
+\patchcmd{\enit@setresumekeys}{\def}{\gdef}{}{}
+\patchcmd{\enit@setresumekeys}{\def}{\gdef}{}{}
+\makeatother
+
+\newcommand{\myheading}[1]{\uplevel{\section*{#1}}
+}
+\newcommand{\mysubheading}[1]{\uplevel{\subsection*{#1}}
+}
+
+%uncomment if running Pandoc
+% \renewcommand{\myheading}[1]{{\section*{#1}}}
+% \renewcommand{\mysubheading}[1]{\subsection*{#1}}
+
+
+
+
+
+\def\mytitle{Chapter 2 Homework B}
+\title{\mytitle}
+\date{\today}
+
+\def\mymaketitle{
+  \begin{flushleft}
+    {\LARGE \textbf \mytitle \par}
+  \end{flushleft}
+}
+
+\newcommand{\bs}[2]{\textbf{#1} (\sc #2 Points)}
+
+
+\newcommand{\GFig}[2]{  
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#2]{11_#1_Figure.jpg}
+    \caption{Giancolli Figure 11-#1.}
+    \label{11-#1}
+  \end{figure}
+}
+
+\newcommand{\printeqs}{
+  \section*{Equations} 
+  
+  \begin{center}
+    \begin{tabular}{cccccc}
+      $\bar{v} = \frac{\Delta x}{\Delta t}$       &   
+      $\bar{a} = \frac{\Delta v}{\Delta t}$       &&
+      $v = v_0 + a t$                             &
+      $x = x_0 + v_0t + \frac{1}{2}at^2$          &
+      $v^2 = v_0^2 + 2a \left( x - x_0 \right) $  \\
+          & & & ``Old Faithful'' & ``Big Chalupa'' & ``Ain't Got No Time'' \\
+    \end{tabular}
+
+    %\vspace{1em}
+
+    %$\SI{1}{\meter\per\second}=\SI{3.6}{\kilo\meter\per\hour}$
+  \end{center}
+}
+
+\begin{document}
+\maketitle
+% \begin{center}
+%   \includegraphics[width=10cm]{sound-wave.png}
+% \end{center}
+
+\vspace{1em}
+\hrule
+\printeqs
+\hrule
+
+\vfill
+
+\hrule
+
+\section*{Selected Answers}
+
+  \renewcommand{\enotesize}{\normalsize}
+  \renewcommand{\enoteformat}{%
+    \leftskip=1.8em
+    \makebox[0pt][r]{\theenmark. }%
+  }
+
+  \hfill
+
+  \begin{multicols}{2}
+    \theanswers
+  \end{multicols}
+
+
+\vspace{1em}
+
+\pagebreak
+
+\hfill 
+
+\pagebreak
+
+\noindent
+Questions and figures are from OpenStax \emph{College Physics} (Chapter 2) unless otherwise noted.
+
+
+\section*{Kinematic Equations Problems}
+
+Your work for these problems should include diagrams and knowns/unknowns.
+
+\begin{multicols}{2}\begin{enumerate}[resume]
+
+\myquestion (P22) \answer{\SI{502}{m/s}} 
+A bullet in a gun is accelerated from the firing chamber to the end of the barrel at an average rate of \SI{6.20e5}{m/s^2} for \SI{8.10e-4}{s}. What is its muzzle velocity (that is, its final velocity)?
+
+\myquestion (P27) \answer{\SI{0.799}{m}} 
+In a slap shot, a hockey player accelerates the puck from a velocity of 8.00~m/s to 40.0~m/s in the same direction. If this shot takes 0.0333~s, calculate the distance over which the puck accelerates.
+
+
+
+\myquestion (P30) \answer{(a) \SI{7.69e-3}{s}; (b) \SI{8.45e3}{m/s^2}} 
+A fireworks shell is accelerated from rest to a velocity of 65.0~m/s over a distance of 0.250~m. (a) How long did the acceleration last? (b) Calculate the acceleration.
+
+
+\myquestion (P31) \answer{(a) \SI{51.4}{m/s}; (b) \SI{17.1}{s}} 
+A swan on a lake gets airborne by flapping its wings and running on top of the water. (a) If the swan must reach a velocity of 6.00~m/s to take off and it accelerates from rest at an average rate of \SI{0.350}{m/s^2}, how far will it travel before becoming airborne? (b) How long does this take?
+
+\hfill [See \#\ref{k-i}-\#\ref{k-f} for additional practice]
+
+\end{enumerate}\end{multicols}
+
+\pagebreak
+
+\section*{Free Fall Problems}
+
+Your work for these problems should include diagrams and knowns/unknowns.  You may assume air resistance is negligible unless otherwise stated.
+
+
+
+\begin{multicols}{2}\begin{enumerate}[resume]
+
+
+\myquestion (P43) \answer{\SI{4.95}{m/s}} 
+A basketball referee tosses the ball straight up for the starting tip-off. At what minimum velocity must a basketball player leave the ground to rise 1.25 m above the floor in an attempt to get the ball?
+
+\myquestion (P45) \answer{(a) 8.62 m; (b) 2.65 s} 
+A dolphin in an aquatic show jumps straight up out of the water at a velocity of 13.0~m/s. %(a) List the knowns in this problem. 
+(a) How high does his body rise above the water? %To solve this part, first note that the final velocity is now a known and identify its value. Then identify the unknown, and discuss how you chose the appropriate equation to solve for it. After choosing the equation, show your steps in solving for the unknown, checking units, and discuss whether the answer is reasonable. 
+(b) How long is the dolphin in the air? Neglect any effects due to his size or orientation.
+
+\myquestion (P47) \answer{(a) 8.26 m high; (b) 0.717 s} 
+(a) Calculate the height of a cliff if it takes 2.35 s for a rock to hit the ground when it is thrown straight up from the cliff with an initial velocity of 8.00 m/s. (b) How long would it take to reach the ground if it is thrown straight down with the same speed?
+
+\columnbreak
+
+\myquestion (P49) \answer{1.91 s} 
+You throw a ball straight up with an initial velocity of 15.0 m/s. It passes a tree branch on the way up at a height of 7.00 m. How much additional time will pass before the ball passes the tree branch on the way back down?
+
+\myquestion (P51) \answer{(a) 94.0 m; (b) 3.13 s} 
+Standing at the base of one of the cliffs of Mt. Arapiles in Victoria, Australia, a hiker hears a rock break loose from a height of 105 m. He can't see the rock right away but then does, 1.50 s later. (a) How far above the hiker is the rock when he can see it? (b) How much time does he have to move before the rock hits his head?
+
+\hfill [See \#\ref{ff-i}-\#\ref{ff-f} for additional practice]
+
+
+\end{enumerate}\end{multicols}
+
+\pagebreak
+
+\section*{Conceptual Questions}
+
+Please answer each question in at least one complete sentence
+
+\begin{enumerate}[resume]
+
+
+  \myquestion (CQ20) 
+  What is the acceleration of a rock thrown straight upward on the way up? At the top of its flight? On the way down? \vs
+
+  \myquestion (CQ21) 
+  An object that is thrown straight up falls back to Earth. This is one-dimensional motion. (a) When is its velocity zero? (b) Does its velocity change direction? (c) Does the acceleration due to gravity have the same sign on the way up as on the way down? \vs 
+
+  \myquestion (CQ22) 
+  Suppose you throw a rock nearly straight up at a coconut in a palm tree, and the rock misses on the way up but hits the coconut on the way down. Neglecting air resistance, how does the speed of the rock when it hits the coconut on the way down compare with what it would have been if it had hit the coconut on the way up? Is it more likely to dislodge the coconut on the way up or down? Explain. \vs
+
+  \myquestion (CQ24) 
+  The severity of a fall depends on your speed when you strike the ground. All factors but the acceleration due to gravity being the same, how many times higher could a safe fall on the Moon be than on Earth (gravitational acceleration on the Moon is about 1/6 that of the Earth)? \vs
+
+
+
+\end{enumerate}
+
+\pagebreak
+
+\begin{multicols*}{2}
+
+
+\section*{Additional Practice}
+These problems are provided for extra practice.  They are \emph{not required} and there is no bonus for doing them.
+  
+\begin{enumerate}[resume]
+
+\myquestion \label{k-i} (P20) \answer{(a) 10.8~m/s} 
+An Olympic-class sprinter starts a race with an acceleration of \SI{4.5}{m/s^2}. (a) What is her speed 2.40 s~later? (b) Sketch a graph of her position vs. time for this period.
+
+\myquestion (P23) \answer{(a) 16.5~s; (b) 13.5~s; (c) \SI{-2.68}{m/s^2}} 
+An Olympic-class sprinter starts a race with an acceleration of\SI{4.5}{m/s^2}. (a) What is her speed 2.40 s~later? (b) Sketch a graph of her position vs. time for this period.
+
+
+\myquestion (P28) \answer{52.3 m} \label{k-f}
+A powerful motorcycle can accelerate from rest to 26.8~m/s (100~km/h) in only 3.90~s. (a) What is its average acceleration? (b) How far does it travel in that time?
+
+\myquestion (P46) \label{ff-i} \answer{(a) 1.14 s; (b) 0.816 m; (c) $-7.16$ m/s}
+A swimmer bounces straight up from a diving board and falls feet first into a pool. She starts with a velocity of 4.00 m/s, and her takeoff point is 1.80 m above the pool. (a) How long are her feet in the air? (b) What is her highest point above the board? (c) What is her velocity when her feet hit the water?
+
+\myquestion (P48) \label{ff-f} \answer{2.28 s} 
+A very strong, but inept, shot putter puts the shot straight up vertically with an initial velocity of 11.0 m/s. How long does he have to get out of the way if the shot was released at a height of 2.20 m, and he is 1.80 m tall?
+
+\end{enumerate}
+
+
+
+\section*{Bonus}
+
+You will be given bonus if you complete these problems \emph{on a separate sheet of paper}
+  
+\begin{enumerate}[resume]
+
+
+\myquestion (P32)
+  \emph{Professional Application:}
+  A woodpecker's brain is specially protected from large decelerations by tendon-like attachments inside the skull. While pecking on a tree, the woodpecker's head comes to a stop from an initial velocity of 0.600~m/s in a distance of only 2.00~mm. (a) Find the acceleration in \unit{m/s^2} and in multiples of $g$ ($g=\SI{9.8}{m/s^2}$). (b) Calculate the stopping time. (c) The tendons cradling the brain stretch, making its stopping distance 4.50~mm (greater than the head and, hence, less deceleration of the brain). What is the brain's deceleration, expressed in multiples of $g$?
+
+\myquestion (P55)
+  Suppose you drop a rock into a dark well and, using precision equipment, you measure the time for the sound of a splash to return. (a) Neglecting the time required for sound to travel up the well, calculate the distance to the water if the sound returns in 2.0000 s. (b) Now calculate the distance taking into account the time for sound to travel up the well. The speed of sound is 332.00 m/s in this well.
+
+\myquestion (P57)
+  A coin is dropped from a hot-air balloon that is 300 m above the ground and rising at 10.0 m/s upward. For the coin, find (a) the maximum height reached, (b) its position and velocity 4.00 s after being released, and (c) the time before it hits the ground.
+
+
+  
+\end{enumerate}\end{multicols*}
+
+
+
+\end{document}
