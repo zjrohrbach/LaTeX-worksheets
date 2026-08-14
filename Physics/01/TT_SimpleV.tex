@@ -1,0 +1,47 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\question A go-cart travels forward at 21.3 m/s for 45 seconds.  How far has it traveled?
+
+\vs\hrule\vs
+
+\question What is your speed if you travel 30 meters in 5.2 seconds?
+
+\vs\hrule\vs
+
+\question How much time does it take an airplane with a speed of 73 m/s to travel 3500 m?
+
+\vs\hrule\vs  
+
+\question Light travels at 300 million meters per second.  It takes about 8 minutes for light from the sun to get to the earth.  How far away is the sun?
+
+\vs\hrule\vs  
+
+\question Apollo 11 had a top speed of 24,000 miles/hour.  If it maintained this speed constantly, how much time would it take to get to the moon, which is 238,900 miles away?
+
+\vs\hrule\vs  
+
+\question Apollo 11 took 3 days and 4 hours to make it to the moon.  What was its average speed?
+
+\end{questions}
+\end{document}

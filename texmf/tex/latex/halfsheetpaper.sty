@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{halfsheetpaper}[2026/08/08 Custom Package]
+
+\newcommand{\mypassit}{}
+
+\DeclareOption{hon}{\renewcommand{\mypassit}{hon}}
+\DeclareOption{phy}{\renewcommand{\mypassit}{phy}}
+\DeclareOption{icp}{\renewcommand{\mypassit}{icp}}
+\ProcessOptions
+\relax
+
+
+\RequirePackage[\mypassit]{template-for-exam}
+\pagestyle{empty}
+
+\RequirePackage[letterpaper,margin=0.5in]{geometry}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{titling}
+
+\setlength{\TPHorizModule}{1in}
+\setlength{\TPVertModule}{1in}
+
+\def\quizheader{
+  Name: \hfill\hfill Date: \hfill Period: \hfill
+  \vspace{0.5em}
+  \hrule
+  \vspace{0.5em}
+  {\noindent \Large \bf \thetitle} \hfill [Version \thisver]
+
+  \vspace{1em}
+
+}
+
+\newenvironment{tophalf}{
+  \begin{textblock}{7.5}(0.5,0.5)
+    \noindent
+    \begin{minipage}[t][4.5in]{\textwidth}
+      \quizheader
+}{
+    \end{minipage}
+  \end{textblock}
+}
+
+
+\newenvironment{bottomhalf}{
+  \begin{textblock}{7.5}(0.5,6)
+    \noindent
+    \begin{minipage}[t][4.5in]{\textwidth}
+      \quizheader
+}{
+    \end{minipage}
+  \end{textblock}
+}
+
+\endinput

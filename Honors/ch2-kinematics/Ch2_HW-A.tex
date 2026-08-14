@@ -40,7 +40,7 @@
 
 
 
-\def\mytitle{Chapter 2 Homework A}
+\def\mytitle{Chapter 2 (Kinematics) Homework A}
 \title{\mytitle}
 \date{\today}
 
@@ -65,34 +65,25 @@
 \newcommand{\printeqs}{
   \section*{Equations} 
   
-  \begin{center}
-    \begin{tabular}{cccccc}
-      $\bar{v} = \frac{\Delta x}{\Delta t}$       &   
-      $\bar{a} = \frac{\Delta v}{\Delta t}$       &&
-      $v = v_0 + a t$                             &
-      $x = x_0 + v_0t + \frac{1}{2}at^2$          &
-      $v^2 = v_0^2 + 2a \left( x - x_0 \right) $  \\
-          & & & ``Old Faithful'' & ``Big Chalupa'' & ``Ain't Got No Time'' \\
-    \end{tabular}
-
-    %\vspace{1em}
-
-    %$\SI{1}{\meter\per\second}=\SI{3.6}{\kilo\meter\per\hour}$
-  \end{center}
+  \begin{align*}
+    \bar{v} &\equiv \frac{\Delta x}{\Delta t} &
+    \bar{a} &\equiv \frac{\Delta v}{\Delta t}
+  \end{align*}
 }
 
 \begin{document}
 \maketitle
-% \begin{center}
-%   \includegraphics[width=10cm]{sound-wave.png}
-% \end{center}
+
 
 \vspace{1em}
 \hrule
 \printeqs
 \hrule
 
-\vfill
+\begin{center}
+  \includegraphics[height=4.9in]{2-14.png}
+\end{center}
+
 
 \hrule
 \section*{Selected Answers}
@@ -130,8 +121,45 @@ For paths A, B, C, and D in Figure~\ref{2-57}, calculate the (i) distance travel
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=3in]{2-57.jpg}
-    \caption{(OpenStax Fig~2.57)}
+    %\includegraphics[width=3in]{2-57.jpg}
+    \begin{tikzpicture}
+      \def\m{.5}
+      \def\picwidth{14*\m}
+
+      \draw[->,very thick] (0,0) -- +(\picwidth,0);
+      \draw[gray,thin,dotted] 
+        (0,-\m) grid[step=\m] (\picwidth,4);
+      \draw[thick, dotted] 
+        (0,0) grid[step=4*\m] ++(\picwidth,4);
+      \foreach \x in {0,4,8,12} {
+        \node at (\x*\m,-0.5*\m) {\x};
+      }
+      \node at (0.5*\picwidth,-1.5*\m) {position $x$ (m)};
+
+
+      % {color}{pathname}{y coord}{x start}{x end}
+      \newcommand{\mypath}[5]{
+        \fill[#1] (#4*\m,#3*\m) circle (0.1) 
+          node[above=5,color=black,fill=white] {\bf #2};
+        \draw[.->|, #1, ultra thick] (#4*\m,#3*\m) -- (#5*\m,#3*\m);
+      }
+
+      \mypath{green}{A}{7}{0}{7}
+      \mypath{blue}{B}{6}{12}{8}
+
+      \fill[red] (2*\m,4*\m) circle (0.1) 
+          node[above=5,color=black,fill=white] {\bf C};
+      \draw[.->|, red, ultra thick,rounded corners] (2*\m,4*\m) -- ++(8*\m,0)
+        -- ++(0,0.25) -- ++ (-2*\m,0) -- ++(0,0.25) -- ++(2*\m,0);
+
+      \fill[orange] (9*\m,2*\m) circle (0.1) 
+          node[above=5,color=black,fill=white] {\bf D}; 
+      \draw[.->|, orange, ultra thick,rounded corners] (9*\m,2*\m) 
+        -- ++(-6*\m,0) -- ++(0,0.25) -- ++(1*\m,0);
+
+
+    \end{tikzpicture}
+    \caption{(Based on OpenStax Fig~2.57)}
     \label{2-57}
   \end{figure}
 
@@ -295,9 +323,9 @@ Estimate the (a) velocity and (b) acceleration at $t=20$~s of the jet car whose 
     \hfill
 
     \begin{tikzpicture}
-      \draw[->] (0,-0.5) -- (0,4.5)
+      \draw[->] (0,-2.25) -- (0,2.25)
         node[midway, above, sloped] {Velocity $v$};
-      \draw[->] (-0.5,0) -- (6,0) 
+      \draw[->] (-0.1,0) -- (6,0) 
         node[midway, below] {Time $t$};
 
     \end{tikzpicture}

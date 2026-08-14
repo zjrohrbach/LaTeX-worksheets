@@ -1,0 +1,127 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,cclicenses,hyperref,tikz}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Tue, Aug 11}
+
+\newcommand{\mypath}[5]{
+  \fill[#1] (#4*\m,#3*\m) circle (0.1) 
+    node[above=5,color=black,fill=white] {\bf #2};
+  \draw[.->|, #1, ultra thick] (#4*\m,#3*\m) -- (#5*\m,#3*\m);
+}
+
+\def\content{
+% %\includegraphics[width=2.5in]{2-57.jpg}
+
+% {\footnotesize
+
+% \noindent
+% Image Credit: OpenStax \emph{College Physics 2e}. Authored by: P.P Urone, R. Hinrichs, et al.
+
+% \noindent
+% License: \cc\hspace{-1em}\ccby  CC BY: Attribution.}
+
+
+\begin{tikzpicture}
+      \def\m{.5}
+      \def\picwidth{14*\m}
+
+      \draw[->,very thick] (0,0) -- +(\picwidth,0);
+      \draw[gray,thin,dotted] 
+        (0,-\m) grid[step=\m] (\picwidth,4);
+      \draw[gray] 
+        (0,0) grid[step=4*\m] ++(\picwidth,4);
+      \foreach \x in {0,4,8,12} {
+        \node at (\x*\m,-0.5*\m) {\x};
+      }
+      \node at (0.5*\picwidth,-1.5*\m) {position $x$ (m)};
+
+
+      % {color}{pathname}{y coord}{x start}{x end}
+
+
+      \mypath{green}{A}{7}{0}{7}
+      \mypath{blue}{B}{6}{12}{8}
+
+      \fill[red] (2*\m,3.8*\m) circle (0.1) 
+          node[above=5,color=black,fill=white] {\bf C};
+      \draw[.->|, red, ultra thick,rounded corners] (2*\m,3.8*\m) -- ++(8*\m,0)
+        -- ++(0,0.25) -- ++ (-2*\m,0) -- ++(0,0.25) -- ++(2*\m,0);
+
+      \fill[orange] (9*\m,2*\m) circle (0.1) 
+          node[above=5,color=black,fill=white] {\bf D}; 
+      \draw[.->|, orange, ultra thick,rounded corners] (9*\m,2*\m) 
+        -- ++(-6*\m,0) -- ++(0,0.25) -- ++(1*\m,0);
+
+
+    \end{tikzpicture}
+
+\begin{questions}
+  \question Calculate the \emph{distance} and the \emph{displacement} of paths A, B, C, and D.
+
+  \renewcommand{\arraystretch}{2.5}
+
+  \begin{tabular}{|c|p{10em}|p{10em}|}
+    \hline
+    & distance & displacement \\\hline
+    A && \\\hline
+    B && \\\hline
+    C && \\\hline
+    D && \\\hline
+    
+  \end{tabular}
+
+  \question If path D is completed in 4.0~seconds, calculate the \emph{average speed} and \emph{average velocity} of that motion.
+\end{questions}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}
