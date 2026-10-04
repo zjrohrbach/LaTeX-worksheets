@@ -92,6 +92,18 @@
       \draw (pedal) -- (handlebars) -- (seat);
       \draw (handlebars) -- (frontwheel);
     \end{scope}
+  },
+  compass/.pic = {
+    \begin{scope}[scale=0.5,draw=purple]
+      \draw[<->] 
+        (1,0) node[right] {E} 
+        -- (-1,0) node[left] {W};
+      \draw[<->]
+        (0,1) node[above] {N} 
+        -- (0,-1) node[below] {S};
+      \draw (0,0) circle (0.5);
+
+    \end{scope}
   }
 }
 

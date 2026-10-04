@@ -1,0 +1,77 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,tikz}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Fri, Sept 4}
+
+\def\content{
+Two balls of different masses are dropped from different heights as shown in the diagram.  The 1000-kg black ball is dropped from 10~meters, while the 1-kg gray ball is dropped from 25~meters.
+
+%
+\begin{tikzpicture}
+  \node[circle,fill=gray,draw=black] at (2,5) {1 kg};
+  \node[circle,fill=black,draw=white] at (0,2) {1 kg};
+  \node[white] at (0,2.2) {1000};
+  \node[white] at (0,1.8) {kg};
+
+  \draw (-2,0) -- (4,0);
+  \draw[<->] (-1,0) -- ++(0,2) node[midway,fill=white]{10 m};
+  \draw[<->] (3,0) -- ++(0,5) node[midway,fill=white]{25 m};
+
+\end{tikzpicture}
+
+\begin{parts}
+  \part Which one hits the ground first?  Explain in at least one sentence. \vs 
+  \part Which one has a larger speed the moment before it hits the ground?  Explain in at least one sentence.
+\end{parts}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

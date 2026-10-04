@@ -17,58 +17,66 @@
     {: \emph{\thequestiontitle}}
   \mystrut  \hfill}
 \begin{questions}
+
+  \large
   
 \question
   
   Vectors $\vec{A}$ and $\vec{B}$ are shown below.
 
+  \newcommand{\domath}[1]{\fpeval{round(#1,2)}}
+
   \begin{parts}
     \part 
-      Find the components of $\vec{A}$ and $\vec{B}$. {\sc Rotate Marker}
+      Find the components of $\vec{A}$ and $\vec{B}$. %{\sc Rotate Marker}
       %
       \begin{solution}
         \begin{align*}
-          A_x &= \SI{ 9.21}{\meter\per\second} &
-          A_y &= \SI{ 3.91}{\meter\per\second} \\
-          B_x &= \SI{ 5.36}{\meter\per\second} &
-          B_y &= \SI{-4.49}{\meter\per\second} 
+          A_x &= \SI{\domath{ 7*cos( 23*pi/180)}}{\meter\per\second} &
+          B_x &= \SI{\domath{ 7*sin( 23*pi/180)}}{\meter\per\second} \\
+          A_y &= \SI{\domath{10*cos(-40*pi/180)}}{\meter\per\second} &
+          B_y &= \SI{\domath{10*sin(-40*pi/180)}}{\meter\per\second} 
         \end{align*}
       \end{solution}
     \part
-      Sketch out what $\vec{R}=\vec{A}-2\vec{B}$ would look like. {\sc Rotate Marker}
+      Sketch out what $\vec{R}=\vec{A}-2\vec{B}$ would look like. %{\sc Rotate Marker}
       %
       \begin{solution}
+        \begin{center}
+          \begin{tikzpicture}[
+            vector/.style={
+              ->,
+              very thick,
+            },
+            scale=0.6
+          ]
+          \def\unit{0.3}
+            \draw[vector,orange] (0,0) -- 
+              (23:7*\unit) coordinate (end A)
+              node[midway,above,rotate=23] {$\vec{A}$};
 
-        \begin{tikzpicture}[
-          vector/.style={
-            ->,
-            very thick,
-          }
-        ]
-        \def\unit{0.3}
-          \draw[vector,orange] (0,0) -- 
-            (23:10*\unit) coordinate (end A)
-            node[midway,above,rotate=23] {$\vec{A}$};
+            \draw[vector,blue] (end A) -- 
+              ++(-40:-10*\unit) coordinate (end B)
+              node[midway,above,rotate=-40] {$-\vec{B}$};
 
-          \draw[vector,blue] (end A) -- 
-            ++(-40:-7*\unit) coordinate (end B)
-            node[midway,above,rotate=-40] {$-\vec{B}$};
+            \draw[vector,blue] (end B) -- 
+              ++(-40:-10*\unit) coordinate (end C)
+              node[midway,above,rotate=-40] {$-\vec{B}$};
 
-          \draw[vector,blue] (end B) -- 
-            ++(-40:-7*\unit) coordinate (end C)
-            node[midway,above,rotate=-40] {$-\vec{B}$};
-
-          \draw[vector,red] (0,0) -- (end C);
-        \end{tikzpicture}
+            \draw[vector,red] (0,0) -- (end C);
+          \end{tikzpicture}
+        \end{center}
       \end{solution}
     \part
       Calculate the magnitude and direction of $\vec{R}$
 
+      \def\Rx{\domath{7*cos( 23*pi/180)-20*cos(-40*pi/180)}}
+      \def\Ry{\domath{7*sin( 23*pi/180)-20*sin(-40*pi/180)}}
       \begin{solution}
         \begin{align*}
-          R_x     &= \SI{-1.51}{\meter\per\second} &
-          R_y     &= \SI{12.89}{\meter\per\second} \\
-          \vec{R} &= \SI{12.98}{\meter\per\second} \text{\@ 83.3$^\circ$ N of W}
+          R_x     &= \SI{\Rx}{\meter\per\second} &
+          R_y     &= \SI{\Ry}{\meter\per\second} \\
+          \vec{R} &= \SI{\domath{sqrt(\Rx^2+\Ry^2)}}{\meter\per\second} \text{\,@ \domath{atan(-\Ry/\Rx)*180/pi}$^\circ$ N of W}
         \end{align*}
       \end{solution}
   \end{parts}
@@ -84,12 +92,12 @@
     \def\unit{0.5}
     
 
-    \draw[vector,orange] (0,0) -- (23:10*\unit) 
+    \draw[vector,orange] (0,0) -- (23:7*\unit) 
       node[anchor=south east] {\Large $\vec{A}$} 
-      node[midway,above,rotate=23] {10 m/s};
-    \draw[vector,blue] (0,0) -- (-40:7*\unit)
+      node[midway,above,rotate=23] {7 m/s};
+    \draw[vector,blue] (0,0) -- (-40:10*\unit)
       node[anchor=north] {\Large $\vec{B}$}
-      node[midway,below,rotate=-40] {7 m/s};
+      node[midway,below,rotate=-40] {10 m/s};
     \draw (0,3) -- (0,-3);
     \draw (-1,0) -- (6,0);
 
@@ -110,7 +118,7 @@
 
     \begin{parts}
       \part
-        Find the $x$-, $y$-, and $z$- components of the displacement vector from camp to summit.  (Use $+x$ as east, $+y$ as north and $+z$ as up.) {\sc Rotate Marker}
+        Find the $x$-, $y$-, and $z$- components of the displacement vector from camp to summit.  (Use $+x$ as east, $+y$ as north and $+z$ as up.) %{\sc Rotate Marker}
         %
         \begin{solution}
           \begin{align*}

@@ -1,5 +1,7 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
+\usepackage{my-tikz-clipart}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
 
 \title{Projectiles \#4}
 \author{Rohrbach}
@@ -15,7 +17,51 @@
   
   \begin{parts}
     \part
-      Draw a diagram of the situations and write down knowns and unknowns.
+      Label the diagram of the situation and write down knowns and unknowns.
+
+      \vspace{2em}
+    
+      \def\posscale{0.55}
+      \def\vox{17*\posscale}
+      \def\voy{13*\posscale}
+      \begin{tikzpicture}[
+        declare function ={
+          trajx(\t) = \vox*\t;
+          trajy(\t) = \voy*\t-4.9*\t*\t;
+          vy(\t) = \voy-9.8*\t;
+          th(\t) = atan(vy(\t)/(\vox));
+        }
+      ]
+
+        \def\vectorscale{0.3}
+
+        \draw[-Stealth,very thick, red] 
+          (0,0) -- 
+          ++({\vox*\vectorscale},{\voy*\vectorscale})
+          coordinate (end of v);
+        \draw[dashed,red] 
+          (0,0) -| (end of v);
+        \draw[dotted,thick] 
+          plot[
+            samples=100, 
+            domain=0:(2*\voy/9.8), 
+            smooth, 
+            variable=\t
+          ] 
+            ({trajx(\t)}, {trajy(\t)});
+        \draw[thick] (-0.2,-0.1) -- ++(14.2,0);
+
+        \def\myt{0.6}
+
+        \begin{scope}[
+          shift={({trajx(\myt)}, {trajy(\myt)})},
+          rotate={-90+th(\myt)}
+        ]
+          \draw[fill=gray] (-0.05,0.2) rectangle (0.05,-0.2);
+          \draw[fill=gray!10] (-0.05,0.2) -- (0,0.35) -- (0.05,0.2);
+        \end{scope}
+      \end{tikzpicture}
+
       \vs
     
     \part
@@ -44,9 +90,45 @@
 
   \begin{parts}
     \part 
-      Draw a diagram of the situations and write down knowns and unknowns.
-      \vs
+      Label the diagram of the situation and write down knowns and unknowns.
 
+      \vspace{2em}
+    
+      \begin{tikzpicture}
+        \draw[fill=gray] (3,-0.2)
+          -- ++(0,2.2)
+          -- ++(-2,0)
+          -- ++(0,-2.2)
+          -- cycle;
+        \draw[-Stealth,very thick, red] (3, 2.3) -- ++(1,0);
+        \draw[dotted,thick] (3.1,2.3) parabola (10,0.3) ++ (0,-0.1) coordinate (end);
+
+        \draw[ultra thin, gray] (2,2.6) -- ++(-.3,0);
+        \draw[ultra thin, gray] (1.9,2.4) -- ++(-.3,0);
+        \draw[ultra thin, gray] (1.95,2.2) -- ++(-.4,0);
+
+        \draw (2,2.1) pic[scale=0.2] {car};
+
+        \draw[
+          thick,
+          blue,
+          rounded corners,
+          decorate,
+          decoration={
+            random steps,
+            segment length=2mm,
+            amplitude=2pt
+          }] 
+          (3,0) -- (12.5,0);
+        \draw[fill=gray, rounded corners] 
+          (end) ++(-0.7,0) -- ++(1.4,0) 
+          -- ++ (0.2,0.2) -- ++(0,-0.6) -- ++ (-1.8,0)
+          -- ++ (0,0.6)
+          -- cycle;
+
+      \end{tikzpicture}
+
+      \vspace{2em}
     \part
       How much time will it take for the car to fall down the cliff?
       \vs

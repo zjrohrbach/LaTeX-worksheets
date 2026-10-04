@@ -1,0 +1,125 @@
+\documentclass[10pt]{exam}
+\usepackage[hon]{template-for-exam}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\tikzset{
+  myaxis/.append style={
+    -Stealth,
+    thick
+  },
+  mygrid/.append style={
+    dotted, thick
+  },
+  myminorgrid/.append style={
+    dotted, thin
+  },
+  ball/.append style={
+    shading=ball,
+    ball color=orange,
+    minimum width=15pt
+  },
+  ground/.append style={
+    pattern=north east lines
+  },
+  vel/.append style={
+    -Stealth,
+    ultra thick,
+    blue
+  },
+  acc/.append style={
+    -Stealth,
+    line width=1pt,
+    double distance=1pt,
+    red,
+  },
+  vellab/.append style={
+    right=2pt,
+  },
+}
+
+\title{Projectile Motion}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\vspace{-0.5em}
+
+\def\scale{0.2}
+\def\xscale{2}
+\def\axisloc{0}
+\def\velscale{.05}
+
+\noindent
+\begin{tikzpicture}
+  \begin{scope}[every node/.append style={fill=white}]
+    \draw[myaxis] (\axisloc,-3) -- (\axisloc,52*\scale) 
+      node[left,fill=none] {$y$};
+    \draw[myaxis] (-2,0) -- (7*\xscale,0)
+      node[right,fill=none] {$x$};
+    % \node[rotate=90] at (-3,25*\scale) {\bf Displacement (m)};
+    % \foreach \y in {0,10,20,...,50} {
+    %   \draw[mygrid] (\axisloc,\scale*\y) node[anchor=east,fill=none] {\y} -- (\xscale*7,\scale*\y);
+    % }
+    % \foreach \y in {5,15,...,50} {
+    %   \draw[myminorgrid] (\axisloc,\scale*\y) -- (\xscale*7,\scale*\y);
+    % }
+    % %\fill[ground] (\axisloc,0) rectangle (7*\xscale,-0.5);
+
+    \draw[dotted] (-2,-3) grid[step=0.5] (6.75*\xscale,50*\scale);
+
+    \draw[ball] (0,0) coordinate (a) 
+      circle (6pt)
+      node[left=10pt] {$t=0$ s};
+    \draw[ball] (\xscale*1,\scale*25) coordinate (b) 
+      circle (6pt) 
+      node[left=10pt] {$t=1$ s};
+    \draw[ball] (\xscale*2,\scale*40) coordinate (c)
+      circle (6pt) 
+      node[left=10pt] {$t=2$ s};
+    \draw[ball] (\xscale*3,\scale*45)  coordinate (d)
+      circle (6pt)
+      node[above right=6pt] {$t=3$ s};
+    \draw[ball] (\xscale*4,\scale*40) coordinate (e)
+      circle (6pt)
+      node[right=10pt] {$t=4$ s};
+    \draw[ball] (\xscale*5,\scale*25) coordinate (f) 
+      circle (6pt) 
+      node[right=10pt] {$t=5$ s};
+    \draw[ball] (\xscale*6,0) coordinate (g)
+      circle (6pt)
+      node[right=10pt] {$t=6$ s};
+  \end{scope}
+
+  \draw[vel] (0,0) -- ++(1,3) node[left=0.2cm, fill=white] {$\vec{v}_0$};
+  \draw[acc] (-1,5) -- ++(0,-1) node[anchor=west] {$\vec{a}$};
+\end{tikzpicture}
+
+\begin{center}
+  \large $\vec{v} = \vec{v}_0 + \vec{a}t$ \hfill 
+  $\vec{x}=\vec{x}_0+\vec{v}_0 t + \frac{1}{2}\vec{a}t^2$ \hfill
+  $\vec{v}^2 = \vec{v}_0^2 + 2 \vec{a}\cdot(\vec{x}-\vec{x_0})$
+\end{center}
+
+\newcommand{\vecaddgraph}[1]{
+  \begin{tikzpicture}
+    \draw[dotted] (-0.5,-3) grid[step=0.5] (1.5,3.5);
+    \draw[vel] (0,0) -- (1,3) node[left=0.5cm,below=0.2cm] {$\vec{v}_0$};
+    \node[fill=white] at (.5,3.25) {$t=#1$~s};
+    \node[fill=white] at (.5,-3.3) {\small $\vec{v}=\vec{v}_0+\vec{a}(\SI{#1}{s})$};
+  \end{tikzpicture}
+}
+
+\noindent
+\vecaddgraph{1} \hfill
+\vecaddgraph{2} \hfill
+\vecaddgraph{3} \hfill
+\vecaddgraph{4} \hfill
+\vecaddgraph{5} \hfill
+\vecaddgraph{6} \hfill
+
+
+
+\end{document}

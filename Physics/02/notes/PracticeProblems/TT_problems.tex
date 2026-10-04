@@ -1,0 +1,45 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\question You are driving in a car traveling at 18 m/s.  You accelerate at a constant rate of 1.3 m/s$^2$ until you get up to a speed of 24 m/s.  What distance do you cover when you do this?
+
+\vs\hrule\vs
+
+\question A train is travelling at 73 m/s.  The engineer applies the brakes, which cause the train to decelerate at a rate of 1.8~m/s$^2$.
+
+\begin{parts}
+  \part How much time will it take the train to stop?
+  \part What distance will it take the train to stop?
+\end{parts}
+
+\vs\hrule\vs
+
+
+\question You drop an object from the top of a building that is 10.6~m tall.  How much time will it take the object to hit the ground?
+
+\vs\hrule\vs
+
+\question You throw a ball straight up in the air at a velocity of 17~m/s.  What is the maximum height the ball will reach?
+
+\end{questions}
+\end{document}

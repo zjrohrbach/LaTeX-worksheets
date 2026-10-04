@@ -1,0 +1,107 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Tue, Sept 22}
+
+\def\content{
+\begin{questions}
+  
+  \question 
+    What two things must a \emph{vector} have?
+    \vs
+  
+
+  \question 
+    In the following diagram, label the \emph{resultant} and the \emph{$x$-component}, and the \emph{$y$-component}.
+
+    \vspace{2em}
+    \begin{center}
+      \begin{tikzpicture}[
+          every node/.append style={font=\large},
+          component/.append style={
+            dashed,
+            -{Stealth}
+          },
+          resultant/.append style={
+            ultra thick,
+            -{Stealth}
+          },
+          scale=0.7
+      ]
+        \draw[resultant] 
+                  (0,0) -- (4.5,3);
+        \draw[component] 
+                  (0,0) -- (4.5,0);
+        \draw[component] 
+                  (4.5,0) -- (4.5,3);
+        \draw[-Stealth] (1,0) 
+                  arc[
+                    start angle = 0,
+                    end angle = 31, 
+                    radius = 1
+                  ];
+      \end{tikzpicture}
+    \end{center}
+    \vspace{2em}
+
+  \question 
+    What happens to the $x$-component and $y$-component of a projectile's velocity over time?  
+    \vs
+
+  \question
+    For a given initial projectile speed, which angle gives the furthest range?  Why is that?
+    \vs
+  \end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

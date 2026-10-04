@@ -1,0 +1,55 @@
+\documentclass[12pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \begin{scope}[gray]
+    \draw (-5,0) node[anchor=east]  {W} -- (5,0) node[anchor=west] {E};
+    \draw (0,-5) node[anchor=north] {S} -- (0,5) node[anchor=south] {N};
+  \end{scope}
+
+  \newcommand{\newvector}[5]{
+    \draw[#4, ultra thick, -Stealth] (0,0) -- (#2:#3) 
+      node[anchor=#5] {$\vec{#1}$} node[midway,sloped,above] {#3 m};
+  }
+
+  \begin{scope}
+    \newvector{A}{25}{5}{blue}{west}
+    \draw[] (0:1) arc (0:25:1) node[midway,anchor=west] {$25^\circ$};
+
+    \newvector{B}{240}{3}{blue}{north}
+    \draw[] (180:1) arc (180:240:1) node[midway,anchor=east] {$60^\circ$};
+
+    \newvector{C}{130}{7}{blue}{south}
+    \draw[] (130:1.5) arc (130:180:1.5) node[midway,anchor=east] {$50^\circ$};
+  \end{scope}
+
+
+  %\draw[blue, ultra thick, ->] (0,0) -- (15:5) 
+  %  node[anchor=south] {$\vec{A}$} node[midway,sloped,above] {$44.0$};
+  % \draw[->] (0:1) arc (0:15:1) node[midway,anchor=west] {$28^\circ$};
+  % \draw[blue, ultra thick, ->] (0,0) -- (124:26.5)
+  %   node[anchor=south] {$\vec{B}$} node[midway,sloped,above] {$26.5$};
+  % \draw[->] (-1,0) arc (180:124:1) node[midway,anchor=east] {$56^\circ$};
+  % \draw[blue, ultra thick, ->] (0,0) -- (0,-31) 
+  %   node[anchor=north east] {$\vec{C}$} node[midway,sloped,above] {$31.0$};
+
+
+
+  % \begin{scope}
+  %   \draw (0,0) -- (20:5) node[midway] {5 m} node[anchor=south] {$\vec{A}$};
+  % \end{scope}
+
+
+  \node at (0,7) 
+    {\LARGE Calculate the $x$- and $y$- components of each vector };
+
+\end{tikzpicture}
+
+
+
+
+
+\end{document}

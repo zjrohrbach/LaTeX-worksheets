@@ -35,17 +35,17 @@
         { m{.25\textwidth} | m{.3\textwidth}| m{.25\textwidth} } 
         Independent Variables & 
         Dependent Variables   & 
-        Control Variables  \\[6em]
+        Control Variables  \\[10em]
       \end{tabular}
     \end{center}
 
 \vspace{-2em}
 \section*{Data}
 
-  \def\cw{.15\textwidth}
+  \def\cw{7em}
   \newcommand{\datatable}{
     \renewcommand{\arraystretch}{1.65}
-    \begin{center}
+    %\begin{center}
       \begin{tabular}
         {
           |*{4}{>{\centering\arraybackslash}m{\cw}|}
@@ -71,15 +71,34 @@
         12 &&&&\\
         \hline
       \end{tabular}
-    \end{center}
+
+      \vspace{1em}
+
+      Before moving on, measure the time it takes the car to go 3.00~meters.  Calculate velocity using $v=d/t$.
+
+      \begin{tabular}{|*{3}{>{\centering\arraybackslash}m{5.5em}|}|
+        >{\centering\arraybackslash}m{5.7em}|||c|}
+        \hline
+        \multicolumn{4}{|c|||}{Time to travel 3.00 m (s) } & Velocity (m/s) \\\cline{1-4}
+         Trial \#1 & Trial \#2 & Trial \#3 & Average & \emph{\small (should be less than 1.00 m/s)}\\\hline
+         & & & & \\[0.5em] \hline
+      \end{tabular}
+
+    %\end{center}
   }
 
-  \noindent
-  Red Car:
+  \paragraph{Red Car:} \hfill
+
+  \hfill
+
   \datatable
 
-  \noindent
-  Blue Car:
+  \pagebreak
+
+  \paragraph{Blue Car:} \hfill
+
+  \hfill
+
   \datatable
 
   \paragraph{Graph:} 
@@ -161,13 +180,31 @@
   \question
     How does this graph show that these cars have a constant velocity?
     \vs
+
+  \pagebreak
+
+  \question
+    You calculated the velocity of each car by measuring the time it took to go 3.00~meters.  Compare the velocities with the slopes you calculated for each car by calculating a percent error.
+    %
+    \begin{align*}
+      \text{Percent Error} = \frac{\left| \text{measured} - \text{expected}  \right|}{\text{expected}} \times 100\%
+    \end{align*}
+    %
+
+    \vs
+
+    Percent Error (Red Car): \fillin[][10em]
+    %
+    \hfill
+    %
+    Percent Error (Blue Car): \fillin[][10em]
   
   \question
     Are your results accurate?  Explain.
     \vs
   
   \question
-    Are your results precise?  Explain.
+    Are your results precise?  Explain.  \emph{Remember, you will need to look at your graph to answer this.}
     \vs
 
   \question

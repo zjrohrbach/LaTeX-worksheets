@@ -1,0 +1,131 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Wed, Sept 30 (Pd 6) / Thu, Oct 1 (Pd 1, 3)}
+
+\def\content{
+  \def\velx{16.1}
+  \def\vely{42.4}
+  Given a projectile with an initial $x$-velocity of \velx~m/s and an intial $y$-velocity of \vely~m/s, calculate the \textbf{resultant initial velocity} and the \textbf{launch angle} of the projectile.  Then fill in all of the blanks in the diagram below.
+
+  \vfill
+
+
+  % \begin{center}
+  %   \begin{tikzpicture}
+  %     \draw (9,6) -- ++(5,0);
+  %     \draw (11.5,6.5) -- ++(0,-4);
+  %     \node at (10.25,6.25) {$x$-direction};
+  %     \node at (12.75,6.25) {$y$-direction};
+  %   \end{tikzpicture}
+  % \end{center}
+
+  \noindent
+  \begin{tikzpicture}[
+    every node/.append style={font=\footnotesize},
+    scale=0.8
+  ]
+
+    \def\apexx{4.5}
+    \def\apexy{5}
+    \def\vx{\velx/10}
+    \def\vy{\vely/10}
+    \def\bnk{\fillin[][5em]}
+
+    \draw (-1,-0.7) 
+      -- ++(1,0) 
+      -- ++(2*\apexx,0) 
+      -- ++(1,0);
+
+    \draw[dashed,red] (\apexx,\apexy) 
+      coordinate (apex) parabola (0,0);
+    \draw[dashed,red] (apex) parabola 
+      (2*\apexx,0) coordinate (end);
+  
+    \draw[ball color=purple] (0,0) circle (0.2);
+    \draw[ball color=purple] (apex) circle (0.2);
+    \draw[ball color=purple] (end) circle (0.2);
+
+
+    \draw[dashed, blue] (0,0) -- (\vx, 0)
+      node[midway,below=4] {$v_x=\velx$~m/s}
+      -- (\vx, \vy)
+      node[midway,rotate=90,below=4] {$v_y=\vely$~m/s};
+    \draw[ultra thick, blue, ->] (0,0) -- (\vx, \vy)
+      node[midway,sloped,above=4] {$v_R=\bnk$};
+
+
+    \draw[dashed, blue] (end) -- +(\vx, 0)
+      node[midway,above=4] {\hspace{2em}$v_x=\bnk$}
+      -- +(\vx, -\vy)
+      node[midway,rotate=90,below=4] {$v_y=\bnk$};
+    \draw[ultra thick, blue, ->] (end) -- +(\vx, -\vy)
+      node[midway,sloped,below=4] {$v_R=\bnk$};
+  
+  
+    \draw[ultra thick, blue, ->] (apex) -- ++(\vx,0)
+      node[midway,above=5] (lab) {$v_R=\bnk$};
+    \node[above of=lab,below=5,blue] (lab2) {$v_y=\bnk$};
+    \node[above of=lab2,below=5,blue] (lab2)
+      {$v_x=\bnk$};
+
+    
+
+  \end{tikzpicture}
+
+
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

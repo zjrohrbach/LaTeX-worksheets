@@ -1,0 +1,98 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\todayDate{Tue, Sept 8}
+
+\def\content{
+\begin{questions}
+  \question What is the acceleration of objects in free fall? \vspace{3em} 
+  \question Ignoring air resistance, what is true about heavy and light objects and how they fall? \vspace{3em} 
+  \question Explain in a couple sentences what happens to a ball thrown straight up into the air as it is moving up, as it reaches the top of its motion, and as its moving down \vspace{12em} 
+
+  \question An object is thrown straight up into the air.  Consider which way the velocity and acceleration vectors point at each of these moments in time:
+
+  \newcommand{\qs}{
+
+    \vspace{-1em}
+
+    \begin{multicols}{2}
+      an object's \emph{velocity} is 
+      
+      \begin{oneparcheckboxes}
+        \choice $+$
+        \choice $-$
+        \choice zero
+      \end{oneparcheckboxes}
+
+      \columnbreak 
+
+      an object's \emph{acceleration} is 
+
+      \begin{oneparcheckboxes}
+        \choice $+$
+        \choice $-$
+        \choice zero
+      \end{oneparcheckboxes}
+      
+    \end{multicols}
+
+  }
+
+  \begin{parts}
+    \part On the way up, \qs
+    \part At the top of its motion, \qs
+    \part On the way down, \qs
+  \end{parts}
+\end{questions}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

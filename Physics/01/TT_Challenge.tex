@@ -1,0 +1,70 @@
+\documentclass[12pt]{exam}
+\usepackage[hon]{template-for-exam}
+\footer{}{}{}
+\header{}{}{}
+
+\usepackage{tikz}
+\usetikzlibrary{shadings,decorations.pathmorphing,arrows.meta,patterns}
+
+\shadedsolutions
+%\printanswers
+
+\def\mystrut{\protect\rule[-2.2ex]{0ex}{2.2ex}} 
+\qformat{ \textbf{Task \#\thequestion}
+  \ifthenelse{\equal{\thequestion}{\thequestiontitle}}
+    {}
+    {: \emph{\thequestiontitle}}
+  \mystrut  \hfill}
+
+\begin{document}
+\begin{questions}
+
+\Large
+
+\vfill 
+
+
+\question 
+You leave from home on a road trip at \textbf{noon}.  You are driving steadily at 25~m/s for \textbf{180~km}.  After that distance, it begins to rain, so you slow down to 18~m/s for the rest of the trip.  At \textbf{4:30pm}, you arrive at your destination.  How far is your destination from home?
+
+{\small Adapted from problem 2-7 in Giancolli \emph{Physics: Principles and Applications}, 7th edition.}
+
+\begin{solution}
+  7200 seconds at 25 m/s; 9000 seconds at 18 m/s; 162 km a 18 m/s; \textbf{342 km total}
+\end{solution}
+
+\vfill \hrule \vfill
+
+\question Two bicycles start moving, but one has a starting position that is ahead of the other. The front bicycle travels at a constant speed of 12 m/s, while the back bicycle travels at a constant speed of 18 m/s. The initial distance between the two bicycles is 150 meters.  Calculate where the back bicycle overtakes the front bicycle.
+
+\begin{solution}
+  300 m from front bicycle or 450 m from back bicycle.
+\end{solution}
+
+
+
+
+\vfill \hrule \vfill
+
+\question
+Two cars start a distance of 100~meters apart, facing each other.  Car A travels east at 10 m/s; Car B travels west at 15 m/s.
+
+  \vspace{1em}
+
+  \noindent
+  Superfly is sitting on the front bumper of Car A.  He has super powers that allow him to fly at a constant speed of 45~m/s and instantaneously change direction.  Superfly flies toward the bumper of Car B and then instantaneously turns around and flies back toward Car A.  He continues to go back and forth between the two cars until they collide.  (Superfly is also invincible.)
+
+  \vspace{1em}
+
+  \noindent
+  What distance does Superfly travel before the cars collide?
+
+  \begin{solution}
+    $t=d/(v_1+v_2) = 4$ sec;  $v_3 t = v_3 d/(v_1+v_2) = 180$ m;
+
+    displacement $v_1 d/(v_1+v_2) = 28.6$ m
+  \end{solution}
+
+
+\end{questions}
+\end{document}

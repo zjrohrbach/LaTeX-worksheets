@@ -1,0 +1,150 @@
+\documentclass[10pt,landscape]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{multicol,silence,graphicx,my-tikz-clipart}
+\usepackage{pgfplots}
+\pgfplotsset{
+  compat=1.18,
+  height=4cm,
+  width=5.5cm,
+  posgraph/.append style={
+    axis y line = left,
+    axis x line = center,
+    axis line style = ultra thick,
+    xlabel={\bf time},
+    ylabel={\bf displacement},
+    ymin=0,
+    ymax=9,
+    xmin=0,
+    xmax=3,
+    xtick=\empty,
+    ytick=\empty,
+  },
+  velgraph/.append style={
+    xlabel={\bf time},
+    ylabel={\bf velocity},
+    ymin=-5,
+    ymax=5,
+    xmin=0,
+    xmax=4,
+    ytick=\empty,
+    xtick=\empty,
+    axis y line = left,
+    axis x line = center,
+    axis line style = ultra thick,
+  },
+  numberedplots/.append style={
+    xlabel={\bf time (s)},
+    width=7cm,
+    ytick={-15,...,15},
+    xtick={0,...,5},
+    axis y line = left,
+    axis x line = center,
+    grid=major,
+    axis line style = ultra thick,
+  },
+}
+
+\WarningFilter{latex}{Label `question}
+\WarningFilter{latex}{There were multiply-defined labels}
+\WarningFilter{latex}{Label `part}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\blankgraphs}{
+  \begin{multicols}{2}
+
+    \begin{tikzpicture}
+      \begin{axis}[posgraph]
+      \end{axis}
+    \end{tikzpicture}
+
+    \begin{tikzpicture}
+      \begin{axis}[velgraph]
+      \end{axis}
+    \end{tikzpicture}
+    
+  \end{multicols}
+}
+
+\def\todayDate{Mon, Aug 24}
+
+\def\content{
+
+Let's do a problem that puts together almost everything you've learned in this unit:
+
+\vspace{1em}
+
+\noindent
+Consider a bicycle traveling at an initial velocity of \SI{-2.3}{m/s}.  It accelerates constantly at a rate of \SI{-0.4}{m/s^2} for \SI{5.1}{s}.
+
+\vspace{1em}
+
+\begin{parts}
+
+  \part Draw the velocity and acceleration vectors.
+
+  \begin{tikzpicture}[scale=0.5]
+    \draw pic[scale=0.5,x=-1cm]{bike};
+    \draw (-10,-1) rectangle ++(20,-0.2);
+  \end{tikzpicture}
+
+  \part Is the bicycle traveling to the right or to the left? How do you know? \vspace{2em}
+
+  \part Is it speeding up or slowing down?  How do you know? \vspace{2em}
+
+  \part Sketch the displacement and velocity graphs for the bike's motion.
+  %
+  \blankgraphs
+
+  \part Set up your knowns and unknowns and then solve for the final velocity.
+  
+\end{parts}
+
+
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\pagestyle{empty}
+
+\setlength{\columnsep}{0.8in}
+\begin{multicols*}{2}
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\columnbreak
+
+\noindent  
+Name: \hfill Period: \hspace{5em}
+\vspace{0.5em}
+\hrule
+
+\section*{\todayDate}
+\subsection*{Warmup}
+
+\content
+
+\vfill
+\hrule
+\vspace{0.5em}
+\hfill {\sc Physics I}
+
+\end{multicols*}
+
+\end{document}

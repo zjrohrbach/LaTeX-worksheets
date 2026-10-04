@@ -29,15 +29,13 @@
     \draw[ball color=purple] (7,1.5) circle (0.2);
     \draw[ball color=purple] (14,0) circle (0.2);
   
-  
-    \draw[dashed, blue] (0,0) -- (2.31,0) -- (2.31, 0.92);
-    \draw[ultra thick, blue, ->] (0,0) -- (2.31, 0.92);
-    %\draw[dashed, blue] (14,0) -- +(2.31,0) 
-    %    -- +(2.31, -0.92);
-    %\draw[ultra thick, blue, ->] (14,0) -- ++(2.31, -0.92);
+    \draw[ultra thick, blue, ->] (0,0.1) -- (4.62, 1.84) coordinate (end);
+    \draw[dashed, blue] (0,0.1) -| (end);
+    \draw[ultra thick, blue, ->] (14,0) -- ++(4.62, -1.84) coordinate (end);
+    %\draw[dashed, blue] (14,0) -| (end);
   
   
-    %\draw[ultra thick, blue, ->] (7,1.5) -- ++(2.31,0);
+    \draw[ultra thick, blue, ->] (7,1.5) -- ++(4.62,0);
   \end{tikzpicture}
   
   \vspace{3em}
@@ -56,7 +54,7 @@
   \vs 
 
 \question
-A car drives off a cliff at 15~m/s.  It falls until it has a $y$-velocity of 7~m/s.
+A stunt driver drives a car off a cliff at 15~m/s.  It falls until it has a $y$-velocity of $-7$~m/s.
 
   \begin{tikzpicture}
     
@@ -65,15 +63,20 @@ A car drives off a cliff at 15~m/s.  It falls until it has a $y$-velocity of 7~m
       -- ++(-2,0)
       -- ++(0,-1.8)
       -- cycle;
-    \fill[white,pattern color=black, pattern= north east lines] (1,-.1) rectangle (7,.2);
-    \draw[thick] (1,.2) -| (7,-.1);
-    \draw[dashed,red] (3.1,2.3) parabola (6,.5);
+    \fill[white,pattern color=black, pattern= north east lines] (1,-.1) rectangle (12,.2);
+    \draw[thick] (1,.2) -| (12,-.1);
+    \draw[dashed,red] (3.1,2.3) parabola (10,.5) coordinate (start);
 
     \draw[ultra thin, gray] (2,2.6) -- ++(-.3,0);
     \draw[ultra thin, gray] (1.9,2.4) -- ++(-.3,0);
     \draw[ultra thin, gray] (1.95,2.2) -- ++(-.4,0);
 
     \draw (2,2.1) pic[scale=0.2] {car};
+
+    \draw[ultra thick, blue, ->] (3, 2.3) -- ++(3,0);
+
+    \draw[white] (start) -- ++(3,0) -- ++(0,-1.4) coordinate (end);
+    \draw[ultra thick, blue, ->] (start) -- (end);
 
   \end{tikzpicture}
 

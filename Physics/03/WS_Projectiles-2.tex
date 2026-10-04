@@ -1,5 +1,6 @@
 \documentclass[10pt]{exam}
 \usepackage[phy]{template-for-exam}
+\usepackage{tikz,graphicx}
 
 \title{Projectiles \#2}
 \author{Rohrbach}
@@ -14,9 +15,10 @@
   A swallow is carrying a coconut horizontally across the ground with an air speed velocity of 11 m/s.  Suddenly, the bird loses his grip on the husk, and it falls to the ground.  The bird is flying at an altitude of 45~meters.
 
   \begin{parts}
-    \part 
-      Draw a diagram of the situation and write down knowns and unknowns.
-      \vs
+    \part
+      \emph{Label} diagram of the situation, and write down knowns and unknowns.
+      
+      \vspace{2em} \includegraphics[height=1.5in]{swallow.jpg} \vspace{2em}
 
     \part
       How much time did it take the coconut to hit the ground?
@@ -43,8 +45,28 @@
   
   \begin{parts}
     \part
-      Draw a diagram of the situation and write down knowns and unknowns.
-      \vs
+      \emph{Label} diagram of the situation, and write down knowns and unknowns.
+      
+      \vspace{1em}
+      %
+      \begin{tikzpicture}
+
+        \begin{scope}[shift={(0,3)}]
+          \node at (-0.2,.75) {\includegraphics[height=1cm]{airplane}};
+          \draw[rounded corners=3px,rotate=10] (0,0) rectangle (0.4,0.4);
+        \end{scope}
+        
+
+        \begin{scope}[shift={(5,0)}]
+          \draw[rounded corners=3px,rotate=10] (0,0) rectangle (0.4,0.4);
+        \end{scope}
+
+        \draw[dashed] (0.5,3.3) parabola (5.1,0.37);
+
+        \draw (-2,0) -- (8,0);
+      \end{tikzpicture}
+      %
+      \vspace{2em}
     
     \part
       How long did it take the package to hit the ground?

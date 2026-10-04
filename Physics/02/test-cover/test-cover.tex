@@ -3,13 +3,12 @@
 \usepackage{tikz}
 \usepackage[margin=0.3in]{geometry}
 
-
 \begin{document}
 \pagestyle{empty}
 \def\mytitle{Unit 02 Test: Kinematics}
 
 \newcommand{\topmatter} {
-  {\noindent \Large \bf \mytitle}
+  
 
   \vspace{3em}
 
@@ -24,6 +23,29 @@
     \item You may write anywhere on the packet.
     
   \end{itemize}
+
+  \hrule
+
+  \section*{Equations}
+
+    \begin{center}
+      \begin{tabular}{|*6c|}
+        \hline 
+        &&&&&\\
+        \Large $v=\frac{d}{t}$ &
+        \Large $a=\frac{\Delta v}{t}$ &&
+        \Large $v_f=v_i+at$ &
+        \Large $d=v_i t + \tfrac{1}{2} at^2$ &
+        \Large $v_f^2 = v_i^2 + 2ad$ \\
+        &&&
+        \it ``Old Faithful'' &
+        \it ``The Big Chalupa'' &
+        \it ``Ain't Got no Time'' \\
+        &&&&&\\
+        \hline
+      \end{tabular}
+    \end{center}
+
 }
 \newcommand{\bottommatter}{
   %
@@ -35,6 +57,7 @@
       \node[anchor=south west] at (0,0) {\includegraphics[width=328.83pt]{scantron.png}};
       \fill (#1,#2) circle (0.25);
       \node[anchor=west] at (2,12) {\mytitle};
+      \node at (-4,14) {\Large \bf \sc \mytitle};
     \end{tikzpicture}
   \end{flushright}
 

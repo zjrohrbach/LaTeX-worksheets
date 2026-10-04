@@ -1,0 +1,105 @@
+\documentclass[10pt]{exam}
+\usepackage[phy]{template-for-exam}
+\usepackage{tikz}
+\usepackage{silence}
+\WarningFilter{latex}{Label `part}
+\WarningFilter{latex}{There were multiply-defined labels}
+
+\title{Sub Plans Practice Problem}
+\author{Rohrbach}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\paragraph{Instructions}
+Recall that yesterday we learned how to put all of the pieces of our kinematic equations (``\emph{Old Faithful}'', ``\emph{Big Chalupa}'', and ``\emph{Ain't Got No Time}'') as well as trigonometry to solve projectile motion problems.  Here is another practice problem. 
+
+Try to solve the problem on your own or with a partner.  The answers are on the back for you to check your progress.  I have also included some hints for each part of the problem if you get stuck.  This problem is due at the end of the period.
+
+
+\paragraph{Problem}
+At kickoff, an NFL player kicks a football with an initial resultant velocity of 25~m/s at a direction of $32^\circ$ above horizontal
+
+\hfill
+
+  \begin{parts}
+    \part 
+      Label the diagram of this situation and write down your knowns and unknowns T-chart.  (Rememnber, only $x$ and $y$ numbers go in the T-chart.  Resultants and angles do not.)
+
+      \vspace{1em}
+    
+      \begin{tikzpicture}[baseline]
+
+        \begin{scope}[scale=0.4, shift={(-0.3,0)}]
+          \draw (0.1,1.2) circle (0.2);
+          \coordinate (waste) at (-0.15,0.52);
+          \coordinate (neck) at (0,1);
+          \draw (waste) -- (neck);
+          \draw (waste) -- (-0.35,0.23) -- ++(-0.3,-0.2);
+          \draw (waste) -- ++(0.3,-0.1) -- ++ (0.3,-.3);
+          \draw (neck) -- ++(0.35,-0.3) -- ++(0.15,0.17);
+          \draw (neck) -- ++(-0.4,0.14) -- ++(-0.18,0.06);
+        \end{scope}
+
+
+        \draw[dashed,red] (4.5,1.5) coordinate (apex)
+          parabola (0,0);
+        \draw[dashed,red] (apex) parabola (9,0);
+        \draw[color=green,very thick] (-1,0) -- ++(11,0);
+
+        \begin{scope}[shift={(10,-4)}]
+          \draw (0,6) -- ++(4.5,0);
+          \draw (2.25,6.5) -- ++(0,-4);
+          \node at (1.125,6.25) {$x$-direction};
+          \node at (3.375,6.25) {$y$-direction};
+        \end{scope}
+
+      \end{tikzpicture}
+
+
+      \vspace{1em}
+
+    \part
+      Find the $x$- and $y$- components of the ball's initial velocity.  (Draw a triangle and use trig.)
+      \vs
+  
+    \part
+      How long is the ball in the air? (Pick an equation and use either the $x$-numbers or the $y$-numbers from your T-chart.)
+      \vs
+  
+    \part
+      How far in the $x$-direction did it travel?
+      \vs
+   
+    \part
+      What is the football's maximum height?
+      \vs
+
+  \end{parts}
+
+  \pagebreak
+
+  \subsection*{Hints}
+
+  \begin{parts}
+    \part At this point of the problem, there should only be two things in the T-chart chart: the two accelerations (\SI{0}{m/s^2} and \SI{-9.8}{m/s^2})
+    \part This is a Type-II Problem.  Check your notes or the front equation board.
+    \part First, make sure to include the answers for part (b) in the T-chart as the $v_i$'s.  You also know that $v_f=0$ at the top of this motion.  So, in the $y$-direction, you know $v_i$, $v_f$, and $a$.  Use Old Faithful to find $t$.  Don't forget that you need to double it!
+    \part Make sure to add the $t$ that you found in part (c) to both sides of the T-chart.  In the $x$-direction, you now know $v_i$, $a$, and $t$.  You should be able to use Big Chalupa to find $d$.  Don't forget that $a=0$ in the $x$-direction.
+    \part You should only use $y$ numbers to solve this.  It's probably easiest to using Ain't Got No Time for this part
+  \end{parts}
+
+  \subsection*{Answers}
+
+  \begin{parts}
+    \part label the initial velocity vector and the angle.
+    \part $v_{ix}=21.20$ m/s; $v_{iy}=13.25$ m/s
+    \part $t=2.70$ s
+    \part $d_x=57.32$ m
+    \part $d_y=8.95$ m
+  \end{parts}
+
+
+\end{document}
